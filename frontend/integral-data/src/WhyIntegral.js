@@ -20,6 +20,10 @@ import { Divider } from '@mui/material';
 import BackgroundVideo from './videos/video.mp4';
 import Image1 from './images/financial_data.svg';
 import Image2 from './images/problem.svg';
+import ImageCode from './images/code_and_coffee.jpeg';
+import ImageNerd from './images/circuit_nerd.jpeg';
+import ImageDash from './images/dashboard.jpeg';
+import ImageTeam from './images/teamwork.jpeg';
 
 import {CustomGridLeft, CustomGridRight} from './WideTextPlusImage';
 import SectionDivider from './SectionDivider';
@@ -79,7 +83,7 @@ export default function WhyIntegral() {
               color="text.primary"
               gutterBottom
             >
-              Why should I partner with Integral?
+              Experience the Integral Advantage
             </Typography>
             <Typography
               variant="h6"
@@ -87,7 +91,7 @@ export default function WhyIntegral() {
               color="text.secondary"
               paragraph
             >
-              We believe our expetise can help you make better business decisions while saving money.
+              We empower your business to leverage data and analytics, driving informed decisions and cost-effective solutions.
             </Typography>
             <Stack
               sx={{ pt: 2 }}
@@ -95,6 +99,7 @@ export default function WhyIntegral() {
               spacing={2}
               justifyContent="center"
             >
+              <Button variant="contained" component={Link} to="/contact">Contact Us</Button>
             </Stack>
           </Grid>
           
@@ -112,37 +117,37 @@ export default function WhyIntegral() {
     <Box sx={{ height: `${SPACER_HEIGHT}px` }} />  {/* Spacer */}
 
 <CustomGridRight 
-    headerText="Experience" 
-    subText="Integral consultants have an average of 10+ years of experience working with data."
-    imgSrc={Image2}
+    headerText="Seasoned Expertise" 
+    subText="Integral's team comprises seasoned professionals, averaging over a decade of data-centric experience to the table."
+    imgSrc={ImageCode}
 />
 
 <SectionDivider />
 
 <CustomGridLeft
-    headerText="Good for Small Business" 
-    subText="Hiring an internal team to manage analytics can be expensive. Letting Integral handle analytics saves you money and makes your business more nimble."
-    imgSrc={Image2}
+    headerText="Cost-effective Solutions" 
+    subText="An internal analytics team can be a significant expense. By choosing Integral, you save on overheads while increasing your business agility and staying competitive."
+    imgSrc={ImageDash}
 />
 <SectionDivider />
 
 <CustomGridRight 
-    headerText="Quality" 
-    subText="Quality is at the forefront of everything we do. We leverage our experience & expertise to make sure we do the job right."
-    imgSrc={Image2}
+    headerText="Uncompromised Quality" 
+    subText="Quality is our guiding principle. Our seasoned expertise guarantees top-tier, accurate solutions that make a real difference."
+    imgSrc={ImageNerd}
 />
 <SectionDivider />
 
 <CustomGridLeft
-    headerText="Relationship Building" 
-    subText="We aren't just coders. We want to help you understand your business and make sound, data-driven decisions."
-    imgSrc={Image2}
+    headerText="Building Partnerships" 
+    subText="We are more than just data experts & programmers. We are your partners, invested in your understanding of your business landscape, facilitating you to make strategic, data-driven decisions."
+    imgSrc={ImageTeam}
 />
 <SectionDivider />
 
 <CustomGridRight 
-    headerText="Flexibility" 
-    subText="We are happy to help with projects of any size & offer flexible pricing options."
+    headerText="Flexibility to Meet Your Needs" 
+    subText="We cater to projects of any magnitude with adaptable pricing options. Your business needs are our top priority."
     imgSrc={Image2}
 />
 

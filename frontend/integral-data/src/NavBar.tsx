@@ -13,13 +13,12 @@ import MenuItem from '@mui/material/MenuItem';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const pages = [
-  { name: 'What We Do', url: '/what_we_do' },
+  { name: 'Our Services', url: '/what_we_do' },
   { name: 'Why Integral?', url: '/why_integral' },
   { name: 'Skills', url: '/experience' },
   { name: 'Skills V2', url: '/skills' },  
   { name: 'Contact Us', url: '/contact' },
 
-  
 ];
 
 const defaultTheme = createTheme({

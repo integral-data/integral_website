@@ -74,7 +74,7 @@ export default function WhatWeDo() {
               color="text.primary"
               gutterBottom
             >
-              What We Do
+              Discover Our Services
             </Typography>
             <Typography
               variant="h6"
@@ -82,8 +82,11 @@ export default function WhatWeDo() {
               color="text.secondary"
               paragraph
             >
-              We have experience working on a wide variety of projects.
+              {/* Experience the depth of our expertise through a diverse range of successful projects. */}
+              Drawing from a wealth of expertise across numerous projects, we convert challenges into opportunities.
             </Typography>
+
+            
             <Stack
               sx={{ pt: 2 }}
               direction="row"
@@ -106,27 +109,27 @@ export default function WhatWeDo() {
 <Box sx={{ height: "100px" }} />  {/* Spacer */}
 <CustomGridRight 
     headerText="Data Migrations" 
-    subText="Moving data from one system to another can be a challenge. We've got expertise with migrations and can make sure they are done right."
+    subText="Seamlessly transition your data between systems with our expertise in migrations."
     imgSrc={Image2}
 />
 <Box sx={{ height: "300px" }} />  {/* Spacer */}
 <CustomGridLeft
     headerText="BI Dashboards" 
-    subText="Get deep insight from your data with powerful visuals & relevant metrics."
+    subText="Gain deep insights from your data with visually impactful dashboards & insightful metrics."
     imgSrc={Image2}
 />
 <Box sx={{ height: "300px" }} />  {/* Spacer */}
 
 <CustomGridRight 
     headerText="Web Scraping" 
-    subText="Need to get your data from a website? We can help with that."
+    subText="Efficiently extract data from websites to unlock valuable information."
     imgSrc={Image2}
 />
 <Box sx={{ height: "300px" }} />  {/* Spacer */}
 
 <CustomGridLeft
     headerText="Database Creation" 
-    subText="We've got experience building databases from the ground up across numerous industries."
+    subText="Experience tailored database solutions built from the ground up for your business."
     imgSrc={Image2}
 />
 

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import CssBaseline from '@mui/material/CssBaseline';
 import { createTheme, ThemeProvider, createPalette } from '@mui/material/styles';
 import Box from '@mui/material/Box';
-
+import { useState, useEffect } from 'react';
 
 import HomePage from './HomePage';
 import ContactForm from './ContactForm';
@@ -14,6 +14,8 @@ import WhyIntegral from './WhyIntegral';
 import WhatWeDo from './WhatWeDo';
 import Footer from './Footer';
 import SkillsV2 from './SkillsV2';
+
+
 
 const defaultTheme = createTheme({
     palette: {
@@ -29,6 +31,8 @@ const defaultTheme = createTheme({
       }
     },
   });
+
+
 
 
   function AppRouter() {
