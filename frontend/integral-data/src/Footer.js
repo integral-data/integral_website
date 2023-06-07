@@ -18,7 +18,7 @@ function Copyright() {
   
   function Footer() {
     return (
-        <Box sx={{ bgcolor: 'background.paper', p: 2 }} component="footer">
+        <Box sx={{ bgcolor: 'background.paper', p: 1 }} component="footer">
             <Typography variant="h6" align="center" gutterBottom></Typography>
             <Typography variant="subtitle1" align="center" color="text.secondary" component="p">
                 Powered By Integral Data

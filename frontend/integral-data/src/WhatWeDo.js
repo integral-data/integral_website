@@ -15,14 +15,12 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { Link } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Divider } from '@mui/material';
-
 import BackgroundVideo from './videos/video.mp4';
+
 import Image1 from './images/financial_data.svg';
 import Image2 from './images/problem.svg';
-
+import ResponsiveAppBar from './NavBar.tsx';
 import {CustomGridLeft, CustomGridRight} from './WideTextPlusImage';
-import SectionDivider from './SectionDivider';
 
 const defaultTheme = createTheme({
   palette: {
@@ -38,9 +36,7 @@ const defaultTheme = createTheme({
   },
 });
 
-const SPACER_HEIGHT = 50; // Specify your desired constant value here
-
-export default function WhyIntegral() {
+export default function WhatWeDo() {
   return (
     <>
       <CssBaseline />
@@ -66,7 +62,6 @@ export default function WhyIntegral() {
       >
 <main>
 
-
 <Grid container direction="column" spacing={2}>
     <Grid item xs={12}>
       <Container maxWidth="lg">  {/* Adjusted here */}
@@ -79,7 +74,7 @@ export default function WhyIntegral() {
               color="text.primary"
               gutterBottom
             >
-              Why should I partner with Integral?
+              What We Do
             </Typography>
             <Typography
               variant="h6"
@@ -87,7 +82,7 @@ export default function WhyIntegral() {
               color="text.secondary"
               paragraph
             >
-              We believe our expetise can help you make better business decisions while saving money.
+              We have experience working on a wide variety of projects.
             </Typography>
             <Stack
               sx={{ pt: 2 }}
@@ -95,6 +90,7 @@ export default function WhyIntegral() {
               spacing={2}
               justifyContent="center"
             >
+              <Button variant="contained" component={Link} to="/contact">Contact Us</Button>
             </Stack>
           </Grid>
           
@@ -106,49 +102,37 @@ export default function WhyIntegral() {
   }}
 >
 </Grid>
+
+<Box sx={{ height: "100px" }} />  {/* Spacer */}
+<CustomGridRight 
+    headerText="Data Migrations" 
+    subText="Moving data from one system to another can be a challenge. We've got expertise with migrations and can make sure they are done right."
+    imgSrc={Image2}
+/>
+<Box sx={{ height: "300px" }} />  {/* Spacer */}
+<CustomGridLeft
+    headerText="BI Dashboards" 
+    subText="Get deep insight from your data with powerful visuals & relevant metrics."
+    imgSrc={Image2}
+/>
+<Box sx={{ height: "300px" }} />  {/* Spacer */}
+
+<CustomGridRight 
+    headerText="Web Scraping" 
+    subText="Need to get your data from a website? We can help with that."
+    imgSrc={Image2}
+/>
+<Box sx={{ height: "300px" }} />  {/* Spacer */}
+
+<CustomGridLeft
+    headerText="Database Creation" 
+    subText="We've got experience building databases from the ground up across numerous industries."
+    imgSrc={Image2}
+/>
+
         </Grid>
       </Container>
     </Grid>
-    <Box sx={{ height: `${SPACER_HEIGHT}px` }} />  {/* Spacer */}
-
-<CustomGridRight 
-    headerText="Experience" 
-    subText="Integral consultants have an average of 10+ years of experience working with data."
-    imgSrc={Image2}
-/>
-
-<SectionDivider />
-
-<CustomGridLeft
-    headerText="Good for Small Business" 
-    subText="Hiring an internal team to manage analytics can be expensive. Letting Integral handle analytics saves you money and makes your business more nimble."
-    imgSrc={Image2}
-/>
-<SectionDivider />
-
-<CustomGridRight 
-    headerText="Quality" 
-    subText="Quality is at the forefront of everything we do. We leverage our experience & expertise to make sure we do the job right."
-    imgSrc={Image2}
-/>
-<SectionDivider />
-
-<CustomGridLeft
-    headerText="Relationship Building" 
-    subText="We aren't just coders. We want to help you understand your business and make sound, data-driven decisions."
-    imgSrc={Image2}
-/>
-<SectionDivider />
-
-<CustomGridRight 
-    headerText="Flexibility" 
-    subText="We are happy to help with projects of any size & offer flexible pricing options."
-    imgSrc={Image2}
-/>
-
-
-
-
 </Grid>
 
 </main>

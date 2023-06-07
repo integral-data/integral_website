@@ -1,18 +1,39 @@
+import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { TextField, Button, Box, Container, Grid } from '@mui/material';
+import { Snackbar, Alert } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+
+
 
 import Typography from '@mui/material/Typography';
 import Image2 from './images/problem.svg';
 
 
+
+
+
 const ContactForm = () => {
+  const [open, setOpen] = React.useState(false);    
+  const handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+  
+    setOpen(false);
+  };
+
+  const navigate = useNavigate();
+
+
   const formik = useFormik({
     initialValues: {
       name: '',
       email: '',
       message: '',
     },
+    
     validationSchema: Yup.object({
       name: Yup.string()
         .required('Required'),
@@ -36,6 +57,10 @@ const ContactForm = () => {
         body: JSON.stringify(values),
         });
         resetForm();
+        setOpen(true);
+        // Navigate to the success page
+        navigate('/contact_success');
+        
       } catch (error) {
         // show error message
       }
@@ -45,6 +70,11 @@ const ContactForm = () => {
 
   return (
     <Container sx={{ paddingTop: '40px' }}>
+        <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+              <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
+                Message sent successfully - thanks for reaching out!
+              </Alert>
+        </Snackbar>
         <Grid container spacing={3}>
             <Grid item xs={12} md={8}>
                 <form onSubmit={formik.handleSubmit}>
@@ -53,7 +83,7 @@ const ContactForm = () => {
                     </Typography>
 
                     <Typography variant="subtitle1" gutterBottom>
-                        Fill out the form below to get in touch with us. We'll be in touch in the next 1-2 business days.
+                        Fill out the form below to get in touch with us. We will reach out in the next 1-2 business days.
                     </Typography>
                     <Box mb={2}>
                         <TextField
@@ -78,6 +108,7 @@ const ContactForm = () => {
                             onChange={formik.handleChange}
                             error={formik.touched.email && Boolean(formik.errors.email)}
                             helperText={formik.touched.email && formik.errors.email}
+                            style={{ marginBottom: '20px', marginTop: '20px' }}
                         />
                     </Box>
                     <Box mb={2}>
@@ -92,6 +123,7 @@ const ContactForm = () => {
                             onChange={formik.handleChange}
                             error={formik.touched.message && Boolean(formik.errors.message)}
                             helperText={formik.touched.message && formik.errors.message}
+                            style={{ marginBottom: '20px', marginTop: '20px' }}
                         />
                     </Box>
                     <Button color="primary" variant="contained" fullWidth type="submit">

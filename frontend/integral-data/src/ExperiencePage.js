@@ -10,6 +10,12 @@ import Typography from '@mui/material/Typography';
 import BackgroundVideo from './videos/video.mp4';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
+import { shadows } from '@mui/system';
+
+import Image1 from './images/nasa-unsplash.jpeg';
+import Image2 from './images/holding_lightbulb.jpeg';  // Replace with your second image
+import ImageDash from './images/dashboard.jpeg'
+import ImageCoding from './images/coding.jpeg'
 
 const defaultTheme = createTheme({
   palette: {
@@ -25,38 +31,57 @@ const defaultTheme = createTheme({
   },
 });
 
-function ExperienceCard({ title, listItems }) {
-    return (
+function ExperienceCard({ title, listItems, image }) {
+  return (
       <Grid item xs={12} sm={6} md={4}>
-        <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-          <CardContent sx={{ flexGrow: 1 }}>
-            <Typography gutterBottom variant="h5" component="h2">
-              {title}
-            </Typography>
-            {listItems && Array.isArray(listItems) && (
-              <List>
-                {listItems.map((item, index) => (
-                  <ListItem key={index}>
-                    <Typography>{item}</Typography>
-                  </ListItem>
-                ))}
-              </List>
-            )}
-          </CardContent>
-        </Card>
+          <Card sx={{ 
+              height: '100%', 
+              display: 'flex', 
+              flexDirection: 'column', 
+              bgcolor: '#0a192f',
+              boxShadow: 3,  // apply shadow
+              borderColor: '#808080', // apply border color
+              borderWidth: 2, // apply border width
+              borderStyle: 'solid' // apply border style
+              }}
+          >
+              <CardContent sx={{ flexGrow: 1 }}>
+                  <Typography gutterBottom variant="h5" component="h2" align="center" sx={{color: '#D3D3D3'}}>
+                      {title}
+                  </Typography>
+                  {listItems && Array.isArray(listItems) && (
+                      <List>
+                          {listItems.map((item, index) => (
+                              <ListItem key={index}>
+                                  <Typography sx={{color: '#D3D3D3'}}>{item}</Typography>
+                              </ListItem>
+                          ))}
+                      </List>
+                  )}
+              </CardContent>
+              <Box 
+                  component="img" 
+                  alt="image description" 
+                  src={image} 
+                  sx={{
+                      objectFit: 'cover',
+                      height: '150', 
+                      width: '100%'
+                  }}
+              />
+          </Card>
       </Grid>
-    );
-  }
-  
+  );
+}
 
   export default function ExperiencePage() {
     const experiences = [
-        { title: 'Languages', listItems: ['Python', 'JavaScript', 'React','SQL'] },
-        { title: 'Visualization Software', listItems: ['Tableau', 'Power BI', 'Google Data Studio'] },
-        { title: 'Data Warehouses', listItems: ['Snowflake', 'Redshift', 'PostGres','SQLite'] },
-        { title: 'Industries', listItems: ['Financial Services', 'Car Dealerships', 'Government Contracts','Human Resources', 'Insurance' ]},
-        { title: 'Python Libraries', listItems: ['Pandas', 'Django', 'Flask'] },        
-        { title: 'Other Tech', listItems: ['Git', 'Docker', 'Django'] },
+        { title: 'Languages', listItems: ['Python', 'JavaScript', 'React','SQL'], image: ImageCoding },
+        { title: 'Visualization Software', listItems: ['Tableau', 'Power BI', 'Google Data Studio'], image: ImageDash },
+        { title: 'Data Warehouses', listItems: ['Snowflake', 'Redshift', 'PostGres','SQLite'], image: Image1 },
+        { title: 'Industries', listItems: ['Financial Services', 'Car Dealerships', 'Government Contracts','Human Resources', 'Insurance' ], image: Image1},
+        { title: 'Python Libraries', listItems: ['Pandas', 'Django', 'Flask'], image: Image1 },        
+        { title: 'Other Tech', listItems: ['Git', 'Docker', 'Django'], image: Image1 },
         
       ];
       return (
@@ -83,17 +108,24 @@ function ExperienceCard({ title, listItems }) {
               pb: 6,
             }}
           >
-            <Typography variant="h3" align="center" gutterBottom>
-                            Integral Data Skillset
-                        </Typography>
+            <Typography
+              component="h1"
+              variant="h2"
+              align="center"
+              color="text.primary"
+              gutterBottom
+            >
+              Integral Skillset
+            </Typography>
                         <Typography variant="h6" align="center" gutterBottom>
                             Here is a brief overview of the technlogy we leverage & experience we have.
                         </Typography>
+                        <Box sx={{ height: "60px" }} />  {/* Spacer */}
 
             <Container maxWidth="md">
               <Grid container spacing={4}>
                 {experiences.map((experience, index) => (
-                  <ExperienceCard key={index} title={experience.title} listItems={experience.listItems} />
+                  <ExperienceCard key={index} title={experience.title} listItems={experience.listItems} image={experience.image} />
                 ))}
               </Grid>
             </Container>

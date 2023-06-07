@@ -2,13 +2,18 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import CssBaseline from '@mui/material/CssBaseline';
 import { createTheme, ThemeProvider, createPalette } from '@mui/material/styles';
+import Box from '@mui/material/Box';
 
-import MainPage from './HomePage';
+
+import HomePage from './HomePage';
 import ContactForm from './ContactForm';
+import ContactSuccess from './ContactSuccess';
 import ExperiencePage from './ExperiencePage';
 import ResponsiveAppBar from './NavBar.tsx';
 import WhyIntegral from './WhyIntegral';
+import WhatWeDo from './WhatWeDo';
 import Footer from './Footer';
+import SkillsV2 from './SkillsV2';
 
 const defaultTheme = createTheme({
     palette: {
@@ -26,23 +31,29 @@ const defaultTheme = createTheme({
   });
 
 
-function AppRouter() {
+  function AppRouter() {
     return (
       <Router>
         <CssBaseline />
         <ThemeProvider theme={defaultTheme}>
-            <ResponsiveAppBar />
-            <Routes>
-                <Route exact path="/" element={<MainPage />} />
-                <Route path="/contact" element={<ContactForm />} />
-                <Route path="/experience" element={<ExperiencePage />} />
-                <Route path="/why_integral" element={<WhyIntegral />} />
-            </Routes>
-        <Footer />
+            <Box display="flex" flexDirection="column" minHeight="100vh">
+                <ResponsiveAppBar />
+                <Box flex="1">
+                    <Routes>
+                        <Route exact path="/" element={<HomePage />} />
+                        <Route path="/contact" element={<ContactForm />} />
+                        <Route path="/contact_success" element={<ContactSuccess />} />
+                        <Route path="/experience" element={<ExperiencePage />} />
+                        <Route path="/why_integral" element={<WhyIntegral />} />
+                        <Route path="/what_we_do" element={<WhatWeDo />} />
+                        <Route path="/skills" element={<SkillsV2 />} />
+                    </Routes>
+                </Box>
+                <Footer />
+            </Box>
         </ThemeProvider>
-
-    </Router>
+      </Router>
     );
-  }
+}
   
-  export default AppRouter;
+export default AppRouter;

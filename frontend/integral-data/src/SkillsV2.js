@@ -21,8 +21,10 @@ import BackgroundVideo from './videos/video.mp4';
 import Image1 from './images/financial_data.svg';
 import Image2 from './images/problem.svg';
 
-import {CustomGridLeft, CustomGridRight} from './WideTextPlusImage';
+import {CustomGridLeft, CustomGridRight, CustomGridLeftWithList, CustomGridRightWithList} from './WideTextPlusImage';
 import SectionDivider from './SectionDivider';
+import ImageDash from './images/dashboard.jpeg'
+import ImageCoding from './images/coding.jpeg'
 
 const defaultTheme = createTheme({
   palette: {
@@ -40,7 +42,7 @@ const defaultTheme = createTheme({
 
 const SPACER_HEIGHT = 50; // Specify your desired constant value here
 
-export default function WhyIntegral() {
+export default function SkillsV2() {
   return (
     <>
       <CssBaseline />
@@ -79,7 +81,7 @@ export default function WhyIntegral() {
               color="text.primary"
               gutterBottom
             >
-              Why should I partner with Integral?
+              What capabilities & experience does Integral have?
             </Typography>
             <Typography
               variant="h6"
@@ -87,7 +89,7 @@ export default function WhyIntegral() {
               color="text.secondary"
               paragraph
             >
-              We believe our expetise can help you make better business decisions while saving money.
+              We've got a wide range of experience across all sections of the tech stack.
             </Typography>
             <Stack
               sx={{ pt: 2 }}
@@ -111,18 +113,20 @@ export default function WhyIntegral() {
     </Grid>
     <Box sx={{ height: `${SPACER_HEIGHT}px` }} />  {/* Spacer */}
 
-<CustomGridRight 
-    headerText="Experience" 
-    subText="Integral consultants have an average of 10+ years of experience working with data."
-    imgSrc={Image2}
+<CustomGridLeftWithList 
+    headerText="Languages" 
+    subText="We work with a wide variety of programming languages."
+    imgSrc={ImageCoding}
+    listItems={['Python','JavaScript','React','SQL','VBA']}
 />
 
 <SectionDivider />
 
-<CustomGridLeft
-    headerText="Good for Small Business" 
-    subText="Hiring an internal team to manage analytics can be expensive. Letting Integral handle analytics saves you money and makes your business more nimble."
-    imgSrc={Image2}
+<CustomGridRightWithList
+    headerText="Visualization Software" 
+    subText="We can leverage a variety of tools to visualize your data."
+    imgSrc={ImageDash}
+    listItems={['Power BI','Tableau','Google Data Studio','Plotly','Matplotlib']}
 />
 <SectionDivider />
 
