@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid, Container, Typography, Stack, Box, List, ListItem, ListItemText } from '@mui/material';
+  
 
 const CustomGridRight = ({ headerText, subText, imgSrc }) => {
     return (
@@ -8,8 +9,8 @@ const CustomGridRight = ({ headerText, subText, imgSrc }) => {
                 <Grid container spacing={2} direction="row-reverse">
                     <Grid item xs={12} md={6}>
                         <Typography
-                            component="h1"
-                            variant="h2"
+                            component="h3"
+                            variant="h3"
                             align="center"
                             color="text.primary"
                             gutterBottom
@@ -17,7 +18,7 @@ const CustomGridRight = ({ headerText, subText, imgSrc }) => {
                             {headerText}
                         </Typography>
                         <Typography
-                            variant="h5"
+                            variant="h6"
                             align="center"
                             color="text.secondary"
                             paragraph
@@ -33,13 +34,13 @@ const CustomGridRight = ({ headerText, subText, imgSrc }) => {
 
                         </Stack>
                     </Grid>
-                    <Grid item xs={12} md={6}>
+                    <Grid item xs={12} md={6} container justifyContent="center">
                         <Box
                             component="img"
                             sx={{
-                                width: { xs: '20%', sm: '40%', md: '60%' },
-                                mx: 'auto',
+                                width: { xs: '60%', sm: '60%', md: '60%' },
                                 maxWidth: '100%',
+                                borderRadius: '50%', // Make the image circular
                                 objectFit: 'cover',
                             }}
                             alt="Image description"
@@ -59,8 +60,8 @@ const CustomGridLeft = ({ headerText, subText, imgSrc }) => {
               <Grid container spacing={2}>
                   <Grid item xs={12} md={6}>
                       <Typography
-                          component="h1"
-                          variant="h2"
+                          component="h3"
+                          variant="h3"
                           align="center"
                           color="text.primary"
                           gutterBottom
@@ -68,7 +69,7 @@ const CustomGridLeft = ({ headerText, subText, imgSrc }) => {
                           {headerText}
                       </Typography>
                       <Typography
-                          variant="h5"
+                          variant="h6"
                           align="center"
                           color="text.secondary"
                           paragraph
@@ -91,6 +92,7 @@ const CustomGridLeft = ({ headerText, subText, imgSrc }) => {
                               mx: 'auto',
                               maxWidth: '100%',
                               objectFit: 'cover',
+                              borderRadius: '50%', // Make the image circular
                           }}
                           alt="Image description"
                           src={imgSrc}
@@ -109,7 +111,7 @@ const CustomGridRightWithList = ({ headerText, subText, imgSrc, listItems }) => 
         <Container maxWidth="lg">
             <Grid container spacing={2} direction="row-reverse" alignItems="center">
                 <Grid item xs={12} md={6}>
-                    <Typography variant="h2" align="center" color="text.primary" gutterBottom>
+                    <Typography variant="h4" align="center" color="text.primary" gutterBottom>
                         {headerText}
                     </Typography>
                     <Typography variant="h5" align="center" color="text.secondary" paragraph>
