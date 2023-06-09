@@ -63,7 +63,7 @@ const Layout = ({ children, background = '', backgroundType = 'video', videoSrc 
           right: 0,
           bottom: 0,
           left: 0,
-          backgroundColor: 'rgba(255, 255, 255, 0.9)', // black with 80% opacity
+          backgroundColor: 'rgba(255, 255, 255, 0.92)', // white with 90% opacity - controls overlay of video
         }
       }}
     >

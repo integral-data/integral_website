@@ -49,32 +49,27 @@ const ContactForm = () => {
   });
 
   return (
-    <Container sx={{ paddingTop: '40px' }}       justifyContent="center" // This will center the grid items
-    >
+    <Container sx={{ paddingTop: '40px' }}>
       <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
         <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
           Message sent successfully - thanks for reaching out!
         </Alert>
-      </Snackbar>  
-      <Grid container spacing={3} justifyContent="center" // This will center the grid items
->
-        <Grid item xs={12} md={8} >
+      </Snackbar>
+      <Grid container spacing={3} justifyContent="center">
+        <Grid item xs={12} md={8}>
           <form onSubmit={formik.handleSubmit}>
-
-            <TitleSubtitle 
+            <Grid container item justifyContent="center">
+              <TitleSubtitle 
                 title="Contact Us" 
                 subtitle="Fill out the form below to get in touch with us. We will reach out in the next 1-2 business days."
-                  />
-            
-            
-            
-
-<Grid container spacing={3} >
-    <Grid item xs={12}>
-        <Grid container spacing={3}>
-            <Grid item xs={12} sm={6}>
-                <Box mb={2}>
-                    <TextField
+              />
+            </Grid>
+            <Grid container spacing={3} justifyContent="center">
+              <Grid item xs={12}>
+                <Grid container spacing={3}>
+                  <Grid item xs={12} sm={6}>
+                    <Box mb={2}>
+                      <TextField
                         fullWidth
                         id="name"
                         name="name"
@@ -84,12 +79,12 @@ const ContactForm = () => {
                         error={formik.touched.name && Boolean(formik.errors.name)}
                         helperText={formik.touched.name && formik.errors.name}
                         style={{ marginBottom: '20px', marginTop: '20px' }}
-                    />
-                </Box>
-            </Grid>
-            <Grid item xs={12} sm={6}>
-                <Box mb={2}>
-                    <TextField
+                      />
+                    </Box>
+                  </Grid>
+                  <Grid item xs={12} sm={6}>
+                    <Box mb={2}>
+                      <TextField
                         fullWidth
                         id="email"
                         name="email"
@@ -99,33 +94,29 @@ const ContactForm = () => {
                         error={formik.touched.email && Boolean(formik.errors.email)}
                         helperText={formik.touched.email && formik.errors.email}
                         style={{ marginBottom: '20px', marginTop: '20px' }}
-                    />
+                      />
+                    </Box>
+                  </Grid>
+                </Grid>
+              </Grid>
+              <Grid item xs={12}>
+                <Box mb={2}>
+                  <TextField
+                    fullWidth
+                    multiline
+                    rows={4}
+                    id="message"
+                    name="message"
+                    label="Message"
+                    value={formik.values.message}
+                    onChange={formik.handleChange}
+                    error={formik.touched.message && Boolean(formik.errors.message)}
+                    helperText={formik.touched.message && formik.errors.message}
+                    style={{ marginBottom: '20px', marginTop: '20px' }}
+                  />
                 </Box>
+              </Grid>
             </Grid>
-        </Grid>
-    </Grid>
-    <Grid item xs={12}>
-        <Box mb={2}>
-            <TextField
-                fullWidth
-                multiline
-                rows={4}
-                id="message"
-                name="message"
-                label="Message"
-                value={formik.values.message}
-                onChange={formik.handleChange}
-                error={formik.touched.message && Boolean(formik.errors.message)}
-                helperText={formik.touched.message && formik.errors.message}
-                style={{ marginBottom: '20px', marginTop: '20px' }}
-            />
-        </Box>
-    </Grid>
-</Grid>
-
-
-
-
             <Button color="primary" variant="contained" fullWidth type="submit">
               Submit
             </Button>
@@ -156,20 +147,8 @@ const ContactForm = () => {
           </Box>
         </Grid>
       </Grid>
-
-
-
-
-
-
-      
     </Container>
   );
-
-
-
-
-  
 };
 
 export default ContactForm;
