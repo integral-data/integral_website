@@ -10,8 +10,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { FlexBox } from '@mui/system';
 import integral_banner from './images/integral_wide_transparent.png';
 import integral_small from './images/integral_transparent_icon.png';
 
@@ -24,21 +22,6 @@ const pages = [
   { name: 'Contact Us', url: '/contact' },
 
 ];
-
-const defaultTheme = createTheme({
-  palette: {
-    primary: {
-      main: '#0a192f',
-    },
-    secondary: {
-      main: '#00bcd4',
-    },
-    background: {
-      default: '#0a192f',
-    },
-  },
-});
-
 
 
 function ResponsiveAppBar() {

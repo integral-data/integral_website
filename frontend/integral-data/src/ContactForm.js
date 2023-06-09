@@ -4,7 +4,6 @@ import * as Yup from 'yup';
 import { TextField, Button, Box, Container, Grid } from '@mui/material';
 import { Snackbar, Alert } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import Typography from '@mui/material/Typography';
 import TitleSubtitle from './components/TitleSubtitle';
 import Image2 from './images/problem.svg';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Container, Typography, Stack, Box, List, ListItem, ListItemText } from '@mui/material';
+import { Grid, Container, Typography, Stack, Box } from '@mui/material';
 
 const CustomGrid = ({ headerText, subText, imgSrc, imgPosition }) => {
   return (

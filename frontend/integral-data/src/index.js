@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import AppRouter from './AppRouter';
-import MainPage from './HomePage';
 import reportWebVitals from './reportWebVitals';
-import ContactForm from './ContactForm';
 
 
 
