@@ -1,7 +1,7 @@
 {
   "name": "integral-data",
   "version": "0.1.0",
-  "homepage": "http://integral-data.github.io/integral_website",
+  "homepage": "https://purple-beach-089dc5f0f.3.azurestaticapps.net/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.0",
