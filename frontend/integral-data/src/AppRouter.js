@@ -14,6 +14,8 @@ import WhyIntegral from './WhyIntegral';
 import WhatWeDo from './WhatWeDo';
 import Footer from './Footer';
 import SkillsV2 from './SkillsV2';
+import NewPage from './NewPage';
+import Layout from './Layout';
 
 
 
@@ -33,16 +35,10 @@ const defaultTheme = createTheme({
   });
 
 
-
-
   function AppRouter() {
     return (
       <Router>
-        <CssBaseline />
-        <ThemeProvider theme={defaultTheme}>
-            <Box display="flex" flexDirection="column" minHeight="100vh">
-                <ResponsiveAppBar />
-                <Box flex="1">
+        <Layout>
                     <Routes>
                         <Route exact path="/" element={<HomePage />} />
                         <Route path="/contact" element={<ContactForm />} />
@@ -51,13 +47,42 @@ const defaultTheme = createTheme({
                         <Route path="/why_integral" element={<WhyIntegral />} />
                         <Route path="/what_we_do" element={<WhatWeDo />} />
                         <Route path="/skills" element={<SkillsV2 />} />
+                        <Route path="/test" element={<NewPage />} />
+                        
                     </Routes>
-                </Box>
-                <Footer />
-            </Box>
-        </ThemeProvider>
+                    </Layout>
+
       </Router>
     );
 }
+
+
+
+//   function AppRouter() {
+//     return (
+//       <Router>
+//         <CssBaseline />
+//         <ThemeProvider theme={defaultTheme}>
+//         <Box flex="1" sx={{ overflow: 'auto' }}>
+//                 <ResponsiveAppBar />
+//                 <Box flex="1">
+//                     <Routes>
+//                         <Route exact path="/" element={<HomePage />} />
+//                         <Route path="/contact" element={<ContactForm />} />
+//                         <Route path="/contact_success" element={<ContactSuccess />} />
+//                         <Route path="/experience" element={<ExperiencePage />} />
+//                         <Route path="/why_integral" element={<WhyIntegral />} />
+//                         <Route path="/what_we_do" element={<WhatWeDo />} />
+//                         <Route path="/skills" element={<SkillsV2 />} />
+//                         <Route path="/test" element={<NewPage />} />
+                        
+//                     </Routes>
+//                 </Box>
+//                 <Footer />
+//             </Box>
+//         </ThemeProvider>
+//       </Router>
+//     );
+// }
   
 export default AppRouter;

@@ -22,9 +22,10 @@ import Image1 from './images/financial_data.svg';
 import Image2 from './images/problem.svg';
 
 import {CustomGridLeft, CustomGridRight, CustomGridLeftWithList, CustomGridRightWithList} from './WideTextPlusImage';
-import SectionDivider from './SectionDivider';
-import ImageDash from './images/dashboard.jpeg'
-import ImageCoding from './images/coding.jpeg'
+import SectionDivider from './components/SectionDivider';
+import ImageDash from './images/dashboard.jpeg';
+import ImageCoding from './images/coding.jpeg';
+
 
 const defaultTheme = createTheme({
   palette: {
@@ -46,6 +47,7 @@ export default function SkillsV2() {
   return (
     <>
       <CssBaseline />
+
       <Box
         sx={{
           position: 'fixed',

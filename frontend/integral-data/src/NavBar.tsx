@@ -11,8 +11,12 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { FlexBox } from '@mui/system';
+import integral_banner from './images/integral_wide_transparent.png';
+import integral_small from './images/integral_transparent_icon.png';
 
 const pages = [
+  { name: 'Home', url: '/' },
   { name: 'Our Services', url: '/what_we_do' },
   { name: 'Why Integral?', url: '/why_integral' },
   { name: 'Skills', url: '/experience' },
@@ -35,6 +39,8 @@ const defaultTheme = createTheme({
   },
 });
 
+
+
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
@@ -47,7 +53,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="fixed">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -64,10 +70,10 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            Integral Data
+              <img src={integral_banner} alt="Logo" style={{ height: '36px' }} />
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, justifyContent: 'space-between' }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -102,6 +108,11 @@ function ResponsiveAppBar() {
                 </MenuItem>
               ))}
             </Menu>
+            <img 
+              src={integral_small} 
+              alt="Small Logo" 
+              style={{ height: '50px' }} 
+            />
           </Box>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
