@@ -140,7 +140,7 @@ const ContactForm = () => {
                 width: '50%',
                 objectFit: 'cover',
               }}
-              alt="Image description"
+              alt="A brief description"
               src={Image2}
             />
           </Box>
