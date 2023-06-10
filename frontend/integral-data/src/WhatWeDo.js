@@ -1,7 +1,5 @@
 import React from 'react';
-import { Grid, Box, Container, Button } from '@mui/material';
-import { Link } from 'react-router-dom';
-import Image2 from './images/problem.svg';
+import { Grid, Box, Container } from '@mui/material';
 import CustomGrid from './components/WideCardLayout';
 import SectionDivider from './components/SectionDivider';
 import TitleSubtitle from './components/TitleSubtitle';
