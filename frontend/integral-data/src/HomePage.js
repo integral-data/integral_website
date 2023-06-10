@@ -63,9 +63,6 @@ function HomePage() {
               <Button variant="outlined" color="inherit" onClick={() => navigate('/why_integral')} sx={buttonStyle}>
                 Why Integral?
               </Button>
-              <Button variant="outlined" color="inherit" onClick={() => navigate('/contact')} sx={buttonStyle}>
-                Contact Us
-              </Button>
             </Box>
           </Grid>
           <Grid item xs={12} sm={6}>

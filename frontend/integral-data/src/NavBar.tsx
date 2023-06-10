@@ -17,9 +17,6 @@ const pages = [
   { name: 'Home', url: '/' },
   { name: 'Our Services', url: '/what_we_do' },
   { name: 'Why Integral?', url: '/why_integral' },
-  { name: 'Skills', url: '/experience' },
-  { name: 'Skills V2', url: '/skills' },  
-  { name: 'Contact Us', url: '/contact' },
 
 ];
 
