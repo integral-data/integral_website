@@ -17,9 +17,9 @@ const ContactUsReact = () => {
   };
   const navigate = useNavigate();
 
-  const SERVICE_ID = "**************";
-const TEMPLATE_ID = "*******";
-const USER_ID = "****************";
+//   const SERVICE_ID = "**************";
+// const TEMPLATE_ID = "*******";
+// const USER_ID = "****************";
 
   const formik = useFormik({
     initialValues: {
