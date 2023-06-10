@@ -6,6 +6,12 @@ import CustomGrid from './components/WideCardLayout';
 import SectionDivider from './components/SectionDivider';
 import TitleSubtitle from './components/TitleSubtitle';
 
+import ImageCode from './images/code_and_coffee.jpeg';
+import ImageNerd from './images/circuit_nerd.jpeg';
+import ImageDash from './images/dashboard.jpeg';
+import ImageTeam from './images/teamwork.jpeg';
+
+
 export default function WhatWeDo() {
   return (
     <main>
@@ -19,37 +25,38 @@ export default function WhatWeDo() {
                 title="Discover Our Services" 
                 subtitle="Drawing from a wealth of expertise across numerous projects, we convert challenges into opportunities."
                   />
-                <Box sx={{ display: 'flex', justifyContent: 'center', marginBottom: '2em' }}>
+                {/* <Box sx={{ display: 'flex', justifyContent: 'center', marginBottom: '2em' }}>
                   <Button variant="contained" component={Link} to="/contact">Contact Us</Button>
-                </Box>
+                </Box> */}
               </Grid>
 
               <SectionDivider/>
               <CustomGrid
                   headerText="Data Migrations" 
                   subText="Seamlessly transition your data between systems with our expertise in migrations."
-                  imgSrc={Image2}
+                  imgSrc={ImageCode}
               />
               <SectionDivider/>
               <CustomGrid
                   headerText="BI Dashboards" 
                   subText="Gain deep insights from your data with visually impactful dashboards & insightful metrics."
-                  imgSrc={Image2}
+                  imgSrc={ImageDash}
                   imgPosition='right'
               />
               <SectionDivider/>
               <CustomGrid 
                   headerText="Web Scraping" 
                   subText="Efficiently extract data from websites to unlock valuable information."
-                  imgSrc={Image2}
+                  imgSrc={ImageNerd}
               />
               <SectionDivider/>
               <CustomGrid
                   headerText="Database Creation" 
                   subText="Experience tailored database solutions built from the ground up for your business."
-                  imgSrc={Image2}
+                  imgSrc={ImageTeam}
                   imgPosition='right'
               />
+              <SectionDivider/>
             </Grid>
           </Container>
         </Grid>
