@@ -1,0 +1,128 @@
+import React, { useState } from "react";
+import Video from "../../videos/video.mp4";
+import { Button } from "../ButtonElements";
+import MyImage from "../../images/integral_transparent_icon.png";
+import { Grid, Box, useTheme, Typography } from "@mui/material";
+import { ArrowForward, ArrowRight } from "./HeroElements";
+import { tokens } from "../../theme";
+
+const HeroSection = () => {
+  const [hover, setHover] = useState(false);
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+
+  const onHover = () => {
+    setHover(!hover);
+  };
+
+  const rotatingImageStyle = {
+    animation: "rotate 25s linear infinite",
+    maxWidth: "100%",
+    maxHeight: "100%",
+  };
+
+  return (
+    <Grid
+      container
+      id="home"
+      sx={{
+        background: "#0c0c0c",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        padding: "0 30px",
+        height: "700px",
+        position: "relative",
+        zIndex: 1,
+      }}
+    >
+      <Grid
+        item
+        md={12}
+        sx={{
+          position: "absolute",
+          top: 0,
+          right: 0,
+          bottom: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          overflow: "hidden",
+        }}
+      >
+        <Grid
+          item
+          md={12}
+          component="video"
+          autoPlay
+          loop
+          muted
+          src={Video}
+          type="video/mp4"
+          sx={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            background: "#232a34",
+            filter: "opacity(10%)",
+          }}
+        />
+      </Grid>
+
+      <Grid container>
+        <Grid item md={12}>
+          <Typography
+            sx={{
+              fontFamily: "Mona Sans",
+              fontSize: "108px",
+              fontWeight: "700",
+              fontStretch: "110%",
+              color: "#fff",
+            }}
+          >
+            Integral Data
+          </Typography>
+        </Grid>
+        <Grid item md={10}>
+          <Typography
+            variant="h3"
+            color={colors.greenAccent[600]}
+            sx={{ fontStretch: "120%", fontWeight: "300" }}
+          >
+            Unleash your business's data potential with our technology-driven
+            consulting firm. We specialize in all things data, utilizing
+            cutting-edge technology to drive growth.
+          </Typography>
+        </Grid>
+
+        <Grid
+          item
+          md={2}
+          sx={{
+            marginTop: "32px",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <Button
+            to="/contactus"
+            onMouseEnter={onHover}
+            onMouseLeave={onHover}
+            primary="true"
+            dark="true"
+            smooth={true}
+            duration={500}
+            spy={true}
+            exact="true"
+            offset={-80}
+          >
+            Contact Us {hover ? <ArrowForward /> : <ArrowRight />}
+          </Button>
+        </Grid>
+      </Grid>
+    </Grid>
+  );
+};
+
+export default HeroSection;

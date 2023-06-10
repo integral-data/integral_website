@@ -1,21 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import AppRouter from './AppRouter';
-import MainPage from './HomePage';
-import reportWebVitals from './reportWebVitals';
-import ContactForm from './ContactForm';
-
-
+import React from "react";
+import ReactDOM from "react-dom";
+import AppRouter from "./AppRouter";
+import reportWebVitals from "./reportWebVitals";
+import "./index.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <ThemeProvider theme={defaultTheme}> */}
     <AppRouter />
-    {/* </ThemeProvider> */}
-    {/* <MainPage />
-    <ContactForm /> */}
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
