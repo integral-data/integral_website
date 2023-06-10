@@ -11,6 +11,7 @@ import SkillsV2 from './SkillsV2';
 import NewPage from './NewPage';
 import Layout from './Layout';
 
+import ContactUsReact from './ContactFormReact';
 
   function AppRouter() {
     return (
@@ -25,6 +26,7 @@ import Layout from './Layout';
                         <Route path="/what_we_do" element={<WhatWeDo />} />
                         <Route path="/skills" element={<SkillsV2 />} />
                         <Route path="/test" element={<NewPage />} />
+                        <Route path="/contact_us_2" element={<ContactUsReact />} />
                         
                     </Routes>
                     </Layout>
