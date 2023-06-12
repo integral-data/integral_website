@@ -73,9 +73,10 @@ const HeroSection = () => {
       <Grid container maxWidth={1600}>
         <Grid item md={12} zIndex={2}>
           <Typography
+            variant="title"
             sx={{
               fontFamily: "Mona Sans",
-              fontSize: "108px",
+
               fontWeight: "800",
               fontStretch: "110%",
               color: "#fff",
