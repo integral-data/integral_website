@@ -89,20 +89,8 @@ function WhyIntegral() {
               md={6}
               xs={12}
               sx={{
-                height: "350px",
-                display: "flex",
-                justifyContent: { xs: "center", md: "left" },
-              }}
-            >
-              <RotatingLogo src={MyImage} alt="Rotating" />
-            </Grid>
-            <Grid
-              item
-              md={6}
-              xs={12}
-              sx={{
                 alignSelf: "center",
-                textAlign: { xs: "center", md: "right" }, // change here
+                textAlign: { xs: "center", md: "left" }, // change here
               }}
             >
               <GradientText

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Video from "../../videos/video.mp4";
 import { Button } from "../ButtonElements";
-import MyImage from "../../images/integral_transparent_icon.png";
+import RotatingLogo from "../RotatingLogo";
 import { Grid, Box, useTheme, Typography } from "@mui/material";
 import { ArrowForward, ArrowRight } from "./HeroElements";
-
+import logo from "../../images/integral_transparent_icon.png";
 import { tokens } from "../../theme";
 
 const HeroSection = () => {
@@ -31,8 +31,8 @@ const HeroSection = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        padding: "0 30px",
-        height: "700px",
+        padding: "0 10px",
+        height: "1000px",
         position: "relative",
         zIndex: 1,
       }}
@@ -127,12 +127,23 @@ const HeroSection = () => {
               offset={-80}
               sx={{ maxWidth: "200px" }}
             >
-              <Typography variant="h4" sx={{ fontWeight: "400" }}>
+              <Typography variant="h4" sx={{ fontWeight: "600" }}>
                 Contact Us
               </Typography>
               {hover ? <ArrowForward /> : <ArrowRight />}
             </Button>
           </Grid>
+        </Grid>
+        <Grid
+          item
+          md={12}
+          zIndex={3}
+          sx={{
+            height: "350px",
+            justifyContent: { xs: "center", md: "left" },
+          }}
+        >
+          <RotatingLogo src={logo} />
         </Grid>
       </Grid>
     </Grid>
