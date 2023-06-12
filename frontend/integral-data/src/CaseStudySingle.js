@@ -30,8 +30,8 @@ const CaseStudyPage = () => {
           </Link> : <Box></Box> // empty box to take up space when there is no next case
         }
       </Box>
-      <Box mt={3} display="flex" >
-        <Button variant="contained" color="primary" justifyContent='center' component={Link} to="/case_studies" sx={{ ':hover': { backgroundColor: '#1E90FF', color: 'white' } }}>
+      <Box mt={3} display="flex" justifyContent="center">
+        <Button variant="contained" color="secondary" component={Link} to="/case_studies" sx={{ ':hover': { backgroundColor: '#50A6E1', color: 'white' } }}>
           Back to Cases
         </Button>
       </Box>

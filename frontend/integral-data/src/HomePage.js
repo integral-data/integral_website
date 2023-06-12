@@ -67,7 +67,7 @@ function HomePage() {
         display={"flex"}
         flexDirection={"row"}
         sx={{
-          background: "linear-gradient(to right, #8a2387, #e94057, #f27121);",
+          // background: "linear-gradient(to right, #8a2387, #e94057, #f27121);",
           background: "black",
         }}
         // sx={{ background: theme.gradient }}
