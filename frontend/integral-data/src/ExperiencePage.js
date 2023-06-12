@@ -10,10 +10,8 @@ import Typography from '@mui/material/Typography';
 import BackgroundVideo from './videos/video.mp4';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import { shadows } from '@mui/system';
 
 import Image1 from './images/nasa-unsplash.jpeg';
-import Image2 from './images/holding_lightbulb.jpeg';  // Replace with your second image
 import ImageDash from './images/dashboard.jpeg'
 import ImageCoding from './images/coding.jpeg'
 

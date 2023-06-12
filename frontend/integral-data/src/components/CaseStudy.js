@@ -1,13 +1,10 @@
 import React from 'react';
-import { Box, Card, CardContent, Container, Paper, Typography, useTheme, Grid, CardMedia } from '@mui/material';
+import { Box, Card, CardContent, Container, Paper, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { useSpring, animated } from 'react-spring';
-import { tokens } from "../theme";
-import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { caseStudiesData } from '../data/caseStudiesData';
 
 const CaseStudy = ({ id, title, subheader, author, datePosted, content }) => {  
     return (
@@ -31,8 +28,6 @@ const CaseStudy = ({ id, title, subheader, author, datePosted, content }) => {
 };
 
 const CaseStudyOverview = ({ study }) => {
-    const theme = useTheme();
-    const colors = tokens(theme.palette.mode);
     const [props, set] = useSpring(() => ({ scale: 1 }));
   
     return (

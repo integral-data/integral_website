@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Box, Container, IconButton, Typography } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 import Slider from 'react-slick';
 import { ArrowBackIos, ArrowForwardIos } from '@mui/icons-material';
 import { caseStudiesData } from './data/caseStudiesData';

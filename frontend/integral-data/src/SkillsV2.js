@@ -1,24 +1,12 @@
 import React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Button from '@mui/material/Button';
-import CameraIcon from '@mui/icons-material/PhotoCamera';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import { Link } from 'react-router-dom';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Divider } from '@mui/material';
 
 import BackgroundVideo from './videos/video.mp4';
-import Image1 from './images/financial_data.svg';
 import Image2 from './images/problem.svg';
 
 import {CustomGridLeft, CustomGridRight, CustomGridLeftWithList, CustomGridRightWithList} from './WideTextPlusImage';
@@ -26,20 +14,6 @@ import SectionDivider from './components/SectionDivider';
 import ImageDash from './images/dashboard.jpeg';
 import ImageCoding from './images/coding.jpeg';
 
-
-const defaultTheme = createTheme({
-  palette: {
-    primary: {
-      main: '#0a192f',
-    },
-    secondary: {
-      main: '#00bcd4',
-    },
-    background: {
-      default: '#0a192f',
-    },
-  },
-});
 
 const SPACER_HEIGHT = 50; // Specify your desired constant value here
 

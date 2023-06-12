@@ -1,29 +1,21 @@
 import React from "react";
-import { Box, Typography, Button, Container, Grid } from "@mui/material";
+import {Typography, Container, Grid } from "@mui/material";
 import Navbar from "./NavBar.tsx";
 import Footer from "./Footer";
-import { useNavigate } from "react-router-dom";
 import { styled, keyframes } from "@mui/system";
 import MyImage from "./images/integral_transparent_icon.png";
 import Coffee from "./images/code_and_coffee.jpeg";
 import Image2 from "./images/problem.svg";
-import ImageCode from "./images/code_and_coffee.jpeg";
 import DataMigration from "./images/data_migration.png";
 import ImageNerd from "./images/circuit_nerd.jpeg";
 import ImageDash from "./images/dashboard.jpeg";
 import ImageTeam from "./images/teamwork.jpeg";
 import HeroSection from "./components/HeroSection/index.js";
-import { color_blue, color_grey } from "./constants";
-import { useTheme } from "@mui/material";
-import { tokens } from "./theme";
 import ServiceCard from "./components/ServiceCard.js";
-import SectionDivider from "./components/SectionDivider.js";
 import CustomGrid from "./components/WideCardLayout.js";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 
 const rotate = keyframes`
   from {
@@ -62,9 +54,6 @@ const GradientText = styled(Typography)(({ theme }) => ({
 }));
 
 function HomePage() {
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
-  const navigate = useNavigate();
 
   return (
     <>

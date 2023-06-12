@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Container, Typography } from '@mui/material';
+import { Grid, Container } from '@mui/material';
 import { CaseStudyOverview } from './components/CaseStudy';
 import { caseStudiesData } from './data/caseStudiesData';
 import TitleSubtitle from './components/TitleSubtitle';
@@ -10,6 +10,7 @@ export default function CaseStudiesPage() {
        <TitleSubtitle 
                 title="Case Studies" 
                 subtitle="From Problem to Solution: Highlighting Our Client Projects"
+                color="white"
                   />
 
       <Grid container spacing={3}>

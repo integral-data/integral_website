@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import Video from "../../videos/video.mp4";
 import { Button } from "../ButtonElements";
-import MyImage from "../../images/integral_transparent_icon.png";
-import { Grid, Box, useTheme, Typography } from "@mui/material";
+import { Grid, useTheme, Typography } from "@mui/material";
 import { ArrowForward, ArrowRight } from "./HeroElements";
 
 import { tokens } from "../../theme";
@@ -16,11 +15,11 @@ const HeroSection = () => {
     setHover(!hover);
   };
 
-  const rotatingImageStyle = {
-    animation: "rotate 25s linear infinite",
-    maxWidth: "100%",
-    maxHeight: "100%",
-  };
+  // const rotatingImageStyle = {
+  //   animation: "rotate 25s linear infinite",
+  //   maxWidth: "100%",
+  //   maxHeight: "100%",
+  // };
 
   return (
     <Grid

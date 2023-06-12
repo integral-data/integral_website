@@ -10,7 +10,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import { useTheme } from "@mui/material";
 import integral_banner from "./images/integral_wide_transparent.png";
 import integral_small from "./images/integral_transparent_icon.png";
 
@@ -22,7 +21,6 @@ const pages = [
 ];
 
 function ResponsiveAppBar() {
-  const theme = useTheme();
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 

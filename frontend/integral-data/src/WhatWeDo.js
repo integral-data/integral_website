@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Box, Container, Typography, Button } from '@mui/material';
+import { Grid, Box, Container, Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 import Image2 from './images/problem.svg';
 import CustomGrid from './components/WideCardLayout';
