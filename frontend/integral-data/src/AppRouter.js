@@ -24,6 +24,7 @@ import Layout from "./Layout";
 import CaseStudiesPage from './CaseStudiesOverviewPage';
 import CaseStudyPageCarousel from './CaseStudiesCarousel';
 import CaseStudyPage from "./CaseStudySingle";
+import EmployeesPage from "./Consultants";
 
 const defaultTheme = createTheme({
   palette: {
@@ -70,6 +71,7 @@ function AppRouter() {
                         <Route path="/case_carousel" element={<CaseStudyPageCarousel />} />
                         <Route path="/case_study/:id" element={<CaseStudyPageCarousel />} />
                         <Route path="/case_study_v2/:id" element={<CaseStudyPage />} />
+                        <Route path="/consultants" element={<EmployeesPage />} />
 
 
                   </Routes>

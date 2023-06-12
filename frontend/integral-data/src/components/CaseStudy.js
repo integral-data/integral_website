@@ -36,7 +36,7 @@ const CaseStudyOverview = ({ study }) => {
     const [props, set] = useSpring(() => ({ scale: 1 }));
   
     return (
-      <Link to={`/case_study/${study.id}`} style={{ textDecoration: 'none' }}>
+      <Link to={`/case_study_v2/${study.id}`} style={{ textDecoration: 'none' }}>
         <animated.div
           style={props}
           onMouseEnter={() => set({ scale: 1.05 })}
@@ -45,7 +45,7 @@ const CaseStudyOverview = ({ study }) => {
           <Card
             sx={{
               maxWidth: 345,
-              height: 300,
+              height: 200,
               transition: "0.3s",
               borderRadius: "10px",
               alignSelf: "center",

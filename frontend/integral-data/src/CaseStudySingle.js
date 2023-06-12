@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Box, Container, Typography, IconButton } from '@mui/material';
+import { Box, Container, Typography, IconButton, Button } from '@mui/material';
 import { ArrowBackIos, ArrowForwardIos } from '@mui/icons-material';
 import { caseStudiesData } from './data/caseStudiesData';
 import { CaseStudy } from './components/CaseStudy';
@@ -29,6 +29,11 @@ const CaseStudyPage = () => {
             <IconButton color="white"><ArrowForwardIos /></IconButton>
           </Link> : <Box></Box> // empty box to take up space when there is no next case
         }
+      </Box>
+      <Box mt={3} display="flex" >
+        <Button variant="contained" color="primary" justifyContent='center' component={Link} to="/case_studies" sx={{ ':hover': { backgroundColor: '#1E90FF', color: 'white' } }}>
+          Back to Cases
+        </Button>
       </Box>
     </Container>
   );
