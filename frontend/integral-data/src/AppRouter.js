@@ -21,6 +21,9 @@ import SkillsV2 from "./SkillsV2";
 import NewPage from "./NewPage";
 import Layout from "./Layout";
 
+import CaseStudiesPage from './CaseStudiesOverviewPage';
+import CaseStudyPageCarousel from './CaseStudiesCarousel';
+
 const defaultTheme = createTheme({
   palette: {
     // mode: 'dark', // This will set the overall theme to dark.
@@ -61,6 +64,12 @@ function AppRouter() {
                     <Route path="what_we_do" element={<WhatWeDo />} />
                     <Route path="skills" element={<SkillsV2 />} />
                     <Route path="test" element={<NewPage />} />
+
+                    <Route path="/case_studies" element={<CaseStudiesPage />} />
+                        <Route path="/case_carousel" element={<CaseStudyPageCarousel />} />
+                        <Route path="/case_study/:id" element={<CaseStudyPageCarousel />} />
+
+
                   </Routes>
                 </Layout>
               }
