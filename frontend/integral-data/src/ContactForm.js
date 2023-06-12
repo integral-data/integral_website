@@ -4,11 +4,11 @@ import * as Yup from 'yup';
 import { TextField, Button, Box, Container, Grid } from '@mui/material';
 import { Snackbar, Alert } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-import Typography from '@mui/material/Typography';
+import emailjs from 'emailjs-com';
 import TitleSubtitle from './components/TitleSubtitle';
 import Image2 from './images/problem.svg';
 
-const ContactForm = () => {
+const ContactUsReact = () => {
   const [open, setOpen] = React.useState(false);
   const handleClose = (event, reason) => {
     if (reason === 'clickaway') {
@@ -20,32 +20,37 @@ const ContactForm = () => {
 
   const formik = useFormik({
     initialValues: {
-      name: '',
-      email: '',
-      message: '',
+      user_email: '',
+      user_name: '',
+      user_message: '',
     },
     validationSchema: Yup.object({
-      name: Yup.string().required('Required'),
-      email: Yup.string().email('Invalid email address').required('Required'),
-      message: Yup.string().required('Required'),
+      user_name: Yup.string().required('Required'),
+      user_email: Yup.string().email('Invalid email address').required('Required'),
+      user_message: Yup.string().required('Required'),
     }),
+
+
     onSubmit: async (values, { setSubmitting, resetForm }) => {
-      try {
-        await fetch('http://localhost:8000/send_email/', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(values),
-        });
-        resetForm();
-        setOpen(true);
-        navigate('/contact_success');
-      } catch (error) {
-        // show error message
-      }
-      setSubmitting(false);
-    },
+        try {
+          // Send email
+          await emailjs.send("service_y3ejru9","template_fbwz588",{
+            from_name: values.user_name,
+            from_email: values.user_email,
+            message: values.user_message,
+          }, 'Ta2CW2Rq6g3FptgvM');
+          resetForm();
+          setOpen(true);
+          navigate('/contact_success');
+        } catch (error) {
+          console.error(error);
+          // show error message
+        }
+        setSubmitting(false);
+      },
+      
+
+
   });
 
   return (
@@ -71,13 +76,13 @@ const ContactForm = () => {
                     <Box mb={2}>
                       <TextField
                         fullWidth
-                        id="name"
-                        name="name"
+                        id="user_name"
+                        name="user_name"
                         label="Name"
-                        value={formik.values.name}
+                        value={formik.values.user_name}
                         onChange={formik.handleChange}
-                        error={formik.touched.name && Boolean(formik.errors.name)}
-                        helperText={formik.touched.name && formik.errors.name}
+                        error={formik.touched.user_name && Boolean(formik.errors.user_name)}
+                        helperText={formik.touched.user_name && formik.errors.user_name}
                         style={{ marginBottom: '20px', marginTop: '20px' }}
                       />
                     </Box>
@@ -86,13 +91,13 @@ const ContactForm = () => {
                     <Box mb={2}>
                       <TextField
                         fullWidth
-                        id="email"
-                        name="email"
+                        id="user_email"
+                        name="user_email"
                         label="Email"
-                        value={formik.values.email}
+                        value={formik.values.user_email}
                         onChange={formik.handleChange}
-                        error={formik.touched.email && Boolean(formik.errors.email)}
-                        helperText={formik.touched.email && formik.errors.email}
+                        error={formik.touched.user_email && Boolean(formik.errors.user_email)}
+                        helperText={formik.touched.user_email && formik.errors.user_email}
                         style={{ marginBottom: '20px', marginTop: '20px' }}
                       />
                     </Box>
@@ -105,13 +110,13 @@ const ContactForm = () => {
                     fullWidth
                     multiline
                     rows={4}
-                    id="message"
-                    name="message"
+                    id="user_message"
+                    name="user_message"
                     label="Message"
-                    value={formik.values.message}
+                    value={formik.values.user_message}
                     onChange={formik.handleChange}
-                    error={formik.touched.message && Boolean(formik.errors.message)}
-                    helperText={formik.touched.message && formik.errors.message}
+                    error={formik.touched.user_message && Boolean(formik.errors.user_message)}
+                    helperText={formik.touched.user_message && formik.errors.user_message}
                     style={{ marginBottom: '20px', marginTop: '20px' }}
                   />
                 </Box>
@@ -141,7 +146,7 @@ const ContactForm = () => {
                 width: '50%',
                 objectFit: 'cover',
               }}
-              alt="Image description"
+              alt="A brief description"
               src={Image2}
             />
           </Box>
@@ -151,4 +156,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default ContactUsReact;
