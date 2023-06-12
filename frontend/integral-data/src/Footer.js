@@ -22,7 +22,7 @@ function Footer() {
   const theme = useTheme();
   const colors = tokens(theme);
   return (
-    <Box sx={{ background: colors.greenAccent[600], p: 1 }} component="footer">
+    <Box sx={{ background: "black", p: 1 }} component="footer">
       <Typography variant="h6" align="center" gutterBottom></Typography>
       <Typography
         variant="subtitle1"

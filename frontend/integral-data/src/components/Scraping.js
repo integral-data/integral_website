@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography, Grid, Link } from "@mui/material";
 import GradientText from "../components/GradientText.js";
-import migration from "../images/scrape_transparent.png";
+import scrape from "../images/scrape_transparent.png";
 import { useTheme } from "@mui/material";
 import { tokens } from "../theme";
 import { useMediaQuery } from "@mui/material";
@@ -32,7 +32,6 @@ function Scraping() {
             alignSelf={"center"}
             maxWidth={"1600px"}
             md={12}
-            m={5}
             sx={{
               display: "flex",
               justifyContent: "center",
@@ -40,19 +39,21 @@ function Scraping() {
               maxWidth: "1600px",
             }}
           >
-            <Grid
-              item
-              md={4}
-              sm={12}
-              xs={12}
-              sx={{
-                height: isSmallScreen ? "200px" : "200px",
-                backgroundImage: `url(${migration})`,
-                backgroundSize: "contain",
-                backgroundPosition: "left",
-                backgroundRepeat: "no-repeat",
-              }}
-            ></Grid>
+            {!isSmallScreen && (
+              <Grid
+                item
+                md={4}
+                sm={12}
+                xs={12}
+                sx={{
+                  height: isSmallScreen ? "200px" : "200px",
+                  backgroundImage: `url(${scrape})`,
+                  backgroundSize: "contain",
+                  backgroundPosition: "left",
+                  backgroundRepeat: "no-repeat",
+                }}
+              ></Grid>
+            )}
             <Grid item md={8} sm={12} xs={12}>
               <Box
                 sx={{
@@ -63,9 +64,19 @@ function Scraping() {
                   p: 5,
                 }}
               >
-                <Typography variant="h2" fontWeight={600} color="white">
-                  Web Scraping
-                </Typography>
+                <Box sx={{ display: "flex", alignItems: "center" }}>
+                  <Typography variant="h2" fontWeight={600} color="white">
+                    Web Scraping
+                  </Typography>
+                  {isSmallScreen && (
+                    <img
+                      src={scrape}
+                      alt="Dashboard"
+                      height="40px"
+                      style={{ marginLeft: "15px" }}
+                    />
+                  )}
+                </Box>
                 <Box
                   sx={{
                     borderBottom: `4px solid white`,

@@ -1,15 +1,8 @@
 import React from "react";
-import { Container, Grid } from "@mui/material";
 import Navbar from "./NavBar.tsx";
 import Footer from "./Footer";
-
-import Image2 from "./images/problem.svg";
-import DataMigration from "./images/data_migration.png";
 import HeroSection from "./components/HeroSection/index.js";
-import GradientText from "./components/GradientText.js";
 import { useTheme } from "@mui/material";
-import { tokens } from "./theme";
-import CustomGrid from "./components/WideCardLayout.js";
 import WhyIntegral from "./components/WhyIntegral.js";
 import Analytics from "./components/Analytics.js";
 import Migrations from "./components/Migrations.js";
@@ -24,11 +17,10 @@ function HomePage() {
       <Navbar />
       <HeroSection />
       <WhyIntegral />
-      <Analytics />
       <Migrations />
       <Scraping />
       <DatabaseCreation />
-
+      <Analytics />
       <Footer />
     </>
   );

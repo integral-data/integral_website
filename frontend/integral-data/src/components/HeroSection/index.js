@@ -104,32 +104,35 @@ const HeroSection = () => {
 
         <Grid
           item
-          md={2}
+          md={12}
           sx={{
             marginTop: "32px",
             display: "flex",
             flexDirection: "column",
-            alignItems: "center",
+            alignItems: "left",
           }}
           zIndex={2}
         >
-          <Button
-            to="/contactus"
-            onMouseEnter={onHover}
-            onMouseLeave={onHover}
-            primary="true"
-            dark="true"
-            smooth={true}
-            duration={500}
-            spy={true}
-            exact="true"
-            offset={-80}
-          >
-            <Typography variant="h6" sx={{ fontWeight: "400" }}>
-              Contact Us
-            </Typography>
-            {hover ? <ArrowForward /> : <ArrowRight />}
-          </Button>
+          <Grid item md={3}>
+            <Button
+              to="/contactus"
+              onMouseEnter={onHover}
+              onMouseLeave={onHover}
+              primary="true"
+              dark="true"
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={-80}
+              sx={{ maxWidth: "200px" }}
+            >
+              <Typography variant="h4" sx={{ fontWeight: "400" }}>
+                Contact Us
+              </Typography>
+              {hover ? <ArrowForward /> : <ArrowRight />}
+            </Button>
+          </Grid>
         </Grid>
       </Grid>
     </Grid>

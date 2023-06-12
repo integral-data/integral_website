@@ -112,7 +112,8 @@ function WhyIntegral() {
                 text="Why Integral?"
               ></GradientText>
               <Typography variant="h4" color="white">
-                Quite simply, because we dem boyz.
+                Integral transforms complexity into clarity, providing the data
+                expertise needed for smarter business decisions
               </Typography>
             </Grid>
           </Grid>

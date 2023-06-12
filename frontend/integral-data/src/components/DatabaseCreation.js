@@ -33,7 +33,6 @@ function DatabaseCreation() {
             alignSelf={"center"}
             maxWidth={"1600px"}
             md={12}
-            m={5}
             sx={{
               display: "flex",
               justifyContent: "center",
@@ -51,9 +50,19 @@ function DatabaseCreation() {
                   p: 5,
                 }}
               >
-                <Typography variant="h2" fontWeight={600} color="white">
-                  Database Creation
-                </Typography>
+                <Box sx={{ display: "flex", alignItems: "center" }}>
+                  <Typography variant="h2" fontWeight={600} color="white">
+                    Database Creation
+                  </Typography>
+                  {isSmallScreen && (
+                    <img
+                      src={migration}
+                      alt="Dashboard"
+                      height="40px"
+                      style={{ marginLeft: "15px" }}
+                    />
+                  )}
+                </Box>
                 <Box
                   sx={{
                     borderBottom: `4px solid white`,
@@ -142,19 +151,21 @@ function DatabaseCreation() {
                 </Typography>
               </Box>
             </Grid>
-            <Grid
-              item
-              md={4}
-              sm={12}
-              xs={12}
-              sx={{
-                height: isSmallScreen ? "200px" : "200px",
-                backgroundImage: `url(${migration})`,
-                backgroundSize: "contain",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}
-            ></Grid>
+            {!isSmallScreen && (
+              <Grid
+                item
+                md={4}
+                sm={12}
+                xs={12}
+                sx={{
+                  height: isSmallScreen ? "200px" : "200px",
+                  backgroundImage: `url(${migration})`,
+                  backgroundSize: "contain",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                }}
+              ></Grid>
+            )}
           </Grid>
         </Box>
       </Grid>

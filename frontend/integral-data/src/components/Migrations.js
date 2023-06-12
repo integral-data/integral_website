@@ -20,7 +20,8 @@ function Migrations() {
         sm={12}
         md={12}
         sx={{
-          background: `linear-gradient(145deg, #000428, #004e92)`,
+          background: `linear-gradient(145deg, rgba(9,29,85,1) 0.2%, rgba(0,0,0,1) 100.2%)`,
+
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -30,9 +31,8 @@ function Migrations() {
           <Grid
             container
             alignSelf={"center"}
-            maxWidth={"1600px"}
             md={12}
-            m={5}
+            m={0}
             sx={{
               display: "flex",
               justifyContent: "center",
@@ -50,9 +50,19 @@ function Migrations() {
                   p: 5,
                 }}
               >
-                <Typography variant="h2" fontWeight={600} color="white">
-                  Data Migrations
-                </Typography>
+                <Box sx={{ display: "flex", alignItems: "center" }}>
+                  <Typography variant="h2" fontWeight={600} color="white">
+                    Data Migrations
+                  </Typography>
+                  {isSmallScreen && (
+                    <img
+                      src={migration}
+                      alt="Migration"
+                      height="40px"
+                      style={{ marginLeft: "15px" }}
+                    />
+                  )}
+                </Box>
                 <Box
                   sx={{
                     borderBottom: `4px solid white`,
@@ -84,7 +94,10 @@ function Migrations() {
                     }}
                   >
                     <CheckCircle sx={{ fontSize: 22, mr: 1 }} />
-                    <Typography variant="h5">
+                    <Typography
+                      variant="h5"
+                      sx={{ alignSelf: "center", marginTop: "5px" }}
+                    >
                       Comprehensive data exploration and analysis
                     </Typography>
                   </Box>
@@ -97,7 +110,26 @@ function Migrations() {
                     }}
                   >
                     <CheckCircle sx={{ fontSize: 22, mr: 1 }} />
-                    <Typography variant="h5">
+                    <Typography
+                      variant="h5"
+                      sx={{ alignSelf: "center", marginTop: "5px" }}
+                    >
+                      Customized metric and KPI design
+                    </Typography>
+                  </Box>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      color: "#fbf7f5",
+                      mt: 1,
+                    }}
+                  >
+                    <CheckCircle sx={{ fontSize: 22, mr: 1 }} />
+                    <Typography
+                      variant="h5"
+                      sx={{ alignSelf: "center", marginTop: "5px" }}
+                    >
                       Thorough data cleaning, transformation, and formatting
                     </Typography>
                   </Box>
@@ -109,21 +141,13 @@ function Migrations() {
                       mt: 1,
                     }}
                   >
-                    <CheckCircle sx={{ fontSize: 22, mr: 1 }} />
-                    <Typography variant="h5">
-                      Expert data mapping and integration into the new system
-                    </Typography>
-                  </Box>
-                  <Box
-                    sx={{
-                      display: "flex",
-                      alignItems: "center",
-                      color: "#fbf7f5",
-                      mt: 1,
-                    }}
-                  >
-                    <CheckCircle sx={{ fontSize: 22, mr: 1 }} />
-                    <Typography variant="h5">
+                    <CheckCircle
+                      sx={{ fontSize: 22, mr: 1, alignSelf: "center" }}
+                    />
+                    <Typography
+                      variant="h5"
+                      sx={{ alignSelf: "center", marginTop: "5px" }}
+                    >
                       Verification and validation to ensure data accuracy and
                       integrity
                     </Typography>
@@ -131,7 +155,7 @@ function Migrations() {
                 </Box>
 
                 <Typography variant="h6" color="#fbf7f5" mt={2}>
-                  See our data migration case study&nbsp;
+                  See our analytics case study&nbsp;
                   <Link href="#" color="inherit">
                     here
                   </Link>
@@ -139,19 +163,21 @@ function Migrations() {
                 </Typography>
               </Box>
             </Grid>
-            <Grid
-              item
-              md={4}
-              sm={12}
-              xs={12}
-              sx={{
-                height: isSmallScreen ? "200px" : "200px",
-                backgroundImage: `url(${migration})`,
-                backgroundSize: "contain",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-              }}
-            ></Grid>
+            {!isSmallScreen && (
+              <Grid
+                item
+                md={4}
+                sm={12}
+                xs={12}
+                sx={{
+                  height: isSmallScreen ? "200px" : "200px",
+                  backgroundImage: `url(${migration})`,
+                  backgroundSize: "contain",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                }}
+              ></Grid>
+            )}
           </Grid>
         </Box>
       </Grid>

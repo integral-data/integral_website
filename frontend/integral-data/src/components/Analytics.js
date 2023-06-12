@@ -30,9 +30,8 @@ function Analytics() {
           <Grid
             container
             alignSelf={"center"}
-            maxWidth={"1600px"}
             md={12}
-            m={5}
+            m={0}
             sx={{
               display: "flex",
               justifyContent: "center",
@@ -40,19 +39,22 @@ function Analytics() {
               maxWidth: "1600px",
             }}
           >
-            <Grid
-              item
-              md={4}
-              sm={12}
-              xs={12}
-              sx={{
-                height: isSmallScreen ? "200px" : "200px",
-                backgroundImage: `url(${dashboard})`,
-                backgroundSize: "contain",
-                backgroundPosition: "left",
-                backgroundRepeat: "no-repeat",
-              }}
-            ></Grid>
+            {!isSmallScreen && (
+              <Grid
+                item
+                md={4}
+                sm={12}
+                xs={12}
+                sx={{
+                  height: isSmallScreen ? "200px" : "200px",
+                  backgroundImage: `url(${dashboard})`,
+                  backgroundSize: "contain",
+                  backgroundPosition: "left",
+                  backgroundRepeat: "no-repeat",
+                }}
+              ></Grid>
+            )}
+
             <Grid item md={8} sm={12} xs={12}>
               <Box
                 sx={{
@@ -63,9 +65,19 @@ function Analytics() {
                   p: 5,
                 }}
               >
-                <Typography variant="h2" fontWeight={600} color="white">
-                  Analytics
-                </Typography>
+                <Box sx={{ display: "flex", alignItems: "center" }}>
+                  <Typography variant="h2" fontWeight={600} color="white">
+                    Analytics
+                  </Typography>
+                  {isSmallScreen && (
+                    <img
+                      src={dashboard}
+                      alt="Dashboard"
+                      height="40px"
+                      style={{ marginLeft: "15px" }}
+                    />
+                  )}
+                </Box>
                 <Box
                   sx={{
                     borderBottom: `4px solid white`,
