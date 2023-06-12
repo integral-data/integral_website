@@ -244,7 +244,7 @@ export const themeSettings = (mode) => {
         fontStretch: "100%",
       },
       h2: {
-        fontSize: "clamp(2rem, 3vw, 3rem)",
+        fontSize: "clamp(2rem, 4vw, 4rem)",
         fontStretch: "100%",
       },
       h3: {
