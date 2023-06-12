@@ -22,6 +22,17 @@ export const HeroBg = styled.div`
   width: 100%;
   height: 100%;
   overflow: hidden;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* background: rgba(12, 12, 12, 0.2); // color overlay */
+    z-index: 2;
+  }
 `;
 
 export const VideoBg = styled.video`
@@ -29,8 +40,7 @@ export const VideoBg = styled.video`
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  background: #232a34;
-  filter: opacity(10%);
+  background: black;
 `;
 
 export const HeroContent = styled.div`

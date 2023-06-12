@@ -90,7 +90,12 @@ function HomePage() {
           mr={5}
           sx={{ display: "flex", justifyContent: "center" }}
         >
-          <Grid container maxWidth={"1300px"} alignSelf={"center"}>
+          <Grid
+            container
+            alignSelf={"center"}
+            maxWidth={"1600px"}
+            sx={{ display: "flex", justifyContent: "space-between" }}
+          >
             <Grid item md={4} sx={{ height: "300px" }}>
               <RotatingImage src={MyImage} alt="Rotating" />
             </Grid>
@@ -110,38 +115,42 @@ function HomePage() {
           </Grid>
         </Grid>
 
-        <Grid item md={12} p={8}>
-          <Slider {...settings}>
-            <ServiceCard
-              title="Seasoned Expertise"
-              description="Integral's team comprises seasoned professionals, averaging over a decade of data-centric experience to the table."
-              image={Coffee}
-            />
+        <Grid item md={12} p={8} alignSelf={"center"}>
+          <Grid container justifyContent="center">
+            <Grid item sx={{ maxWidth: "1600px" }}>
+              <Slider {...settings}>
+                <ServiceCard
+                  title="Seasoned Expertise"
+                  description="Integral's team comprises seasoned professionals, averaging over a decade of data-centric experience to the table."
+                  image={Coffee}
+                />
 
-            <ServiceCard
-              title="Cost-effective Solutions"
-              description="An internal analytics team can be a significant expense. By choosing Integral, you save on overheads while increasing your business agility and staying competitive."
-              image={ImageDash}
-            />
+                <ServiceCard
+                  title="Cost-effective Solutions"
+                  description="An internal analytics team can be a significant expense. By choosing Integral, you save on overheads while increasing your business agility and staying competitive."
+                  image={ImageDash}
+                />
 
-            <ServiceCard
-              title="Uncompromised Quality"
-              description="Quality is our guiding principle. Our seasoned expertise guarantees top-tier, accurate solutions that make a real difference."
-              image={ImageNerd}
-            />
+                <ServiceCard
+                  title="Uncompromised Quality"
+                  description="Quality is our guiding principle. Our seasoned expertise guarantees top-tier, accurate solutions that make a real difference."
+                  image={ImageNerd}
+                />
 
-            <ServiceCard
-              title="Building Partnerships"
-              description="We are more than just data experts & programmers. We are your partners, invested in your understanding of your business landscape, facilitating you to make strategic, data-driven decisions."
-              image={ImageTeam}
-            />
+                <ServiceCard
+                  title="Building Partnerships"
+                  description="We are more than just data experts & programmers. We are your partners, invested in your understanding of your business landscape, facilitating you to make strategic, data-driven decisions."
+                  image={ImageTeam}
+                />
 
-            <ServiceCard
-              title="Flexibility to Meet Your Needs"
-              description="We cater to projects of any magnitude with adaptable pricing options. Your business needs are our top priority."
-              image={Image2}
-            />
-          </Slider>
+                <ServiceCard
+                  title="Flexibility to Meet Your Needs"
+                  description="We cater to projects of any magnitude with adaptable pricing options. Your business needs are our top priority."
+                  image={Image2}
+                />
+              </Slider>
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
       <Container

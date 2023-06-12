@@ -4,6 +4,7 @@ import { Button } from "../ButtonElements";
 import MyImage from "../../images/integral_transparent_icon.png";
 import { Grid, Box, useTheme, Typography } from "@mui/material";
 import { ArrowForward, ArrowRight } from "./HeroElements";
+
 import { tokens } from "../../theme";
 
 const HeroSection = () => {
@@ -26,7 +27,7 @@ const HeroSection = () => {
       container
       id="home"
       sx={{
-        background: "#0c0c0c",
+        background: "black",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -63,31 +64,36 @@ const HeroSection = () => {
             width: "100%",
             height: "100%",
             objectFit: "cover",
-            background: "#232a34",
-            filter: "opacity(10%)",
+
+            filter: "opacity(60%)",
           }}
         />
       </Grid>
 
-      <Grid container>
-        <Grid item md={12}>
+      <Grid container maxWidth={1600}>
+        <Grid item md={12} zIndex={2}>
           <Typography
             sx={{
               fontFamily: "Mona Sans",
               fontSize: "108px",
-              fontWeight: "700",
+              fontWeight: "800",
               fontStretch: "110%",
               color: "#fff",
+              textShadow: `1px 1px 1px ${colors.greenAccent[500]}`,
             }}
           >
             Integral Data
           </Typography>
         </Grid>
-        <Grid item md={10}>
+        <Grid item md={10} zIndex={2}>
           <Typography
             variant="h3"
-            color={colors.greenAccent[600]}
-            sx={{ fontStretch: "120%", fontWeight: "300" }}
+            color="white"
+            sx={{
+              fontStretch: "110%",
+              fontWeight: "400",
+              textShadow: `1px 1px 1px ${colors.greenAccent[500]}`,
+            }}
           >
             Unleash your business's data potential with our technology-driven
             consulting firm. We specialize in all things data, utilizing
@@ -104,6 +110,7 @@ const HeroSection = () => {
             flexDirection: "column",
             alignItems: "center",
           }}
+          zIndex={2}
         >
           <Button
             to="/contactus"
@@ -117,7 +124,10 @@ const HeroSection = () => {
             exact="true"
             offset={-80}
           >
-            Contact Us {hover ? <ArrowForward /> : <ArrowRight />}
+            <Typography variant="h6" sx={{ fontWeight: "400" }}>
+              Contact Us
+            </Typography>
+            {hover ? <ArrowForward /> : <ArrowRight />}
           </Button>
         </Grid>
       </Grid>
