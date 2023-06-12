@@ -30,9 +30,6 @@ const CaseStudy = ({ id, title, subheader, author, datePosted, content }) => {
     );
 };
 
-
-
-
 const CaseStudyOverview = ({ study }) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
