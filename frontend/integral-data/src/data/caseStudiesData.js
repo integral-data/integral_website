@@ -1,3 +1,5 @@
+import { BadgePython, BadgeGithub, BadgeAPIs, BadgeExcel, BadgeDjango, BadgeTableau, BadgePowerBI } from '../components/TechnologyBadge';
+
 export const caseStudiesData = [
     {
         id: 1,
@@ -5,6 +7,7 @@ export const caseStudiesData = [
         subheader: "Moving from Persistency to Attrition Metrics",
         author: "Jeff Barton",
         datePosted: "2023-06-15",
+        badges: [<BadgePython />, <BadgeGithub />, <BadgeExcel />, <BadgeDjango />, <BadgePowerBI />],
         content: `## The Problem
         \n\nOur client, a **health sharing company**, was struggling to accurately gauge member retention. 
         They had been using a metric called _Persistency_, which calculated as the division of current members over all-time member counts. 
@@ -19,6 +22,7 @@ export const caseStudiesData = [
         subheader: "Automating Data Analysis and Cleansing for a Health Insurance Client",
         author: "Jeff Barton",
         datePosted: "2023-06-20",
+        badges: [<BadgePython />, <BadgeGithub />,],
         content: `## The Challenge\n\nWe were approached by a **health insurance client** who was overwhelmed by the complexity of data they were receiving from a vendor handling their claims. The vendor supplied them with around _15 CSV files_, some of which boasted _thousands of columns_ and _hundreds of thousands of rows_. Analyzing this data manually was virtually impossible and incredibly time-consuming.\n\n## Our Approach\n\nTo tackle this, we turned to automation. We wrote sophisticated code designed to:\n\n1. Navigate through each file\n2. Determine which columns likely held relevant data\n3. Extract the useful information\n4. Considerably condense each dataset\n\nBy automating the data analysis, we were able to efficiently distill the important information from the dauntingly large CSV files.\n\n## Data Cleaning\n\nIn addition to analyzing and condensing the data, we also ensured it was in perfect shape for their analytics platform. Our code carried out thorough data cleaning operations to eliminate errors, inaccuracies, or inconsistencies that could jeopardize the accuracy of further analysis.\n\n## The Outcome\n\nThe result was a streamlined, clean dataset that our client could immediately plug into their analytics platform. What once was an overwhelming and unwieldy set of CSV files, turned into a reliable foundation for their data-driven decisions. This project reaffirmed our ability to leverage technical expertise to tackle complex business challenges, further strengthening our client's trust in our capabilities.`,
       },
       {
@@ -27,6 +31,7 @@ export const caseStudiesData = [
         subheader: "Building a Web Scraping Tool to Efficiently Extract Customer Data",
         author: "Jeff Barton",
         datePosted: "2023-06-23",
+        badges: [<BadgePython />, <BadgeGithub />, <BadgeExcel />, ],
         content: `## The Challenge\n\nWe were approached by a **wealth management client** who faced an extremely tedious and error-prone process for retrieving customer data. Their front-end system held all the necessary client data. However, agents had to manually sift through each customer's data one-by-one – a formidable task considering they had _thousands of customers_.\n\n## Our Solution\n\nRecognizing the inefficiency and potential for errors in their current process, we proposed the creation of a **web scraping tool**. After receiving approval from the client and vendor, we set to work.\n\nThe tool we developed was designed to:\n\n1. Systematically access the front-end system\n2. Efficiently extract the necessary data\n3. Clean and standardize the data for further use\n\n## The Outcome\n\nThe result was a powerful tool that eliminated the need for manual data retrieval. Agents no longer had to painstakingly navigate through individual client data. Instead, they had all the necessary data at their fingertips, cleaned, standardized, and ready for use.\n\nOur client was thrilled with the time savings and the reliability of the data. This project served as yet another testament to our ability to devise technical solutions to business challenges, significantly improving efficiency and accuracy.`,
       },
       {
@@ -35,14 +40,16 @@ export const caseStudiesData = [
         subheader: "Transitioning from Excel to a Web-Based Solution for Superior Functionality",
         author: "Jeff Barton",
         datePosted: "2023-06-24",
+        badges: [<BadgePython />, <BadgeGithub />, <BadgeAPIs />, <BadgeExcel />, <BadgeDjango />],
         content: `## The Challenge\n\nA **wealth management client** initially engaged us to build a custom database entry tool in Excel. However, as we tailored the tool to their specifications, we quickly ran into the inherent limitations of Excel.\n\n## Our Solution\n\nUnderstanding the constraints of Excel and the potential to significantly enhance the functionality and efficiency of the tool, we proposed a transition to a web-based solution.\n\nOur web-based tool offered a host of advantages, including:\n\n1. Enhanced functionality over the Excel-based tool\n2. Ability to support multiple concurrent users\n3. Robust and structured data backend\n\n## The Outcome\n\nWith our web-based tool, the client experienced a significant improvement in their operations. They appreciated the enhanced functionality, the ability to support multiple users concurrently, and the improved data structure.\n\nWe are now in the process of proposing this product to the client as a superior solution for their business needs. This project serves as an excellent example of our ability to leverage technology to overcome challenges and provide superior solutions.`,
       },
       {
         id: 5,
         title: "Cloud Migration for a Global Corporation",
-        datePosted: "October 22, 2022",
+        datePosted: "2022-10-02",
         author: "Jeff Barton",
         subheader: "Moving to the cloud for better scalability and security",
+        badges: [<BadgePython />, <BadgeGithub />, <BadgeAPIs />, <BadgeExcel />, <BadgeTableau />],
         content:
           "We assisted a global corporation with a smooth transition from on-premises infrastructure to a cloud-based solution. The migration not only provided better scalability and flexibility but also improved data security. Our expert handling of this complex project ensured minimal disruption to the client's business operations."
       },

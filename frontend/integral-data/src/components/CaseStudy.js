@@ -6,7 +6,7 @@ import ReactMarkdown from 'react-markdown';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const CaseStudy = ({ id, title, subheader, author, datePosted, content }) => {  
+const CaseStudy = ({ id, title, subheader, author, datePosted, content, badges }) => {  
     return (
       <Container sx={{ py: '40px' }}>
         <Paper elevation={6} sx={{ padding: '30px', marginBottom: '30px' }}>
@@ -19,6 +19,17 @@ const CaseStudy = ({ id, title, subheader, author, datePosted, content }) => {
           <Typography variant="subtitle1" color="text.secondary" align="center" sx={{ mb: 2 }}>
             By {author} | Posted on {datePosted}
           </Typography>
+
+          <Typography variant="subtitle1" color="text.secondary" align="center" sx={{ mb: 2 }}>
+            Tech Used
+          </Typography>
+          <Box display="flex" justifyContent="center" flexWrap="wrap">
+            {badges && badges.map((Badge, index) => (
+              <Box key={index} mx={1}>
+                {Badge}
+              </Box>
+            ))}
+          </Box>
           <Box sx={{ my: 4 }}>
             <ReactMarkdown children={content} />
           </Box>
@@ -40,7 +51,7 @@ const CaseStudyOverview = ({ study }) => {
           <Card
             sx={{
               maxWidth: 345,
-              height: 200,
+              height: 300,
               transition: "0.3s",
               borderRadius: "10px",
               alignSelf: "center",
@@ -57,6 +68,13 @@ const CaseStudyOverview = ({ study }) => {
               <Typography variant="body2" color={"#50A6E1"} sx={{ mt: 1, mb: 2, textAlign: "center" }}>
                 {study.subheader}
               </Typography>
+              <Box display="flex" justifyContent="center" flexWrap="wrap">
+                {study.badges && study.badges.map((Badge, index) => (
+                  <Box key={index} mx={1}>
+                    {Badge}
+                  </Box>
+                ))}
+              </Box>
               <Box sx={{ position: 'absolute', right: 10, bottom: 10, zIndex: 1 }}>
                 <Typography variant="caption" color="white">
                   {study.datePosted}
@@ -69,5 +87,4 @@ const CaseStudyOverview = ({ study }) => {
     );
   };
   
-  export {CaseStudy, CaseStudyOverview};
-  
+export {CaseStudy, CaseStudyOverview};
