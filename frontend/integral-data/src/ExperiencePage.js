@@ -7,7 +7,7 @@ import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import BackgroundVideo from './videos/video.mp4';
+import BackgroundVideo from './videos/background_space_on_left.mp4';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 

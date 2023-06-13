@@ -67,6 +67,7 @@ const ContactUsReact = () => {
               <TitleSubtitle 
                 title="Contact Us" 
                 subtitle="Fill out the form below to get in touch with us. We will reach out in the next 1-2 business days."
+                color="white"
               />
             </Grid>
             <Grid container spacing={3} justifyContent="center">
