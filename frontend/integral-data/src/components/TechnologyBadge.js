@@ -10,10 +10,17 @@ import APILogo from '../images/logo_generic_apis.png';
 import DjangoLogo from '../images/logo_django.png';
 import TableauLogo from '../images/logo_tableau.png';
 import PowerBILogo from '../images/logo_power_bi.png';
-import SeleniumLogo from '../images/logo_power_bi.png';
-import PandasLogo from '../images/logo_power_bi.png';
-import JupyterLogo from '../images/logo_power_bi.png';
-import AWSLogo from '../images/logo_power_bi.png';
+import SeleniumLogo from '../images/logo_selenium.jpeg';
+import PandasLogo from '../images/logo_pandas.png';
+import JupyterLogo from '../images/logo_jupyter.png';
+import AWSLogo from '../images/logo_aws.png';
+import HTMLLogo from '../images/logo_html.png';
+import CSSLogo from '../images/logo_css.png';
+import SQLLogo from '../images/logo_sql.png';
+import FlaskLogo from '../images/logo_flask.jpeg';
+
+
+
 
 // Add your descriptions here
 const descriptions = {
@@ -27,7 +34,11 @@ const descriptions = {
     "Selenium": "Selenium is a popular open-source web-based automation tool that provides a way to automate browser actions.",
     "Pandas": "Pandas is a software library written for the Python programming language for data manipulation and analysis.",
     "Jupyter Notebook": "Jupyter Notebook is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations, and narrative text.",
-    "AWS": "Amazon Web Services (AWS) is a secure cloud services platform offering compute power, database storage, content delivery, and other functionalities to help businesses scale and grow."
+    "AWS": "Amazon Web Services (AWS) is a secure cloud services platform offering compute power, database storage, content delivery, and other functionalities to help businesses scale and grow.",
+    "HTML": "HTML stands for Hyper Text Markup Language. It's the standard markup language for creating web pages and web applications.",
+    "CSS": "CSS stands for Cascading Style Sheets. It's used for describing the look and formatting of a document written in HTML or XML.",
+    "SQL": "SQL (Structured Query Language) is a standard language for managing and manipulating relational databases.",
+    "Flask": "Flask is a micro web framework written in Python. It is classified as a microframework because it does not require particular tools or libraries.",
   };
   
 
@@ -139,5 +150,12 @@ const BadgeSelenium = () => <TechnologyBadge logo={SeleniumLogo} technologyName=
 const BadgePandas = () => <TechnologyBadge logo={PandasLogo} technologyName="Pandas" />;
 const BadgeJupyter = () => <TechnologyBadge logo={JupyterLogo} technologyName="Jupyter Notebook" />;
 const BadgeAWS = () => <TechnologyBadge logo={AWSLogo} technologyName="AWS" />;
+const BadgeHTML = () => <TechnologyBadge logo={HTMLLogo} technologyName="HTML" />;
+const BadgeCSS = () => <TechnologyBadge logo={CSSLogo} technologyName="CSS" />;
+const BadgeSQL = () => <TechnologyBadge logo={SQLLogo} technologyName="SQL" />;
+const BadgeFlask = () => <TechnologyBadge logo={FlaskLogo} technologyName="Flask" />;
 
-export { TechnologyBadge, BadgePython, BadgeGithub, BadgeExcel, BadgeAPIs, BadgeDjango, BadgeTableau, BadgePowerBI, BadgeSelenium, BadgePandas, BadgeJupyter, BadgeAWS };
+
+
+
+export { TechnologyBadge, BadgePython, BadgeGithub, BadgeExcel, BadgeAPIs, BadgeDjango, BadgeTableau, BadgePowerBI, BadgeSelenium, BadgePandas, BadgeJupyter, BadgeAWS, BadgeHTML, BadgeCSS, BadgeSQL, BadgeFlask };
