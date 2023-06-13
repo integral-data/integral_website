@@ -234,7 +234,7 @@ export const themeSettings = (mode) => {
     typography: {
       fontFamily: ["Mona Sans", "League Spartan", "sans-serif"].join(","),
       title: {
-        fontSize: "clamp(3rem, 5vw, 7rem)",
+        fontSize: "clamp(64px, 6vw, 7rem)",
         fontWeight: 700,
         fontStretch: "120%",
       },
@@ -244,7 +244,7 @@ export const themeSettings = (mode) => {
         fontStretch: "100%",
       },
       h2: {
-        fontSize: "clamp(2rem, 3vw, 3rem)",
+        fontSize: "clamp(2rem, 4vw, 4rem)",
         fontStretch: "100%",
       },
       h3: {

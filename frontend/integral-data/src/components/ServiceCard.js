@@ -16,7 +16,13 @@ const ServiceCard = ({ title, description, image }) => {
   const [props, set] = useSpring(() => ({ scale: 1 }));
 
   return (
-    <Grid item m={5} md={12} sx={{ display: "flex", justifyContent: "center" }}>
+    <Grid
+      item
+      mb={2}
+      mt={2}
+      md={12}
+      sx={{ display: "flex", justifyContent: "center" }}
+    >
       <animated.div
         style={props}
         onMouseEnter={() => set({ scale: 1.05 })}
@@ -25,7 +31,7 @@ const ServiceCard = ({ title, description, image }) => {
         <Card
           sx={{
             maxWidth: 345,
-            height: 300,
+            height: 340,
             transition: "0.3s",
             borderRadius: "10px",
             alignSelf: "center",
@@ -37,10 +43,20 @@ const ServiceCard = ({ title, description, image }) => {
         >
           <CardMedia component="img" height="140" image={image} alt="service" />
           <CardContent sx={{ background: colors.primary[600], height: "100%" }}>
-            <Typography variant="h5" component="div">
+            <Typography
+              variant="h4"
+              component="div"
+              color={colors.greenAccent[500]}
+              fontWeight={600}
+            >
               {title}
             </Typography>
-            <Typography variant="body2" color={colors.greenAccent[500]}>
+            <Typography
+              variant="body1"
+              color={"white"}
+              fontWeight={500}
+              sx={{ fontStretch: "130%" }}
+            >
               {description}
             </Typography>
           </CardContent>

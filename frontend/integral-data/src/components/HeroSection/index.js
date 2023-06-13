@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import Video from "../../videos/video.mp4";
 import { Button } from "../ButtonElements";
-import { Grid, useTheme, Typography } from "@mui/material";
+import RotatingLogo from "../RotatingLogo";
+import { Grid, Box, useTheme, Typography } from "@mui/material";
 import { ArrowForward, ArrowRight } from "./HeroElements";
-
+import logo from "../../images/integral_transparent_icon.png";
 import { tokens } from "../../theme";
 
 const HeroSection = () => {
@@ -30,8 +31,8 @@ const HeroSection = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        padding: "0 30px",
-        height: "700px",
+        padding: "0 10px",
+        height: "1000px",
         position: "relative",
         zIndex: 1,
       }}
@@ -72,9 +73,10 @@ const HeroSection = () => {
       <Grid container maxWidth={1600}>
         <Grid item md={12} zIndex={2}>
           <Typography
+            variant="title"
             sx={{
               fontFamily: "Mona Sans",
-              fontSize: "108px",
+
               fontWeight: "800",
               fontStretch: "110%",
               color: "#fff",
@@ -102,32 +104,46 @@ const HeroSection = () => {
 
         <Grid
           item
-          md={2}
+          md={12}
           sx={{
             marginTop: "32px",
             display: "flex",
             flexDirection: "column",
-            alignItems: "center",
+            alignItems: "left",
           }}
           zIndex={2}
         >
-          <Button
-            to="/contactus"
-            onMouseEnter={onHover}
-            onMouseLeave={onHover}
-            primary="true"
-            dark="true"
-            smooth={true}
-            duration={500}
-            spy={true}
-            exact="true"
-            offset={-80}
-          >
-            <Typography variant="h6" sx={{ fontWeight: "400" }}>
-              Contact Us
-            </Typography>
-            {hover ? <ArrowForward /> : <ArrowRight />}
-          </Button>
+          <Grid item md={3}>
+            <Button
+              to="/contactus"
+              onMouseEnter={onHover}
+              onMouseLeave={onHover}
+              primary="true"
+              dark="true"
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={-80}
+              sx={{ maxWidth: "200px" }}
+            >
+              <Typography variant="h4" sx={{ fontWeight: "600" }}>
+                Contact Us
+              </Typography>
+              {hover ? <ArrowForward /> : <ArrowRight />}
+            </Button>
+          </Grid>
+        </Grid>
+        <Grid
+          item
+          md={12}
+          zIndex={3}
+          sx={{
+            height: "350px",
+            justifyContent: { xs: "center", md: "left" },
+          }}
+        >
+          <RotatingLogo src={logo} />
         </Grid>
       </Grid>
     </Grid>

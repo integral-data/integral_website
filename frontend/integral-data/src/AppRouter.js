@@ -1,8 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import {
-  ThemeProvider,
-} from "@mui/material/styles";
+import { ThemeProvider } from "@mui/material/styles";
 import { ColorModeContext, useMode } from "./theme";
 import HomePage from "./HomePage";
 import ContactForm from "./ContactForm";
@@ -14,12 +12,10 @@ import SkillsV2 from "./SkillsV2";
 import NewPage from "./NewPage";
 import Layout from "./Layout";
 
-import CaseStudiesPage from './CaseStudiesOverviewPage';
-import CaseStudyPageCarousel from './CaseStudiesCarousel';
+import CaseStudiesPage from "./CaseStudiesOverviewPage";
+import CaseStudyPageCarousel from "./CaseStudiesCarousel";
 import CaseStudyPage from "./CaseStudySingle";
 import EmployeesPage from "./Consultants";
-
-
 
 function AppRouter() {
   const [theme, colorMode] = useMode();
@@ -48,12 +44,19 @@ function AppRouter() {
                     <Route path="test" element={<NewPage />} />
 
                     <Route path="/case_studies" element={<CaseStudiesPage />} />
-                        <Route path="/case_carousel" element={<CaseStudyPageCarousel />} />
-                        <Route path="/case_study/:id" element={<CaseStudyPageCarousel />} />
-                        <Route path="/case_study_v2/:id" element={<CaseStudyPage />} />
-                        <Route path="/consultants" element={<EmployeesPage />} />
-
-
+                    <Route
+                      path="/case_carousel"
+                      element={<CaseStudyPageCarousel />}
+                    />
+                    <Route
+                      path="/case_study/:id"
+                      element={<CaseStudyPageCarousel />}
+                    />
+                    <Route
+                      path="/case_study_v2/:id"
+                      element={<CaseStudyPage />}
+                    />
+                    <Route path="/consultants" element={<EmployeesPage />} />
                   </Routes>
                 </Layout>
               }

@@ -6,33 +6,16 @@
   font-stretch: 75% 125%;
 }
 
-.slick-prev:before,
-.slick-next:before {
-  color: white;
-  font-size: 30px;
-}
-
-.slick-prev {
-  left: 10px;
-  color: aquamarine;
-  z-index: 1;
-}
-
-.slick-next {
-  right: 10px;
-}
-
-.slick-dots {
-  color: white;
-}
-
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-} */
+.slick-dots li button:before {
+  color: white !important; /* non-active dots color */
+  font-size: 9px !important;
+}
+.slick-dots li.slick-active button:before {
+  color: green !important; /* active dot color */
+}
