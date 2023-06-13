@@ -7,6 +7,7 @@ import Analytics from "./components/Analytics.js";
 import Migrations from "./components/Migrations.js";
 import Scraping from "./components/Scraping.js";
 import DatabaseCreation from "./components/DatabaseCreation.js";
+import Skills from "./components/Skills.js";
 
 function HomePage() {
 
@@ -19,6 +20,7 @@ function HomePage() {
       <Scraping />
       <DatabaseCreation />
       <Analytics />
+      <Skills />
       <Footer />
     </>
   );
