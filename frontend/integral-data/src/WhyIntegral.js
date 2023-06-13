@@ -1,7 +1,5 @@
 import React from 'react';
 import {Box, Container, Grid } from '@mui/material';
-import { Button } from '@mui/material';
-import { Link } from 'react-router-dom';
 import Image2 from './images/problem.svg';
 import ImageCode from './images/code_and_coffee.jpeg';
 import ImageNerd from './images/circuit_nerd.jpeg';
