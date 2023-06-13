@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Video from "../../videos/video.mp4";
 import { Button } from "../ButtonElements";
 import RotatingLogo from "../RotatingLogo";
-import { Grid, Box, useTheme, Typography } from "@mui/material";
+import { Grid, useTheme, Typography } from "@mui/material";
 import { ArrowForward, ArrowRight } from "./HeroElements";
 import logo from "../../images/integral_transparent_icon.png";
 import { tokens } from "../../theme";

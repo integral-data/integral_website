@@ -1,15 +1,12 @@
 import React from "react";
 import { Box, Typography, Grid, Link } from "@mui/material";
-import GradientText from "../components/GradientText.js";
 import migration from "../images/migration_transparent.png";
 import { useTheme } from "@mui/material";
-import { tokens } from "../theme";
 import { useMediaQuery } from "@mui/material";
 import { CheckCircle } from "@mui/icons-material";
 
 function Migrations() {
   const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   return (

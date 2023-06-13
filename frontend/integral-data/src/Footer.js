@@ -2,8 +2,6 @@ import React from "react";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
-import { useTheme } from "@mui/material";
-import { tokens } from "./theme";
 
 function Copyright() {
   return (
@@ -19,8 +17,6 @@ function Copyright() {
 }
 
 function Footer() {
-  const theme = useTheme();
-  const colors = tokens(theme);
   return (
     <Box sx={{ background: "black", p: 1 }} component="footer">
       <Typography variant="h6" align="center" gutterBottom></Typography>

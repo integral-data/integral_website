@@ -1,6 +1,5 @@
 import React from "react";
 import { Box, Typography, Grid } from "@mui/material";
-import MyImage from "../images/integral_transparent_icon.png";
 import Coffee from "../images/code_and_coffee.jpeg";
 import Image2 from "../images/problem.svg";
 import ImageNerd from "../images/circuit_nerd.jpeg";
@@ -8,9 +7,7 @@ import ImageDash from "../images/dashboard.jpeg";
 import ImageTeam from "../images/teamwork.jpeg";
 import GradientText from "../components/GradientText.js";
 import ServiceCard from "../components/ServiceCard.js";
-import RotatingLogo from "../components/RotatingLogo.js";
 import { useTheme } from "@mui/material";
-import { tokens } from "../theme";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -18,7 +15,6 @@ import { useMediaQuery } from "@mui/material";
 
 function WhyIntegral() {
   const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
   const isXs = useMediaQuery(theme.breakpoints.only("xs"));
   const isSm = useMediaQuery(theme.breakpoints.only("sm"));
   const isMd = useMediaQuery(theme.breakpoints.only("md"));
@@ -60,7 +56,7 @@ function WhyIntegral() {
         flexDirection={"row"}
         sx={{
           background: "linear-gradient(to right, #8a2387, #e94057, #f27121);",
-          background: "black",
+          // background: "black",
         }}
         // sx={{ background: theme.gradient }}
       >

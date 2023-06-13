@@ -1,15 +1,12 @@
 import React from "react";
 import { Box, Typography, Grid, Link } from "@mui/material";
-import GradientText from "./GradientText.js";
 import migration from "../images/database_transparent.png";
 import { useTheme } from "@mui/material";
-import { tokens } from "../theme.js";
 import { useMediaQuery } from "@mui/material";
 import { CheckCircle } from "@mui/icons-material";
 
 function DatabaseCreation() {
   const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
