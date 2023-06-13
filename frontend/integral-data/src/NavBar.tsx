@@ -10,7 +10,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import { useTheme } from "@mui/material";
 import integral_banner from "./images/integral_wide_transparent.png";
 import integral_small from "./images/integral_transparent_icon.png";
 
@@ -18,13 +17,10 @@ const pages = [
   { name: "Home", url: "/" },
   { name: "Our Services", url: "/what_we_do" },
   { name: "Why Integral?", url: "/why_integral" },
-  { name: "Skills", url: "/experience" },
-  { name: "Skills V2", url: "/skills" },
   { name: "Contact Us", url: "/contact" },
 ];
 
 function ResponsiveAppBar() {
-  const theme = useTheme();
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 

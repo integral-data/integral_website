@@ -16,11 +16,11 @@ const HeroSection = () => {
     setHover(!hover);
   };
 
-  const rotatingImageStyle = {
-    animation: "rotate 25s linear infinite",
-    maxWidth: "100%",
-    maxHeight: "100%",
-  };
+  // const rotatingImageStyle = {
+  //   animation: "rotate 25s linear infinite",
+  //   maxWidth: "100%",
+  //   maxHeight: "100%",
+  // };
 
   return (
     <Grid

@@ -1,20 +1,16 @@
 import React from "react";
 import {
   Grid,
-  Container,
   Typography,
   Stack,
   Box,
-  List,
-  ListItem,
-  ListItemText,
 } from "@mui/material";
-import { useTheme } from "@mui/material";
-import { tokens } from "../theme";
+// import { useTheme } from "@mui/material";
+// import { tokens } from "../theme";
 
 const CustomGrid = ({ headerText, subText, imgSrc, imgPosition }) => {
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
+  // const theme = useTheme();
+  // const colors = tokens(theme.palette.mode);
 
   return (
     <Box sx={{ maxWidth: "1700px", margin: "0 auto" }}>
