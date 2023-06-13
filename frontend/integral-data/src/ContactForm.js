@@ -5,6 +5,7 @@ import { TextField, Button, Box, Container, Grid } from '@mui/material';
 import { Snackbar, Alert } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import emailjs from 'emailjs-com';
+import { Link } from 'react-router-dom';
 import TitleSubtitle from './components/TitleSubtitle';
 import Image2 from './images/problem.svg';
 
@@ -153,6 +154,38 @@ const ContactUsReact = () => {
           </Box>
         </Grid>
       </Grid>
+
+      <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: '2em' }}>
+          <Button 
+            variant="contained" 
+            component={Link} 
+            to="/case_studies" 
+            sx={{ 
+              backgroundColor: 'lightblue', 
+              marginRight: '1em',
+              color: 'black',
+              '&:hover': {
+                backgroundColor: 'skyblue',
+              }
+            }}
+          >
+            Case Studies
+          </Button>
+          <Button 
+            variant="contained" 
+            component={Link} 
+            to="/consultants" 
+            sx={{ 
+              backgroundColor: 'lightblue', 
+              color: 'black',
+              '&:hover': {
+                backgroundColor: 'skyblue',
+              }
+            }}
+          >
+            Consultants
+          </Button>
+      </Box>
     </Container>
   );
 };
