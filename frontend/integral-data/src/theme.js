@@ -298,7 +298,7 @@ export const themeSettings = (mode) => {
       ${colors.blueAccent.transparent(0.5)[600]}
       ,
     )`,
-    borderGradient: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
+    borderGradient: "linear-gradient(45deg, #00C9FF 30%, #92FE9D 90%)",
     gradient:
       "radial-gradient(circle, #02084b, #000946, #000940, #00083b, #000735, #010631, #01062d, #010529, #010526, #010423, #010421, #01031e)",
 
