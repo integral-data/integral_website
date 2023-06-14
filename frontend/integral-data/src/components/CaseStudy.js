@@ -1,12 +1,11 @@
 import React from 'react';
-import { Box, Card, CardContent, Container, Paper, Typography, List, ListItem } from '@mui/material';
+import { Box, Card, CardContent, Container, Paper, Typography} from '@mui/material';
 import { Link } from 'react-router-dom';
 import { useSpring, animated } from 'react-spring';
 import ReactMarkdown from 'react-markdown';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import { BadgePython, BadgeGithub, BadgeExcel, BadgeAPIs, BadgeDjango, BadgeTableau, BadgePowerBI } from './TechnologyBadge';
 
 
 
