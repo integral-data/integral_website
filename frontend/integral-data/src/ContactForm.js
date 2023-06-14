@@ -124,9 +124,25 @@ const ContactUsReact = () => {
                 </Box>
               </Grid>
             </Grid>
-            <Button color="primary" variant="contained" fullWidth type="submit">
-              Submit
-            </Button>
+
+            <Button 
+            type="submit"
+            variant="contained" 
+            sx={{ 
+              backgroundColor: 'lightblue', 
+              marginRight: '1em',
+              color: 'black',
+              '&:hover': {
+                backgroundColor: 'skyblue',
+              }
+            }}
+          >
+            Submit
+          </Button>
+
+
+
+
           </form>
         </Grid>
         <Grid item xs={12} md={4}>

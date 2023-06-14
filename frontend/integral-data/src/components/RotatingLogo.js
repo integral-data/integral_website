@@ -9,11 +9,11 @@ const rotate = keyframes`
   }
 `;
 
-const RoatingLogo = styled("img")(({ theme }) => ({
-  animation: `${rotate} 25s linear infinite`,
-  maxWidth: "100%",
-  maxHeight: "100%",
+const RotatingLogo = styled("img")(({ theme, width = '50%', height = '50%' }) => ({
+  animation: `${rotate} 10s linear infinite`,
+  maxWidth: width,
+  maxHeight: height,
   scale: 0.1,
 }));
 
-export default RoatingLogo;
+export default RotatingLogo;

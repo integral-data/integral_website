@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import LargeVideo from "../../videos/background_space_on_left.mp4";
-import SmallVideo from "../../videos/background_space_on_left_tiny.mp4"; // import your smaller video
+import SmallVideo from "../../videos/background_space_on_left_tiny.mp4";
 import { Button } from "../ButtonElements";
 import RotatingLogo from "../RotatingLogo";
 import { Grid, useTheme, Typography, useMediaQuery } from "@mui/material";
@@ -11,7 +11,7 @@ import { tokens } from "../../theme";
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
   const theme = useTheme();
-  const matches = useMediaQuery(theme => theme.breakpoints.down('sm'));
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
   const colors = tokens(theme.palette.mode);
 
   const onHover = () => {
@@ -54,7 +54,7 @@ const HeroSection = () => {
           autoPlay
           loop
           muted
-          src={matches ? SmallVideo : LargeVideo} // smaller video for mobile devices
+          src={isSmallScreen ? SmallVideo : LargeVideo}
           type="video/mp4"
           playbackRate={0.1}
           sx={{
@@ -66,16 +66,8 @@ const HeroSection = () => {
         />
       </Grid>
 
-
-
-
-
-
-
-
-
-      <Grid container maxWidth={1600}>
-        <Grid item md={12} zIndex={2}>
+      <Grid container maxWidth={1600} sx={{ paddingTop: isSmallScreen ? '5px' : '5px', paddingLeft: isSmallScreen ? '5px' : '5px' }}>
+        <Grid item md={12} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'left', zIndex: 2 }}>
           <Typography
             variant="title"
             sx={{
@@ -88,6 +80,7 @@ const HeroSection = () => {
           >
             Integral Data
           </Typography>
+          <RotatingLogo src={logo} width={isSmallScreen ? '50%' : '5%'} height={isSmallScreen ? '50%' : '50%'} />
         </Grid>
         <Grid item md={10} zIndex={2}>
           <Typography
@@ -101,7 +94,21 @@ const HeroSection = () => {
             }}
           >
             Unleash your business's data potential with our technology-driven
-            consulting firm. We specialize in all things data, utilizing
+            consulting firm.
+          </Typography>
+
+          <Typography
+            variant="h3"
+            color="white"
+            sx={{
+              fontStretch: "110%",
+              fontWeight: "400",
+              maxWidth: "60%",
+              textShadow: `1px 1px 1px ${colors.greenAccent[500]}`,
+              marginTop: "32px",
+            }}
+          >
+            We specialize in all things data, utilizing
             cutting-edge technology to drive growth.
           </Typography>
         </Grid>
@@ -114,8 +121,8 @@ const HeroSection = () => {
             flexDirection: "column",
             alignItems: "left",
             paddingLeft: { md: '10%' },
+            zIndex: 2,
           }}
-          zIndex={2}
         >
           <Grid item md={3}>
             <Button
@@ -137,18 +144,6 @@ const HeroSection = () => {
               {hover ? <ArrowForward /> : <ArrowRight />}
             </Button>
           </Grid>
-        </Grid>
-        <Grid
-          item
-          md={12}
-          zIndex={3}
-          sx={{
-            height: "350px",
-            justifyContent: { xs: "center", md: "flex-end" },
-            paddingLeft: { md: '10%' },
-          }}
-        >
-          <RotatingLogo src={logo} />
         </Grid>
       </Grid>
     </Grid>
