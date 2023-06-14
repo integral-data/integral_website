@@ -33,7 +33,7 @@ const descriptions = {
     "Power BI": "Power BI is a business analytics tool developed by Microsoft. It provides interactive visualizations with self-service business intelligence capabilities.",
     "Selenium": "Selenium is a popular open-source web-based automation tool that provides a way to automate browser actions.",
     "Pandas": "Pandas is a software library written for the Python programming language for data manipulation and analysis.",
-    "Jupyter Notebook": "Jupyter Notebook is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations, and narrative text.",
+    "Jupyter": "Jupyter Notebook is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations, and narrative text.",
     "AWS": "Amazon Web Services (AWS) is a secure cloud services platform offering compute power, database storage, content delivery, and other functionalities to help businesses scale and grow.",
     "HTML": "HTML stands for Hyper Text Markup Language. It's the standard markup language for creating web pages and web applications.",
     "CSS": "CSS stands for Cascading Style Sheets. It's used for describing the look and formatting of a document written in HTML or XML.",
@@ -43,8 +43,8 @@ const descriptions = {
   
 
 const LogoImage = styled('img')({
-  width: '40px',
-  height: '40px',
+  width: '30px',
+  height: '30px',
   '&:hover': {
     transform: 'scale(1.2)',
     cursor: 'pointer',
@@ -73,9 +73,10 @@ const ModalStyle = {
   p: 4,
 };
 
-const TechnologyBadge = ({ logo, technologyName }) => {
+const TechnologyBadge = ({ logo, technologyName, alwaysShowTitle = false }) => {
     const [open, setOpen] = useState(false);
     const [modalContent, setModalContent] = useState({});
+    const [isHovered, setIsHovered] = useState(false);
   
     const handleOpen = () => {
       setOpen(true);
@@ -90,8 +91,24 @@ const TechnologyBadge = ({ logo, technologyName }) => {
   
     return (
       <Box display="flex" flexDirection="column" alignItems="center">
-        <LogoImage src={logo} alt={technologyName} onClick={handleOpen} />
-        <Typography variant="caption">{technologyName}</Typography>
+        <LogoImage 
+          src={logo} 
+          alt={technologyName} 
+          onClick={handleOpen} 
+          onMouseOver={() => setIsHovered(true)} 
+          onMouseOut={() => setIsHovered(false)}
+        />
+        <Typography 
+          variant="caption" 
+          fontSize="0.75rem" 
+          style={{ 
+            visibility: (isHovered || alwaysShowTitle) ? 'visible' : 'hidden',
+            marginTop: '5px',  // Add space between logo and title
+            fontWeight: 'bold'  // Make the title bold
+          }}
+        >
+          {technologyName}
+        </Typography>
         <Modal
           open={open}
           onClose={handleClose}
@@ -99,35 +116,29 @@ const TechnologyBadge = ({ logo, technologyName }) => {
           aria-describedby="technology-description"
         >
           <Box sx={ModalStyle}>
-          <Box sx={ModalStyle}>
-    <Box sx={{ 
-        display: 'flex', 
-        alignItems: 'center', 
-        justifyContent: 'center', 
-        position: 'relative' 
-    }}>
-        <LogoImageModal src={logo} alt={technologyName} style={{ position: 'absolute', left: '4px' }} />
-        <Typography id="technology-description-title" variant="h6" component="h2">
-            {technologyName}
-            <IconButton
-                aria-label="close"
-                onClick={handleClose}
-                sx={{
-                    position: 'absolute',
-                    right: 8,
-                    top: 8,
-                    color: (theme) => theme.palette.grey[500],
-                }}
-            >
-                <CloseIcon />
-            </IconButton>
-        </Typography>
-    </Box>
-    <Typography id="technology-description" sx={{ mt: 2 }}>
-        {descriptions[technologyName]}
-    </Typography>
-</Box>
-
+            <Box sx={{ 
+                display: 'flex', 
+                alignItems: 'center', 
+                justifyContent: 'center', 
+                position: 'relative' 
+            }}>
+              <LogoImageModal src={logo} alt={technologyName} style={{ position: 'absolute', left: '4px' }} />
+              <Typography id="technology-description-title" variant="h6" component="h2">
+                {technologyName}
+                <IconButton
+                    aria-label="close"
+                    onClick={handleClose}
+                    sx={{
+                        position: 'absolute',
+                        right: 8,
+                        top: 8,
+                        color: (theme) => theme.palette.grey[500],
+                    }}
+                >
+                  <CloseIcon />
+                </IconButton>
+              </Typography>
+            </Box>
             <Typography id="technology-description" sx={{ mt: 2 }}>
               {modalContent.description}
             </Typography>
@@ -136,6 +147,7 @@ const TechnologyBadge = ({ logo, technologyName }) => {
       </Box>
     );
   };
+  
   
 // The rest of your components...
 
@@ -148,7 +160,7 @@ const BadgeTableau = () => <TechnologyBadge logo={TableauLogo} technologyName="T
 const BadgePowerBI = () => <TechnologyBadge logo={PowerBILogo} technologyName="Power BI" />;
 const BadgeSelenium = () => <TechnologyBadge logo={SeleniumLogo} technologyName="Selenium" />;
 const BadgePandas = () => <TechnologyBadge logo={PandasLogo} technologyName="Pandas" />;
-const BadgeJupyter = () => <TechnologyBadge logo={JupyterLogo} technologyName="Jupyter Notebook" />;
+const BadgeJupyter = () => <TechnologyBadge logo={JupyterLogo} technologyName="Jupyter" />;
 const BadgeAWS = () => <TechnologyBadge logo={AWSLogo} technologyName="AWS" />;
 const BadgeHTML = () => <TechnologyBadge logo={HTMLLogo} technologyName="HTML" />;
 const BadgeCSS = () => <TechnologyBadge logo={CSSLogo} technologyName="CSS" />;

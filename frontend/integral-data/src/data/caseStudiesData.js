@@ -36,7 +36,7 @@ export const caseStudiesData = [
       },
       {
         id: 4,
-        title: "Building a Robust Web-Based Database Tool for Wealth Management",
+        title: "Building a Robust Web-Based Database Tool",
         subheader: "Transitioning from Excel to a Web-Based Solution for Superior Functionality",
         author: "Jeff Barton",
         datePosted: "2023-06-24",

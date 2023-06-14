@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Video from "../../videos/background_space_on_left.mp4";
+// import Video from "../../videos/background_purple_weird.mp4";
 import { Button } from "../ButtonElements";
 import RotatingLogo from "../RotatingLogo";
 import { Grid, useTheme, Typography } from "@mui/material";
@@ -21,6 +22,14 @@ const HeroSection = () => {
   //   maxWidth: "100%",
   //   maxHeight: "100%",
   // };
+
+  const videoRef = React.useRef();
+
+React.useEffect(() => {
+  if (videoRef.current) {
+    videoRef.current.play();
+  }
+}, []);
 
   return (
     <Grid
@@ -60,12 +69,13 @@ const HeroSection = () => {
           muted
           src={Video}
           type="video/mp4"
+          playsInline  // Add this to help with mobile playback
+          ref={videoRef}  // Also to help wiith mobile
           playbackRate={0.1}
           sx={{
             width: "100%",
             height: "100%",
             objectFit: "cover",
-
             filter: "opacity(60%)",
           }}
         />
@@ -96,10 +106,25 @@ const HeroSection = () => {
               fontWeight: "400",
               maxWidth: "60%",
               textShadow: `1px 1px 1px ${colors.greenAccent[500]}`,
+              marginTop: "30px",
             }}
           >
             Unleash your business's data potential with our technology-driven
-            consulting firm. We specialize in all things data, utilizing
+            consulting firm.
+          </Typography>
+
+          <Typography
+            variant="h3"
+            color="white"
+            sx={{
+              fontStretch: "110%",
+              fontWeight: "400",
+              maxWidth: "60%",
+              textShadow: `1px 1px 1px ${colors.greenAccent[500]}`,
+              marginTop: "30px",
+            }}
+          > 
+            We specialize in all things data, utilizing
             cutting-edge technology to drive growth.
           </Typography>
         </Grid>

@@ -1,10 +1,14 @@
 import React from 'react';
-import { Box, Card, CardContent, Container, Paper, Typography } from '@mui/material';
+import { Box, Card, CardContent, Container, Paper, Typography, List, ListItem } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { useSpring, animated } from 'react-spring';
 import ReactMarkdown from 'react-markdown';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+import { BadgePython, BadgeGithub, BadgeExcel, BadgeAPIs, BadgeDjango, BadgeTableau, BadgePowerBI } from './TechnologyBadge';
+
+
 
 const CaseStudy = ({ id, title, subheader, author, datePosted, content, badges }) => {  
     return (
@@ -23,13 +27,17 @@ const CaseStudy = ({ id, title, subheader, author, datePosted, content, badges }
           <Typography variant="subtitle1" color="text.secondary" align="center" sx={{ mb: 2 }}>
             Tech Used
           </Typography>
+         
+         
           <Box display="flex" justifyContent="center" flexWrap="wrap">
             {badges && badges.map((Badge, index) => (
               <Box key={index} mx={1}>
-                {Badge}
+                {Badge } 
               </Box>
             ))}
           </Box>
+
+          
           <Box sx={{ my: 4 }}>
             <ReactMarkdown children={content} />
           </Box>
@@ -51,7 +59,7 @@ const CaseStudyOverview = ({ study }) => {
           <Card
             sx={{
               maxWidth: 345,
-              height: 300,
+              height: 250,
               transition: "0.3s",
               borderRadius: "10px",
               alignSelf: "center",
@@ -85,6 +93,5 @@ const CaseStudyOverview = ({ study }) => {
         </animated.div>
       </Link>
     );
-  };
-  
+  };  
 export {CaseStudy, CaseStudyOverview};
