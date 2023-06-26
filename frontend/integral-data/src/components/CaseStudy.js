@@ -1,49 +1,66 @@
-import React from 'react';
-import { Box, Card, CardContent, Container, Paper, Typography} from '@mui/material';
+import { useState, React} from 'react';
+import { Box, Card, Grid, CardContent, Container, Paper, Typography} from '@mui/material';
 import { Link } from 'react-router-dom';
 import { useSpring, animated } from 'react-spring';
 import ReactMarkdown from 'react-markdown';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 
 
-
-const CaseStudy = ({ id, title, subheader, author, datePosted, content, badges }) => {  
+const CaseStudy = ({ id, title, subheader, author, datePosted, content, badges }) => {
+    const [isTechVisible, setTechVisibility] = useState(true);
+  
+    const handleTechVisibility = () => {
+      setTechVisibility(!isTechVisible);
+    };
+  
     return (
       <Container sx={{ py: '40px' }}>
-        <Paper elevation={6} sx={{ padding: '30px', marginBottom: '30px' }}>
-          <Typography variant="h4" align="center" sx={{ mb: 2 }}>
+        <Paper elevation={6} sx={{ padding: '30px', marginBottom: '30px', backgroundColor: 'transparent' }}>
+          <Typography variant="h3" align="left" sx={{ mb: 2 }}>
             {title}
           </Typography>
-          <Typography variant="h6" align="center" sx={{ mb: 2 }}>
+          <Typography variant="h6" align="left" sx={{ mb: 1, color: '#50A6E1' }}>
             {subheader}
           </Typography>
-          <Typography variant="subtitle1" color="text.secondary" align="center" sx={{ mb: 2 }}>
-            By {author} | Posted on {datePosted}
+          <Typography variant="subtitle1" sx={{ color: 'coral', fontSize: '0.875rem' }} align="left">
+            By: {author}
           </Typography>
-
-          <Typography variant="subtitle1" color="text.secondary" align="center" sx={{ mb: 2 }}>
-            Tech Used
-          </Typography>
-         
-         
-          <Box display="flex" justifyContent="center" flexWrap="wrap">
-            {badges && badges.map((Badge, index) => (
-              <Box key={index} mx={1}>
-                {Badge } 
-              </Box>
-            ))}
-          </Box>
-
-          
+  
+          <Grid container justifyContent="center" sx={{ cursor: 'pointer', mb: 2 }} onClick={handleTechVisibility}>
+            <Grid item alignItems="center"> 
+              <Typography alignItems="center" variant="subtitle1" sx={{ fontWeight: 'bold' }}>
+                Tech Used
+              </Typography>
+            </Grid>
+            <Grid item>
+              {isTechVisible ? <KeyboardArrowUpIcon sx={{ ml: 1 }} /> : <KeyboardArrowDownIcon sx={{ ml: 1 }} />}
+            </Grid>
+          </Grid>
+        
+          {isTechVisible && (
+            <Box display="flex" justifyContent="center" flexWrap="wrap">
+              {badges && badges.map((Badge, index) => (
+                <Box key={index} mx={1}>
+                  {Badge}
+                </Box>
+              ))}
+            </Box>
+          )}
+  
           <Box sx={{ my: 4 }}>
             <ReactMarkdown children={content} />
           </Box>
         </Paper>
       </Container>
     );
-};
+  };
+
+
+
 
 const CaseStudyOverview = ({ study }) => {
     const [props, set] = useSpring(() => ({ scale: 1 }));
@@ -83,7 +100,7 @@ const CaseStudyOverview = ({ study }) => {
                 ))}
               </Box>
               <Box sx={{ position: 'absolute', right: 10, bottom: 10, zIndex: 1 }}>
-                <Typography variant="caption" color="white">
+                <Typography variant="caption" color="#f27676">
                   {study.datePosted}
                 </Typography>
               </Box>

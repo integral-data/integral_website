@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import LargeVideo from "../../videos/background_space_on_left.mp4";
 import SmallVideo from "../../videos/background_space_on_left_tiny.mp4";
 import { Button } from "../ButtonElements";
-import RotatingLogo from "../RotatingLogo";
+import {IntegralRotatingLogo} from "../RotatingLogo";
 import { Grid, useTheme, Typography, useMediaQuery } from "@mui/material";
 import { ArrowForward, ArrowRight } from "./HeroElements";
-import logo from "../../images/integral_transparent_icon.png";
 import { tokens } from "../../theme";
 
 const HeroSection = () => {
@@ -80,8 +79,21 @@ const HeroSection = () => {
           >
             Integral Data
           </Typography>
-          <RotatingLogo src={logo} width={isSmallScreen ? '50%' : '5%'} height={isSmallScreen ? '50%' : '50%'} />
+         
+          <Grid
+            container
+            direction="column"
+            justifyContent="center"
+            alignItems="center"
+            >
+              <Grid item xs={12} md={4} >
+               <IntegralRotatingLogo size={'small'} />
+              </Grid>
+          <Grid item xs={8}></Grid>
+          </Grid>
         </Grid>
+
+
         <Grid item md={10} zIndex={2}>
           <Typography
             variant="h3"

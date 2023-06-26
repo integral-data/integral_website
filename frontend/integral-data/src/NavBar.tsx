@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -11,7 +11,6 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import integral_banner from "./images/integral_wide_transparent.png";
-import integral_small from "./images/integral_transparent_icon.png";
 
 const pages = [
   { name: "Home", url: "/" },
@@ -22,7 +21,7 @@ const pages = [
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const location = useLocation();
+  // const location = useLocation();
   const navigate = useNavigate();
 
   const handleOpenNavMenu = (event) => {
@@ -90,20 +89,20 @@ function ResponsiveAppBar() {
               <MenuIcon />
             </IconButton>
             <Typography
-              variant="h6"
-              noWrap
-              component={Link}
-              to="/"
-              sx={{
-                mr: 2,
-                fontFamily: "arial",
-                fontWeight: 200,
-                color: "inherit",
-                textDecoration: "none",
-              }}
-            >
-              <img src={integral_banner} alt="Logo" style={{ height: "36px" }} />
-            </Typography>
+  variant="h6"
+  noWrap
+  component={Link}
+  to="/"
+  sx={{
+    mr: 2,
+    fontFamily: "arial",
+    fontWeight: 200,
+    color: "inherit",
+    textDecoration: "none",
+  }}
+>
+  <img src={integral_banner} alt="Logo" style={{ height: "36px", marginTop: '7px' }} />
+</Typography>
             <div/>
           </Box>
 

@@ -31,9 +31,20 @@ const CaseStudyPage = () => {
         }
       </Box>
       <Box mt={3} display="flex" justifyContent="center">
-        <Button variant="contained" color="secondary" component={Link} to="/case_studies" sx={{ ':hover': { backgroundColor: '#50A6E1', color: 'white' } }}>
-          Back to Cases
-        </Button>
+      <Button 
+  variant="contained" 
+  component={props => <Link to="/case_studies" {...props} />} 
+  sx={{ 
+    backgroundColor: '#f27676', 
+    color: 'white',
+    ':hover': { 
+      backgroundColor: '#50A6E1', 
+      color: 'white' 
+    } 
+  }}
+>
+  Back to Cases
+</Button>
       </Box>
     </Container>
   );
