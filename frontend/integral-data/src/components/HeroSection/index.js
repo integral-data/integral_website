@@ -7,6 +7,7 @@ import { Grid, useTheme, Typography, useMediaQuery } from "@mui/material";
 import { ArrowForward, ArrowRight } from "./HeroElements";
 import { tokens } from "../../theme";
 
+
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
   const theme = useTheme();
@@ -137,24 +138,24 @@ const HeroSection = () => {
           }}
         >
           <Grid item md={3}>
-            <Button
-              to="/contactus"
-              onMouseEnter={onHover}
-              onMouseLeave={onHover}
-              primary="true"
-              dark="true"
-              smooth={true}
-              duration={500}
-              spy={true}
-              exact="true"
-              offset={-80}
-              sx={{ maxWidth: "200px" }}
-            >
-              <Typography variant="h4" sx={{ fontWeight: "600" }}>
-                Contact Us
-              </Typography>
-              {hover ? <ArrowForward /> : <ArrowRight />}
-            </Button>
+          <Button
+  to="/contact"
+  onMouseEnter={onHover}
+  onMouseLeave={onHover}
+  primary="true"
+  dark="true"
+  smooth={true}
+  duration={500}
+  spy={true}
+  exact="true"
+  offset={-80}
+  sx={{ maxWidth: "200px" }}
+>
+  <Typography variant="h4" sx={{ fontWeight: "600" }}>
+    Contact Us
+  </Typography>
+  {hover ? <ArrowForward /> : <ArrowRight />}
+</Button>
           </Grid>
         </Grid>
       </Grid>
