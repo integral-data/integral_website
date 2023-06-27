@@ -17,8 +17,7 @@ function DatabaseCreation() {
         sm={12}
         md={12}
         sx={{
-          background: `linear-gradient(145deg, rgba(30,2,83,1) 44.2%, rgba(198,55,160,1) 138.2% )`,
-
+          background: theme.homeGradient1,
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
