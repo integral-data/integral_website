@@ -1,20 +1,15 @@
 import React from "react";
 import { Box, Typography, Grid } from "@mui/material";
-import Coffee from "../images/code_and_coffee.jpeg";
-import Image2 from "../images/problem.svg";
-import ImageNerd from "../images/circuit_nerd.jpeg";
-import ImageDash from "../images/dashboard.jpeg";
-import ImageTeam from "../images/teamwork.jpeg";
-import GradientText from "../components/GradientText.js";
-import ServiceCard from "../components/ServiceCard.js";
-import { IntegralRotatingLogo } from "./RotatingLogo";
+import Testimonial from "./Testimonial.js";
+import GradientText from "./GradientText.js";
+import { caseStudiesData } from "../data/caseStudiesData";
 import { useTheme } from "@mui/material";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useMediaQuery } from "@mui/material";
 
-function WhyIntegral() {
+function Testimonials() {
   const theme = useTheme();
   const isXs = useMediaQuery(theme.breakpoints.only("xs"));
   const isSm = useMediaQuery(theme.breakpoints.only("sm"));
@@ -41,13 +36,13 @@ function WhyIntegral() {
     speed: 700,
     slidesToShow: isSmallScreen ? 1 : 3, // Show 1 slide on small screens, 3 on larger ones
     rows: 1,
-    slidesToScroll: 1,
+    slidesToScroll: isSmallScreen ? 1 : 3,
     vertical: false,
     verticalSwiping: true,
   };
 
   return (
-    <div id="why-integral">
+    <div id="case-studies">
       <Grid
         container
         xs={12}
@@ -56,7 +51,7 @@ function WhyIntegral() {
         display={"flex"}
         flexDirection={"row"}
         sx={{
-          background: "black",
+          backgroundImage: theme.gradient,
           position: "relative",
         }}
       >
@@ -84,7 +79,7 @@ function WhyIntegral() {
           >
             <Grid
               item
-              md={8}
+              md={12}
               xs={8}
               sx={{
                 alignSelf: "center",
@@ -93,41 +88,15 @@ function WhyIntegral() {
             >
               <GradientText
                 variant="h2"
-                color1="rgba(245,177,97,1)"
-                color2="rgba(236,54,110,1)"
                 fontWeight={600}
-                text="Why Integral?"
+                text="Client Testimonials"
               ></GradientText>
               <Typography variant="h4" color="white">
-                Integral transforms complexity into clarity, providing the data
-                expertise needed for smarter business decisions
+                Discover why clients love working with us. Our flexible and
+                collaborative approach makes the data journey smooth and
+                effortless. Hear directly from our satisfied partners as they
+                endorse our expertise and exceptional service.
               </Typography>
-            </Grid>
-            <Grid
-              item
-              md={4}
-              xs={4}
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "right",
-                maxHeight: "100%",
-              }}
-            >
-              <Box
-                sx={{
-                  width: "100%",
-                  maxWidth: "100%",
-                  height: "100%",
-                  maxHeight: "100%",
-                  display: "flex",
-                  justifyContent: { xs: "center", md: "right" },
-
-                  alignItems: "center",
-                }}
-              >
-                <IntegralRotatingLogo />
-              </Box>
             </Grid>
           </Grid>
         </Grid>
@@ -145,12 +114,12 @@ function WhyIntegral() {
                 xs: "center",
                 sm: "center",
                 md: "space-between",
-              }, // change here
+              },
               alignItems: {
                 xs: "center",
                 sm: "center",
                 md: "flex-start",
-              }, // change here
+              },
 
               margin: "auto",
             }}
@@ -172,41 +141,17 @@ function WhyIntegral() {
               <Box
                 sx={{
                   width: getContainerWidth(),
+
                   maxWidth: "100%",
                   margin: "auto",
-                  marginTop: "0px",
                 }}
               >
                 <Slider {...settings}>
-                  <ServiceCard
-                    title="Seasoned Expertise"
-                    description="Integral's team comprises seasoned professionals, averaging over a decade of data-centric experience to the table."
-                    image={Coffee}
-                  />
-
-                  <ServiceCard
-                    title="Cost-effective Solutions"
-                    description="An internal analytics team can be a significant expense. By choosing Integral, you save on overheads while increasing your business agility and staying competitive."
-                    image={ImageDash}
-                  />
-
-                  <ServiceCard
-                    title="Uncompromised Quality"
-                    description="Quality is our guiding principle. Our seasoned expertise guarantees top-tier, accurate solutions that make a real difference."
-                    image={ImageNerd}
-                  />
-
-                  <ServiceCard
-                    title="Building Partnerships"
-                    description="We are more than just data experts & programmers. We are your partners, invested in your understanding of your business landscape, facilitating you to make strategic, data-driven decisions."
-                    image={ImageTeam}
-                  />
-
-                  <ServiceCard
-                    title="Flexibility"
-                    description="We cater to projects of any magnitude with adaptable pricing options. Your business needs are our top priority."
-                    image={Image2}
-                  />
+                  {caseStudiesData.map((caseStudy) => (
+                    <Grid container md={12} p={2}>
+                      <Testimonial />
+                    </Grid>
+                  ))}
                 </Slider>
               </Box>
             </Grid>
@@ -217,4 +162,4 @@ function WhyIntegral() {
   );
 }
 
-export default WhyIntegral;
+export default Testimonials;

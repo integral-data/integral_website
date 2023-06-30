@@ -9,7 +9,8 @@ import Migrations from "./components/Migrations.js";
 import Scraping from "./components/Scraping.js";
 import DatabaseCreation from "./components/DatabaseCreation.js";
 import Skills from "./components/Skills.js";
-
+import CaseStudies from "./components/CaseStudies.js";
+import Testimonials from "./components/Testimonials.js";
 function HomePage() {
   return (
     <>
@@ -24,6 +25,12 @@ function HomePage() {
       </div>
       <div id="expertise">
         <Skills />
+      </div>
+      <div id="case-studies">
+        <CaseStudies />
+      </div>
+      <div id="testimonials">
+        <Testimonials />
       </div>
       <Footer />
     </>

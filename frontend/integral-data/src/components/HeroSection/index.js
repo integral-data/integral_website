@@ -2,19 +2,14 @@ import React, { useState } from "react";
 import LargeVideo from "../../videos/background_space_on_left.mp4";
 import SmallVideo from "../../videos/background_space_on_left_tiny.mp4";
 import { Button } from "../ButtonElements";
-import {IntegralRotatingLogo} from "../RotatingLogo";
 import { Grid, useTheme, Typography, useMediaQuery } from "@mui/material";
-import RotatingLogo from "../RotatingLogo";
-import GradientText from "../GradientText";
 import { ArrowForward, ArrowRight } from "./HeroElements";
 import { tokens } from "../../theme";
-import { Gradient } from "@mui/icons-material";
-
 
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
   const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const colors = tokens(theme.palette.mode);
 
   const onHover = () => {
@@ -69,13 +64,30 @@ const HeroSection = () => {
         />
       </Grid>
 
-      <Grid container maxWidth={1600} sx={{ paddingTop: isSmallScreen ? '5px' : '5px', paddingLeft: isSmallScreen ? '5px' : '5px' }}>
-        <Grid item md={12} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'left', zIndex: 2 }}>
+      <Grid
+        container
+        maxWidth={1600}
+        sx={{
+          paddingTop: isSmallScreen ? "5px" : "5px",
+          paddingLeft: isSmallScreen ? "5px" : "5px",
+        }}
+        ml={2}
+      >
+        <Grid
+          item
+          md={12}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "left",
+            zIndex: 2,
+          }}
+        >
           <Typography
             variant="title"
             sx={{
               fontFamily: "Mona Sans",
-              fontWeight: "800",
+              fontWeight: "500",
               fontStretch: "110%",
               color: "#fff",
               textShadow: `1px 1px 1px ${colors.greenAccent[500]}`,
@@ -83,20 +95,7 @@ const HeroSection = () => {
           >
             Integral Data
           </Typography>
-         
-          <Grid
-            container
-            direction="column"
-            justifyContent="center"
-            alignItems="center"
-            >
-              <Grid item xs={12} md={4} >
-               <IntegralRotatingLogo size={'small'} />
-              </Grid>
-          <Grid item xs={8}></Grid>
-          </Grid>
         </Grid>
-
 
         <Grid item md={10} zIndex={2}>
           <Typography
@@ -104,7 +103,7 @@ const HeroSection = () => {
             color="white"
             sx={{
               fontStretch: "110%",
-              fontWeight: "400",
+              fontWeight: "200",
               maxWidth: "60%",
               textShadow: `1px 1px 1px ${colors.greenAccent[500]}`,
             }}
@@ -118,14 +117,14 @@ const HeroSection = () => {
             color="white"
             sx={{
               fontStretch: "110%",
-              fontWeight: "400",
+              fontWeight: "200",
               maxWidth: "60%",
               textShadow: `1px 1px 1px ${colors.greenAccent[500]}`,
               marginTop: "32px",
             }}
           >
-            We specialize in all things data, utilizing
-            cutting-edge technology to drive growth.
+            We specialize in all things data, utilizing cutting-edge technology
+            to drive growth.
           </Typography>
         </Grid>
         <Grid
@@ -136,11 +135,11 @@ const HeroSection = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "left",
-            paddingLeft: { md: '10%' },
+
             zIndex: 2,
           }}
         >
-          <Grid item md={3}>
+          <Grid item md={3} sx={{ display: "flex", justifyContent: "left" }}>
             <Button
               to="/contact"
               onMouseEnter={onHover}
