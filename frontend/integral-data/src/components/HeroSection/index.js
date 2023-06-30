@@ -4,8 +4,11 @@ import SmallVideo from "../../videos/background_space_on_left_tiny.mp4";
 import { Button } from "../ButtonElements";
 import {IntegralRotatingLogo} from "../RotatingLogo";
 import { Grid, useTheme, Typography, useMediaQuery } from "@mui/material";
+import RotatingLogo from "../RotatingLogo";
+import GradientText from "../GradientText";
 import { ArrowForward, ArrowRight } from "./HeroElements";
 import { tokens } from "../../theme";
+import { Gradient } from "@mui/icons-material";
 
 
 const HeroSection = () => {
@@ -138,24 +141,24 @@ const HeroSection = () => {
           }}
         >
           <Grid item md={3}>
-          <Button
-  to="/contact"
-  onMouseEnter={onHover}
-  onMouseLeave={onHover}
-  primary="true"
-  dark="true"
-  smooth={true}
-  duration={500}
-  spy={true}
-  exact="true"
-  offset={-80}
-  sx={{ maxWidth: "200px" }}
->
-  <Typography variant="h4" sx={{ fontWeight: "600" }}>
-    Contact Us
-  </Typography>
-  {hover ? <ArrowForward /> : <ArrowRight />}
-</Button>
+            <Button
+              to="/contact"
+              onMouseEnter={onHover}
+              onMouseLeave={onHover}
+              primary="true"
+              dark="true"
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={-80}
+              sx={{ maxWidth: "200px" }}
+            >
+              <Typography variant="h4" sx={{ fontWeight: "600" }}>
+                Contact Us
+              </Typography>
+              {hover ? <ArrowForward /> : <ArrowRight />}
+            </Button>
           </Grid>
         </Grid>
       </Grid>

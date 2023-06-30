@@ -1,4 +1,4 @@
-import { BadgePython, BadgeGithub, BadgeExcel, BadgeAPIs, BadgeDjango, BadgePowerBI, BadgeSelenium, BadgePandas, BadgeJupyter, BadgeAWS, BadgeHTML, BadgeCSS, BadgeSQL, BadgeFlask} from '../components/TechnologyBadge';
+import { BadgePython, BadgeGithub, BadgeExcel, BadgeAPIs, BadgeDjango, BadgePowerBI, BadgeSelenium, BadgePandas, BadgeJupyter, BadgeAWS, BadgeHTML, BadgeCSS, BadgeSQL, BadgeFlask, BadgeTableau} from '../components/TechnologyBadge';
 
 export const caseStudiesData = [
     {
@@ -133,7 +133,45 @@ export const caseStudiesData = [
     datePosted: "2023-08-20",
     badges: [<BadgePython />, <BadgePandas />, <BadgeSelenium />, <BadgeGithub />,<BadgeAWS/>, <BadgeFlask />, <BadgeHTML />, <BadgeCSS /> ],
     content: `## The Beginning\n\nIn the spirit of combining our love for coding and sports, we embarked on a side project to create a fantasy golf web application. We aimed to develop a platform optimized for mobile use, allowing users to engage in a unique fantasy golf experience centered around weekly PGA tournaments.\n\n## The Implementation\n\nThe application we envisioned would allow users to draft a new team each week, based on a three-tier draft system. This setup gave users the chance to strategize and make dynamic choices for their teams, adding a layer of excitement and competition. To bring this vision to life, we leveraged Python, Django, and HTML for the front-end code. For real-time data retrieval, we implemented Selenium, a Python library known for its web scraping capabilities.\n\n## The Outcome\n\nThe result was an interactive web application that provided a live leaderboard, enabling users to track their teams' performances in real time. This project showcased our ability to deliver an engaging user experience by combining different technologies and turning an idea into a fully functional web application.`,
-}
+},
+{
+    id: 16,
+    title: "Optimizing Fraud Detection for a Fortune 500 Company",
+    subheader: "Reducing False Positives with Model Parameter Optimization",
+    author: "Jeff Barton",
+    datePosted: "2023-07-01",
+    badges: [<BadgePython />,<BadgePandas />, <BadgeGithub />],
+    content: `## The Problem
+  
+  During my tenure in the Anti-Money Laundering division of a Fortune 500 company, I identified an issue with a high false positive rate from one of our primary fraud detection models. This model had eight parameters in play, and while it was proficient in detecting potential instances of fraud, it was also prone to generating false positives which were time-consuming and expensive to investigate. 
+  
+  ## The Solution
+  
+  To address this issue, I designed an algorithm that could simulate over 70,000 different combinations of thresholds for the model's parameters. This simulation was aimed at identifying the optimal balance that would maximize our model's precision in detecting true fraudulent activity while minimizing false positives. This approach provided a robust and data-driven solution to fine-tune our model parameters.
+  
+  ## The Result
+  
+  The implementation of the optimized parameters significantly reduced the rate of false positives. This not only saved the company significant amounts of time and resources in unnecessary investigations but also increased the effectiveness of our fraud detection mechanisms. The outcome demonstrated the power of precision parameter tuning in the context of machine learning models.`
+  },
+  {
+    id: 17,
+    title: "Revolutionizing Talent Acquisition Reporting for a Fortune 500 Company",
+    subheader: "From 2 Weeks to 4 Hours: The Power of Automation",
+    author: "Jeff Barton",
+    datePosted: "2023-07-15",
+    badges: [<BadgePython />, <BadgeSQL />, <BadgeTableau />, <BadgeGithub />],
+    content: `## The Problem
+  
+  While working in Talent Acquisition for a Fortune 500 company, I was confronted with a significantly time-consuming Monthly Business Report (MBR) process. This process, which involved manual data collection and analysis, typically took two weeks each month to complete. It was clear that this approach was not only inefficient but was also a potential barrier to timely decision-making.
+  
+  ## The Solution
+  
+  I decided to completely overhaul this process, leveraging Python and SQL to create a database of relevant data, and built a front end in Tableau. The Python and SQL integration facilitated automated data collection and preliminary analysis, while Tableau allowed for dynamic data visualization and easy report generation. The whole system was designed to automate the refresh process, thus significantly reducing the time and effort required to generate the MBR.
+  
+  ## The Result
+  
+  The newly implemented process reduced the time spent on generating the MBR from two weeks to roughly four hours - a significant improvement by any measure. Moreover, the automated system allowed for richer insights to be drawn from the data, aiding decision-making in the Talent Acquisition department. This case underlines the transformative power of automation and the use of the right tools in business processes.`
+  }
 
     
   ];
