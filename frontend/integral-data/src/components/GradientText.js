@@ -4,8 +4,8 @@ import { Typography } from "@mui/material";
 const GradientText = ({
   variant,
   text,
-  color1,
-  color2,
+  color1 = "white",
+  color2 = "white",
   fontWeight,
   shadowColor,
 }) => {

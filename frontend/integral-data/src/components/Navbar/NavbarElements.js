@@ -161,7 +161,5 @@ export const NavMenuMobile = styled.ul`
     top: 50px;
     right: 0px;
     height: 100vh;
-    background: black;
-    padding-bottom: 500px;
-    overflow-y: auto;
+    background: black
 `;

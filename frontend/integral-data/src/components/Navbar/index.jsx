@@ -10,9 +10,7 @@ import {
   NavMenu,
   NavItem,
   NavLinks,
-  NavPages,
   NavMenuMobile,
-  NavBtn,
   NavSignUpLink,
 } from "./NavbarElements";
 import integral_banner from "../../images/integral_wide_transparent.png";
@@ -93,8 +91,8 @@ const Navbar = ({ toggle }) => {
               </NavLinks>
             </NavItem>
             <NavItem>
-              <NavSignUpLink
-                to="case_studies"
+              <NavLinks
+                to="case-studies"
                 smooth={true}
                 duration={500}
                 spy={true}
@@ -105,7 +103,22 @@ const Navbar = ({ toggle }) => {
                 <Typography variant="h2" fontWeight={400}>
                   Case Studies
                 </Typography>
-              </NavSignUpLink>
+              </NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks
+                to="testimonials"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact="true"
+                offset={-80}
+                onClick={() => setIsOpen(false)}
+              >
+                <Typography variant="h2" fontWeight={400}>
+                  Testimonials
+                </Typography>
+              </NavLinks>
             </NavItem>
             <NavItem>
               <NavSignUpLink
@@ -180,8 +193,8 @@ const Navbar = ({ toggle }) => {
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavSignUpLink
-                  to="/case_studies"
+                <NavLinks
+                  to="case-studies"
                   smooth={true}
                   duration={500}
                   spy={true}
@@ -191,7 +204,21 @@ const Navbar = ({ toggle }) => {
                   <Typography variant="h6" fontWeight={700}>
                     Case Studies
                   </Typography>
-                </NavSignUpLink>
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks
+                  to="testimonials"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                >
+                  <Typography variant="h6" fontWeight={700}>
+                    Testimonials
+                  </Typography>
+                </NavLinks>
               </NavItem>
               <NavItem>
                 <NavSignUpLink

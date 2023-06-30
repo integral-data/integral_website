@@ -45,8 +45,8 @@ function Skills() {
               variant="h2"
               fontWeight={700}
               text="Expertise"
-              color1={colors.greenAccent[500]}
-              color2={colors.greenAccent[600]}
+              color1="white"
+              color2="white"
             />
           </Grid>
           {sections.map((section, index) => (

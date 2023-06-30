@@ -2,13 +2,9 @@ import React, { useState } from "react";
 import LargeVideo from "../../videos/background_space_on_left.mp4";
 import SmallVideo from "../../videos/background_space_on_left_tiny.mp4";
 import { Button } from "../ButtonElements";
-import { IntegralRotatingLogo } from "../RotatingLogo";
 import { Grid, useTheme, Typography, useMediaQuery } from "@mui/material";
-import RotatingLogo from "../RotatingLogo";
-import GradientText from "../GradientText";
 import { ArrowForward, ArrowRight } from "./HeroElements";
 import { tokens } from "../../theme";
-import { Gradient } from "@mui/icons-material";
 
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
@@ -75,6 +71,7 @@ const HeroSection = () => {
           paddingTop: isSmallScreen ? "5px" : "5px",
           paddingLeft: isSmallScreen ? "5px" : "5px",
         }}
+        ml={2}
       >
         <Grid
           item
