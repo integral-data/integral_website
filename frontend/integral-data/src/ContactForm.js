@@ -5,8 +5,11 @@ import { TextField, Button, Box, Container, Grid } from '@mui/material';
 import { Snackbar, Alert } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import emailjs from 'emailjs-com';
+import { Link } from 'react-router-dom';
 import TitleSubtitle from './components/TitleSubtitle';
-import Image2 from './images/problem.svg';
+import {IntegralRotatingLogo} from './components/RotatingLogo';
+
+
 
 const ContactUsReact = () => {
   const [open, setOpen] = React.useState(false);
@@ -61,12 +64,13 @@ const ContactUsReact = () => {
         </Alert>
       </Snackbar>
       <Grid container spacing={3} justifyContent="center">
-        <Grid item xs={12} md={8}>
+        <Grid item xs={12} md={12}>
           <form onSubmit={formik.handleSubmit}>
             <Grid container item justifyContent="center">
               <TitleSubtitle 
                 title="Contact Us" 
                 subtitle="Fill out the form below to get in touch with us. We will reach out in the next 1-2 business days."
+                color="white"
               />
             </Grid>
             <Grid container spacing={3} justifyContent="center">
@@ -122,36 +126,75 @@ const ContactUsReact = () => {
                 </Box>
               </Grid>
             </Grid>
-            <Button color="primary" variant="contained" fullWidth type="submit">
-              Submit
-            </Button>
+
+            <Box 
+  sx={{ 
+    display: 'flex', 
+    justifyContent: 'center', 
+    marginBottom: '2em' 
+  }}
+>
+  <Button 
+    type="submit"
+    variant="contained" 
+    sx={{ 
+      backgroundColor: 'lightblue', 
+      marginRight: '1em',
+      color: 'black',
+      '&:hover': {
+        backgroundColor: 'skyblue',
+      }
+    }}
+  >
+    Submit
+  </Button>
+</Box>
+
           </form>
-        </Grid>
-        <Grid item xs={12} md={4}>
-          {/* Image container removed */}
-        </Grid>
-        <Grid item xs={12} md={8}>
+          <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: '2em' }}>
           {/* Image moved here */}
-          <Box
-            sx={{
-              display: 'flex',
-              alignItems: 'flex-start',
-              justifyContent: 'center',
-              height: '100%',
-              pl: '20px',
-            }}
-          >
-            <img
-              style={{
-                width: '50%',
-                objectFit: 'cover',
-              }}
-              alt="A brief description"
-              src={Image2}
-            />
+          
+      
+          <IntegralRotatingLogo size="small"/>
           </Box>
         </Grid>
+
+
+        
+        
       </Grid>
+
+      <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: '2em' }}>
+          <Button 
+            variant="contained" 
+            component={Link} 
+            to="/case_studies" 
+            sx={{ 
+              backgroundColor: 'lightblue', 
+              marginRight: '1em',
+              color: 'black',
+              '&:hover': {
+                backgroundColor: 'skyblue',
+              }
+            }}
+          >
+            Case Studies
+          </Button>
+          <Button 
+            variant="contained" 
+            component={Link} 
+            to="/consultants" 
+            sx={{ 
+              backgroundColor: 'lightblue', 
+              color: 'black',
+              '&:hover': {
+                backgroundColor: 'skyblue',
+              }
+            }}
+          >
+            Consultants
+          </Button>
+      </Box>
     </Container>
   );
 };

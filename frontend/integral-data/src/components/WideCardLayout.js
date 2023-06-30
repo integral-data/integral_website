@@ -5,12 +5,8 @@ import {
   Stack,
   Box,
 } from "@mui/material";
-// import { useTheme } from "@mui/material";
-// import { tokens } from "../theme";
 
 const CustomGrid = ({ headerText, subText, imgSrc, imgPosition }) => {
-  // const theme = useTheme();
-  // const colors = tokens(theme.palette.mode);
 
   return (
     <Box sx={{ maxWidth: "1700px", margin: "0 auto" }}>
@@ -21,18 +17,19 @@ const CustomGrid = ({ headerText, subText, imgSrc, imgPosition }) => {
           spacing={2}
           direction={imgPosition === "right" ? "row" : "row-reverse"}
           justifyContent="space-between"
+          alignItems="center" // Align items vertically
         >
           <Grid item xs={12} md={6} justifyContent="center">
             <Typography
               component="h3"
               variant="h4"
               align="center"
-              color="black"
+              color="white"
               gutterBottom
             >
               {headerText}
             </Typography>
-            <Typography variant="h7" align="center" color="black" paragraph>
+            <Typography variant="h7" align="center" color="white" paragraph>
               {subText}
             </Typography>
             <Stack

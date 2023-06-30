@@ -1,12 +1,10 @@
 import React from 'react';
 import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { Link } from 'react-router-dom';
-import BackgroundVideo from './videos/video.mp4';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 
@@ -22,23 +20,8 @@ const ContactSuccess = () => {
 
   return (
     <React.Fragment>
-      <CssBaseline />
       <Box
         sx={{
-          position: 'fixed',
-          zIndex: -1,
-          minWidth: '100%',
-          minHeight: '100%',
-          objectFit: 'cover',
-        }}
-      >
-        <video autoPlay loop muted>
-          <source src={BackgroundVideo} type="video/mp4" />
-        </video>
-      </Box>
-      <Box
-        sx={{
-          bgcolor: 'rgba(255, 255, 255, 0.9)',
           minHeight: '95vh',
           pt: 8,
           pb: 6,
@@ -57,7 +40,20 @@ const ContactSuccess = () => {
             spacing={2}
             justifyContent="center"
           >
-            <Button variant="contained" component={Link} to="/">Back to Home</Button>
+            
+            <Button 
+            variant="contained" component={Link} to="/"
+            sx={{ 
+              backgroundColor: 'lightblue', 
+              marginRight: '1em',
+              color: 'black',
+              '&:hover': {
+                backgroundColor: 'skyblue',
+              }
+            }}
+          >
+            Back to Home
+          </Button>
           </Stack>
         </Container>
       </Box>

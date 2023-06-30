@@ -6,7 +6,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 
-import BackgroundVideo from './videos/video.mp4';
+import BackgroundVideo from './videos/background_space_on_left.mp4';
 import Image2 from './images/problem.svg';
 
 import {CustomGridLeft, CustomGridRight, CustomGridLeftWithList, CustomGridRightWithList} from './WideTextPlusImage';

@@ -13,7 +13,7 @@ export default function CaseStudiesPage() {
                 color="white"
                   />
 
-      <Grid container spacing={3}>
+      <Grid container spacing={6}>
         {caseStudiesData.map(caseStudy => (
           <Grid item xs={12} sm={6} md={4} key={caseStudy.id}>
             <CaseStudyOverview study={caseStudy} />

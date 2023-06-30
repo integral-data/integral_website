@@ -1,7 +1,5 @@
 import React from 'react';
 import {Box, Container, Grid } from '@mui/material';
-import { Button } from '@mui/material';
-import { Link } from 'react-router-dom';
 import Image2 from './images/problem.svg';
 import ImageCode from './images/code_and_coffee.jpeg';
 import ImageNerd from './images/circuit_nerd.jpeg';
@@ -27,10 +25,8 @@ export default function WhyIntegral() {
                 <TitleSubtitle 
                 title="Integral Skillset" 
                 subtitle="Here is a brief overview of the technology we leverage & experience we have."
+                color="white"
                   />
-                <Box sx={{ display: 'flex', justifyContent: 'center', marginBottom: '2em' }}>
-                  <Button variant="contained" component={Link} to="/contact">Contact Us</Button>
-                </Box>
               </Grid>
 
               <Box sx={{ height: `10em` }} />  {/* Spacer */}
