@@ -84,7 +84,7 @@ export const NavLinks = styled(LinkS)`
   cursor: pointer;
 
   &.active {
-    border-bottom: 3px solid #01bf71;
+    border-bottom: 3px solid #50a6e1;
   }
 `;
 
@@ -98,7 +98,7 @@ export const NavPages = styled(LinkR)`
   cursor: pointer;
 
   &.active {
-    border-bottom: 3px solid #01bf71;
+    border-bottom: 3px solid #50a6e1;
   }
 `;
 
@@ -155,12 +155,13 @@ export const NavMenuMobile = styled.ul`
     flex-direction: column;
     position: absolute;
     align-items: center;
+    justify-content: center;
 
     width: 100%;
     top: 50px;
+    right: 0px;
     height: 100vh;
     background: black;
-    /* Adjust this as needed */
-    /* Add more styling as needed */
-  }
+    padding-bottom: 500px;
+    overflow-y: auto;
 `;

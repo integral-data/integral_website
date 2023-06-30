@@ -16,13 +16,12 @@ const GradientText = ({
         fontWeight={fontWeight}
         sx={{
           color: "#FE6B8B", // fallback color for unsupported browsers
-          background: `linear-gradient(45deg, ${color1} 10%, ${color2} 50%)`,
+          background: `linear-gradient(to right, ${color1} 0%, ${color2} 50%)`,
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
           "@supports (-webkit-background-clip: text)": {
             color: "transparent",
           },
-          textShadow: `1px 1px 1px ${shadowColor ? shadowColor : color2}`,
         }}
       >
         {text}

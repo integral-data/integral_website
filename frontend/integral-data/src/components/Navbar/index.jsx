@@ -47,7 +47,7 @@ const Navbar = ({ toggle }) => {
               transform: isOpen ? "translateY(0)" : "translateY(-100%)",
             }}
           >
-            <NavItem>
+            <NavItem sx={{ marginTop: "200px" }}>
               <NavLinks
                 to="why-integral"
                 smooth={true}

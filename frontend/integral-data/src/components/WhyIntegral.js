@@ -7,6 +7,7 @@ import ImageDash from "../images/dashboard.jpeg";
 import ImageTeam from "../images/teamwork.jpeg";
 import GradientText from "../components/GradientText.js";
 import ServiceCard from "../components/ServiceCard.js";
+import { IntegralRotatingLogo } from "./RotatingLogo";
 import { useTheme } from "@mui/material";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -55,7 +56,8 @@ function WhyIntegral() {
         display={"flex"}
         flexDirection={"row"}
         sx={{
-          background: theme.homeGradient2,
+          background: "black",
+          position: "relative",
         }}
       >
         <Grid
@@ -74,23 +76,25 @@ function WhyIntegral() {
             maxWidth={"1600px"}
             sx={{
               display: "flex",
-              justifyContent: { xs: "center", md: "space-between" }, // change here
-              alignItems: { xs: "center", md: "flex-start" }, // change here
+              justifyContent: { xs: "center", md: "space-between" },
+              alignItems: { xs: "center", md: "flex-start" },
+              position: "relative",
+              zIndex: 1,
             }}
           >
             <Grid
               item
-              md={12}
-              xs={12}
+              md={8}
+              xs={8}
               sx={{
                 alignSelf: "center",
-                textAlign: { xs: "center", md: "left" }, // change here
+                textAlign: { xs: "left", md: "left" }, // change here
               }}
             >
               <GradientText
                 variant="h2"
-                color1="#FE6B8B"
-                color2="#FF8E53"
+                color1="rgba(245,177,97,1)"
+                color2="rgba(236,54,110,1)"
                 fontWeight={600}
                 text="Why Integral?"
               ></GradientText>
@@ -98,6 +102,32 @@ function WhyIntegral() {
                 Integral transforms complexity into clarity, providing the data
                 expertise needed for smarter business decisions
               </Typography>
+            </Grid>
+            <Grid
+              item
+              md={4}
+              xs={4}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "right",
+                maxHeight: "100%",
+              }}
+            >
+              <Box
+                sx={{
+                  width: "100%",
+                  maxWidth: "100%",
+                  height: "100%",
+                  maxHeight: "100%",
+                  display: "flex",
+                  justifyContent: { xs: "center", md: "right" },
+
+                  alignItems: "center",
+                }}
+              >
+                <IntegralRotatingLogo />
+              </Box>
             </Grid>
           </Grid>
         </Grid>
