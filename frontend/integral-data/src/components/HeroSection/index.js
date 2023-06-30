@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import Video from "../../videos/video.mp4";
 import { Button } from "../ButtonElements";
 import RotatingLogo from "../RotatingLogo";
+import GradientText from "../GradientText";
 import { Grid, useTheme, Typography } from "@mui/material";
 import { ArrowForward, ArrowRight } from "./HeroElements";
 import logo from "../../images/integral_transparent_icon.png";
 import { tokens } from "../../theme";
+import { Gradient } from "@mui/icons-material";
 
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
@@ -70,21 +72,15 @@ const HeroSection = () => {
         />
       </Grid>
 
-      <Grid container maxWidth={1600}>
+      <Grid container maxWidth={1600} spacing={2} m={2}>
         <Grid item md={12} zIndex={2}>
-          <Typography
-            variant="title"
-            sx={{
-              fontFamily: "Mona Sans",
-
-              fontWeight: "800",
-              fontStretch: "110%",
-              color: "#fff",
-              textShadow: `1px 1px 1px ${colors.greenAccent[500]}`,
-            }}
-          >
-            Integral Data
-          </Typography>
+          <GradientText
+            text="Integral Data"
+            color1="#fff"
+            color2="#fff"
+            fontWeight={500}
+            variant="h1"
+          />
         </Grid>
         <Grid item md={10} zIndex={2}>
           <Typography
@@ -92,7 +88,7 @@ const HeroSection = () => {
             color="white"
             sx={{
               fontStretch: "110%",
-              fontWeight: "400",
+              fontWeight: "300",
               textShadow: `1px 1px 1px ${colors.greenAccent[500]}`,
             }}
           >
@@ -115,7 +111,7 @@ const HeroSection = () => {
         >
           <Grid item md={3}>
             <Button
-              to="/contactus"
+              to="/contact"
               onMouseEnter={onHover}
               onMouseLeave={onHover}
               primary="true"

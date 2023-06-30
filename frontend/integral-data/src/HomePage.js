@@ -1,5 +1,6 @@
 import React from "react";
-import Navbar from "./NavBar.tsx";
+// import Navbar from "./NavBar.tsx";
+import Navbar from "./components/Navbar/index.jsx";
 import Footer from "./Footer";
 import HeroSection from "./components/HeroSection/index.js";
 import WhyIntegral from "./components/WhyIntegral.js";
@@ -10,17 +11,20 @@ import DatabaseCreation from "./components/DatabaseCreation.js";
 import Skills from "./components/Skills.js";
 
 function HomePage() {
-
   return (
     <>
       <Navbar />
       <HeroSection />
       <WhyIntegral />
-      <Migrations />
-      <Scraping />
-      <DatabaseCreation />
-      <Analytics />
-      <Skills />
+      <div id="services">
+        <Migrations />
+        <Scraping />
+        <DatabaseCreation />
+        <Analytics />
+      </div>
+      <div id="expertise">
+        <Skills />
+      </div>
       <Footer />
     </>
   );

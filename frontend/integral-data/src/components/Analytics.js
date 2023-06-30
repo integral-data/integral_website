@@ -17,7 +17,7 @@ function Analytics() {
         sm={12}
         md={12}
         sx={{
-          background: `linear-gradient(145deg, #CB356B, #BD3F32)`,
+          background: theme.homeGradient2,
           display: "flex",
           justifyContent: "center",
           alignItems: "center",

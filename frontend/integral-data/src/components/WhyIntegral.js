@@ -46,7 +46,7 @@ function WhyIntegral() {
   };
 
   return (
-    <>
+    <div id="why-integral">
       <Grid
         container
         xs={12}
@@ -55,10 +55,8 @@ function WhyIntegral() {
         display={"flex"}
         flexDirection={"row"}
         sx={{
-          background: "linear-gradient(to right, #8a2387, #e94057, #f27121);",
-          // background: "black",
+          background: theme.homeGradient2,
         }}
-        // sx={{ background: theme.gradient }}
       >
         <Grid
           item
@@ -82,7 +80,7 @@ function WhyIntegral() {
           >
             <Grid
               item
-              md={6}
+              md={12}
               xs={12}
               sx={{
                 alignSelf: "center",
@@ -90,9 +88,10 @@ function WhyIntegral() {
               }}
             >
               <GradientText
-                variant="h1"
+                variant="h2"
                 color1="#FE6B8B"
                 color2="#FF8E53"
+                fontWeight={600}
                 text="Why Integral?"
               ></GradientText>
               <Typography variant="h4" color="white">
@@ -184,7 +183,7 @@ function WhyIntegral() {
           </Grid>
         </Grid>
       </Grid>
-    </>
+    </div>
   );
 }
 
