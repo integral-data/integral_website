@@ -26,17 +26,13 @@ function AppRouter() {
         <Router>
           <Routes>
             <Route exact path="/" element={<HomePage />} />
-
+            <Route path="/contact" element={<ContactForm />} />
+            <Route path="contact_success" element={<ContactSuccess />} />
             <Route
               path="/*"
               element={
                 <Layout>
                   <Routes>
-                    <Route path="contact" element={<ContactForm />} />
-                    <Route
-                      path="contact_success"
-                      element={<ContactSuccess />}
-                    />
                     <Route path="experience" element={<ExperiencePage />} />
                     <Route path="why_integral" element={<WhyIntegral />} />
                     <Route path="what_we_do" element={<WhatWeDo />} />
