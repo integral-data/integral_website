@@ -1,7 +1,7 @@
 import React from "react";
 // import Navbar from "./NavBar.tsx";
 import Navbar from "./components/Navbar/index.jsx";
-import Footer from "./Footer";
+import Footer from "./components/Footer.js";
 import HeroSection from "./components/HeroSection/index.js";
 import WhyIntegral from "./components/WhyIntegral.js";
 import Analytics from "./components/Analytics.js";
@@ -26,11 +26,12 @@ function HomePage() {
       <div id="expertise">
         <Skills />
       </div>
+
+      {/* <div id="testimonials">
+        <Testimonials />
+      </div> */}
       <div id="case-studies">
         <CaseStudies />
-      </div>
-      <div id="testimonials">
-        <Testimonials />
       </div>
       <Footer />
     </>

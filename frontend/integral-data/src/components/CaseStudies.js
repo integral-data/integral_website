@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography, Grid } from "@mui/material";
 import GradientText from "./GradientText.js";
-import { CaseStudyOverview } from "./CaseStudy";
+import CaseStudyCard from "./CaseStudyCard.js";
 import { caseStudiesData } from "../data/caseStudiesData";
 import { useTheme } from "@mui/material";
 import Slider from "react-slick";
@@ -153,7 +153,7 @@ function CaseStudies() {
                   {caseStudiesData.map((caseStudy) => (
                     <Grid container md={12} p={2}>
                       <Grid item md={12} key={caseStudy.id}>
-                        <CaseStudyOverview study={caseStudy} />
+                        <CaseStudyCard study={caseStudy} />
                       </Grid>
                     </Grid>
                   ))}
