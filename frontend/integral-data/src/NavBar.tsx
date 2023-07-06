@@ -1,27 +1,26 @@
-import * as React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
+import * as React from "react";
+import { Link, useNavigate } from "react-router-dom";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Menu from "@mui/material/Menu";
+import MenuIcon from "@mui/icons-material/Menu";
+import Container from "@mui/material/Container";
+import Button from "@mui/material/Button";
+import MenuItem from "@mui/material/MenuItem";
 import integral_banner from "./images/integral_wide_transparent.png";
 
 const pages = [
   { name: "Home", url: "/" },
   { name: "Our Services", url: "/#services" },
-  { name: "Why Integral?", url: "/#why_integral" },
+  { name: "Why Integral?", url: "/#why-integral" },
   { name: "Contact Us", url: "/contact" },
 ];
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  // const location = useLocation();
   const navigate = useNavigate();
 
   const handleOpenNavMenu = (event) => {
@@ -36,22 +35,49 @@ function ResponsiveAppBar() {
     handleCloseNavMenu();
     navigate(url);
 
-    if (url.startsWith('/#')) {
+    if (url.startsWith("/#")) {
       setTimeout(() => {
         const id = url.substring(2);
         const element = document.getElementById(id);
         if (element) {
           window.scrollTo({
             top: element.offsetTop - 35,
-            behavior: 'smooth'
+            behavior: "smooth",
           });
         }
       }, 100);
     }
   };
 
+  const [navBackground, setNavBackground] = React.useState("transparent");
+  const navRef = React.useRef();
+  navRef.current = navBackground;
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const show = window.scrollY > 0;
+      if (show) {
+        setNavBackground("black");
+      } else {
+        setNavBackground("transparent");
+      }
+    };
+    document.addEventListener("scroll", handleScroll);
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <AppBar position="fixed">
+    <AppBar
+      position="fixed"
+      sx={{
+        background: navBackground,
+        transition: "background-color 0.5s",
+        elevation: 0,
+        boxShadow: "none",
+      }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -60,9 +86,10 @@ function ResponsiveAppBar() {
             component={Link}
             to="/"
             sx={{
+              flexGrow: 10,
               mr: 2,
               display: { xs: "none", md: "flex" },
-              fontFamily: "arial",
+
               fontWeight: 200,
               color: "inherit",
               textDecoration: "none",
@@ -75,7 +102,7 @@ function ResponsiveAppBar() {
             sx={{
               display: { xs: "flex", md: "none" },
               justifyContent: "space-between",
-              width: '100%'
+              width: "100%",
             }}
           >
             <IconButton
@@ -89,21 +116,25 @@ function ResponsiveAppBar() {
               <MenuIcon />
             </IconButton>
             <Typography
-  variant="h6"
-  noWrap
-  component={Link}
-  to="/"
-  sx={{
-    mr: 2,
-    fontFamily: "arial",
-    fontWeight: 200,
-    color: "inherit",
-    textDecoration: "none",
-  }}
->
-  <img src={integral_banner} alt="Logo" style={{ height: "36px", marginTop: '7px' }} />
-</Typography>
-            <div/>
+              variant="h6"
+              noWrap
+              component={Link}
+              to="/"
+              sx={{
+                mr: 2,
+                fontFamily: "arial",
+                fontWeight: 200,
+                color: "inherit",
+                textDecoration: "none",
+              }}
+            >
+              <img
+                src={integral_banner}
+                alt="Logo"
+                style={{ height: "36px", marginTop: "7px" }}
+              />
+            </Typography>
+            <div />
           </Box>
 
           <Menu

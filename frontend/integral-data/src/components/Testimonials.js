@@ -51,7 +51,7 @@ function Testimonials() {
         display={"flex"}
         flexDirection={"row"}
         sx={{
-          backgroundImage: theme.gradient,
+          backgroundImage: theme.homeGradient2,
           position: "relative",
         }}
       >
