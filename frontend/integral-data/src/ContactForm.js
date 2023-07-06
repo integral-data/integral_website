@@ -14,7 +14,6 @@ import { useNavigate } from "react-router-dom";
 import emailjs from "emailjs-com";
 import contact from "./images/contact-us.png";
 import Footer from "./Footer";
-import { IntegralRotatingLogo } from "./components/RotatingLogo";
 import Navbar from "./NavBar.tsx";
 import { useTheme } from "@mui/material/styles";
 import { tokens } from "./theme";

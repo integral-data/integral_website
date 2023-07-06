@@ -1,12 +1,8 @@
-import { useState, React } from "react";
+import {React } from "react";
 import {
   Box,
   Card,
-  Chip,
-  Grid,
   CardContent,
-  Container,
-  Paper,
   Typography,
 } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -14,8 +10,6 @@ import { useSpring, animated } from "react-spring";
 import ReactMarkdown from "react-markdown";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
 const CaseStudy = ({
   id,
@@ -27,11 +21,11 @@ const CaseStudy = ({
   badges,
   chips,
 }) => {
-  const [isTechVisible, setTechVisibility] = useState(true);
+  // const [isTechVisible, setTechVisibility] = useState(true);
 
-  const handleTechVisibility = () => {
-    setTechVisibility(!isTechVisible);
-  };
+  // const handleTechVisibility = () => {
+  //   setTechVisibility(!isTechVisible);
+  // };
 
   return (
     <Box>

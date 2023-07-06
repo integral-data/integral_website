@@ -55,7 +55,7 @@ const ServiceCard = ({ title, description, image }) => {
               variant="body1"
               color={"white"}
               fontWeight={500}
-              sx={{ fontStretch: "130%" }}
+              sx={{ fontStretch: "110%" }}
             >
               {description}
             </Typography>

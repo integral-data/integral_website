@@ -1,4 +1,4 @@
-import { useState, React } from "react";
+import { React } from "react";
 import { Box, Paper, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useSpring, animated } from "react-spring";

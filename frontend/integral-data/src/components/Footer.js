@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Link, Container, IconButton } from "@mui/material";
+import { Box, Typography, Link, Container } from "@mui/material";
 import { IntegralRotatingLogo } from "./RotatingLogo";
 
 const Footer = () => {

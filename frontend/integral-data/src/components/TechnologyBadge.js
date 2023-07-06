@@ -75,15 +75,6 @@ const LogoImageModal = styled("img")({
   transition: "transform .2s", // Adds a smooth animation
 });
 
-const ChipLogo = styled(Chip)({
-  width: "auto",
-  "&:hover": {
-    transform: "scale(1.2)",
-    cursor: "pointer",
-  },
-  transition: "transform .2s", // Adds a smooth animation
-});
-
 const ModalStyle = {
   position: "absolute",
   top: "50%",
