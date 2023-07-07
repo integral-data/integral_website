@@ -1,14 +1,16 @@
-import React from "react";
-import { Box, Typography, Grid } from "@mui/material";
+import React, { useState } from "react";
+import { Grid, useTheme, Typography, useMediaQuery, Box } from "@mui/material";
 import GradientText from "./GradientText.js";
 import CaseStudyCard from "./CaseStudyCard.js";
 import { caseStudiesData } from "../data/caseStudiesData";
-import { useTheme } from "@mui/material";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useMediaQuery } from "@mui/material";
 import { tokens } from "../theme.js";
+import { Button } from "./ButtonElements";
+import { ArrowForward, ArrowRight } from "./HeroSection/HeroElements";
+
+
 
 function CaseStudies() {
   const theme = useTheme();
@@ -18,6 +20,12 @@ function CaseStudies() {
   const isMd = useMediaQuery(theme.breakpoints.only("md"));
   const isLg = useMediaQuery(theme.breakpoints.only("lg"));
   const isXl = useMediaQuery(theme.breakpoints.only("xl"));
+
+  const [hover, setHover] = useState(false);
+
+  const onHover = () => {
+    setHover(!hover);
+  };
 
   const getContainerWidth = () => {
     // You can adjust these pixel values to better suit your needs
@@ -108,9 +116,12 @@ function CaseStudies() {
                 eager to embark on new projects that drive innovation and
                 growth.
               </Typography>
+
             </Grid>
           </Grid>
         </Grid>
+
+        
 
         <Grid item md={12} sx={{ margin: "auto" }}>
           <Grid
@@ -167,6 +178,28 @@ function CaseStudies() {
                   ))}
                 </Slider>
               </Box>
+              <Box display="flex" justifyContent="center" alignItems="center" style={{ paddingTop: '50px' }}>
+  <Button
+    // to="/case_studies"
+    onMouseEnter={onHover}
+    onMouseLeave={onHover}
+    primary="true"
+    dark="true"
+    smooth={true}
+    duration={500}
+    spy={true}
+    exact="true"
+    offset={-80}
+    sx={{ maxWidth: "200px" ,}}
+  >
+    
+    <Typography variant="h6" sx={{ fontWeight: "600" }}>
+      View All Case Studies
+    </Typography>
+    {hover ? <ArrowForward /> : <ArrowRight />}
+  </Button>
+</Box>
+
             </Grid>
           </Grid>
         </Grid>
