@@ -1,7 +1,8 @@
 import React, { useEffect, useState, Fragment } from "react";
 import { FaBars } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
-import { Typography } from "@mui/material";
+import { Typography, Link as MuiLink } from "@mui/material";
+
 import {
   Nav,
   NavbarContainer,
@@ -14,11 +15,13 @@ import {
   NavSignUpLink,
 } from "./NavbarElements";
 import integral_banner from "../../images/integral_wide_transparent.png";
-import { animateScroll as scroll } from "react-scroll";
+import { animateScroll as scroll, Link as ReactScrollLink } from "react-scroll";
+import { useLocation } from "react-router-dom";
 
 const Navbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const changeNav = () => {
     if (window.scrollY >= 80) {
@@ -30,10 +33,44 @@ const Navbar = ({ toggle }) => {
 
   useEffect(() => {
     window.addEventListener("scroll", changeNav);
+    return () => {
+      setScrollNav(false);
+      window.removeEventListener("scroll", changeNav);
+    };
   }, []);
 
   const toggleHome = () => {
     scroll.scrollToTop();
+  };
+
+  const ScrollOrRouteLink = ({ to, children, ...props }) => {
+    if (location.pathname === "/") {
+      return (
+        <NavLinks
+          as={ReactScrollLink}
+          to={to}
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={-80}
+          {...props}
+        >
+          {children}
+        </NavLinks>
+      );
+    }
+
+    return (
+      <NavLinks
+        as={MuiLink}
+        href={"/#" + to}
+        color="inherit"
+        underline="none"
+        {...props}
+      >
+        {children}
+      </NavLinks>
+    );
   };
 
   return (
@@ -46,79 +83,32 @@ const Navbar = ({ toggle }) => {
             }}
           >
             <NavItem sx={{ marginTop: "200px" }}>
-              <NavLinks
-                to="why-integral"
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
-                offset={-80}
-                onClick={() => setIsOpen(false)}
-              >
+              <ScrollOrRouteLink to="why-integral">
                 <Typography variant="h2" fontWeight={400}>
                   Why Integral?
                 </Typography>
-              </NavLinks>
+              </ScrollOrRouteLink>
             </NavItem>
             <NavItem>
-              <NavLinks
-                to="services"
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
-                offset={-80}
-                onClick={() => setIsOpen(false)}
-              >
+              <ScrollOrRouteLink to="services">
                 <Typography variant="h2" fontWeight={400}>
                   Our Services
                 </Typography>
-              </NavLinks>
+              </ScrollOrRouteLink>
             </NavItem>
             <NavItem>
-              <NavLinks
-                to="expertise"
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
-                offset={-80}
-                onClick={() => setIsOpen(false)}
-              >
+              <ScrollOrRouteLink to="expertise">
                 <Typography variant="h2" fontWeight={400}>
                   Expertise
                 </Typography>
-              </NavLinks>
+              </ScrollOrRouteLink>
             </NavItem>
             <NavItem>
-              <NavLinks
-                to="case-studies"
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
-                offset={-80}
-                onClick={() => setIsOpen(false)}
-              >
+              <ScrollOrRouteLink to="case-studies">
                 <Typography variant="h2" fontWeight={400}>
                   Case Studies
                 </Typography>
-              </NavLinks>
-            </NavItem>
-            <NavItem>
-              <NavLinks
-                to="testimonials"
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
-                offset={-80}
-                onClick={() => setIsOpen(false)}
-              >
-                <Typography variant="h2" fontWeight={400}>
-                  Testimonials
-                </Typography>
-              </NavLinks>
+              </ScrollOrRouteLink>
             </NavItem>
             <NavItem>
               <NavSignUpLink
@@ -151,74 +141,32 @@ const Navbar = ({ toggle }) => {
 
             <NavMenu>
               <NavItem>
-                <NavLinks
-                  to="why-integral"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
+                <ScrollOrRouteLink to="why-integral">
                   <Typography variant="h6" fontWeight={700}>
                     Why Integral?
                   </Typography>
-                </NavLinks>
+                </ScrollOrRouteLink>
               </NavItem>
               <NavItem>
-                <NavLinks
-                  to="services"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
+                <ScrollOrRouteLink to="services">
                   <Typography variant="h6" fontWeight={700}>
                     Our Services
                   </Typography>
-                </NavLinks>
+                </ScrollOrRouteLink>
               </NavItem>
               <NavItem>
-                <NavLinks
-                  to="expertise"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
+                <ScrollOrRouteLink to="expertise">
                   <Typography variant="h6" fontWeight={700}>
                     Expertise
                   </Typography>
-                </NavLinks>
+                </ScrollOrRouteLink>
               </NavItem>
               <NavItem>
-                <NavLinks
-                  to="case-studies"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
+                <ScrollOrRouteLink to="case-studies">
                   <Typography variant="h6" fontWeight={700}>
                     Case Studies
                   </Typography>
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks
-                  to="testimonials"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
-                  <Typography variant="h6" fontWeight={700}>
-                    Testimonials
-                  </Typography>
-                </NavLinks>
+                </ScrollOrRouteLink>
               </NavItem>
               <NavItem>
                 <NavSignUpLink

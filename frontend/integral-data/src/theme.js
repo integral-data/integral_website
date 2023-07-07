@@ -268,9 +268,10 @@ export const themeSettings = (mode) => {
         fontStretch: "100%",
       },
       body2: {
-        fontSize: "clamp(10px, 0.8vw, 13px)",
+        fontSize: "clamp(0.75rem, 0.7vw, 12px)",
         fontStretch: "100%",
       },
+
       tableText: {
         fontFamily: ["Inter", "sans-serif"].join(","),
         fontSize: "clamp(0.75rem, 2vw, 0.75rem)",
@@ -336,7 +337,7 @@ export const themeSettings = (mode) => {
         font-size: 8px;;
       }
       .slick-dots li.slick-active button:before {
-        color: ${colors.greenAccent[600]}; /* active dot color */
+        color: ${colors.greenAccent[100]}; /* active dot color */
         font-size: 15px;
       }
     `,

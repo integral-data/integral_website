@@ -8,9 +8,11 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useMediaQuery } from "@mui/material";
+import { tokens } from "../theme.js";
 
 function CaseStudies() {
   const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
   const isXs = useMediaQuery(theme.breakpoints.only("xs"));
   const isSm = useMediaQuery(theme.breakpoints.only("sm"));
   const isMd = useMediaQuery(theme.breakpoints.only("md"));
@@ -80,25 +82,31 @@ function CaseStudies() {
             <Grid
               item
               md={12}
-              xs={8}
+              xs={12}
               sx={{
                 alignSelf: "center",
                 textAlign: { xs: "left", md: "left" }, // change here
               }}
             >
               <GradientText
-                variant="h2"
+                variant="h1"
                 fontWeight={600}
                 text="Success Stories"
+                color1={colors.blueAccent[100]}
+                color2={colors.blueAccent[400]}
               ></GradientText>
               <Typography variant="h4" color="white">
                 Explore our success stories, showcasing Integral's exceptional
                 work with clients from various industries. From healthcare to
                 finance and retail, we've tackled diverse data challenges with
-                expertise. Get inspired by our past accomplishments and discover
-                how we can empower your business with data-driven solutions.
-                We're always eager to embark on new projects that drive
-                innovation and growth.
+                expertise.
+              </Typography>
+              <br></br>
+              <Typography variant="h4" color="white">
+                Get inspired by our past accomplishments and discover how we can
+                empower your business with data-driven solutions. We're always
+                eager to embark on new projects that drive innovation and
+                growth.
               </Typography>
             </Grid>
           </Grid>
@@ -151,7 +159,7 @@ function CaseStudies() {
               >
                 <Slider {...settings}>
                   {caseStudiesData.map((caseStudy) => (
-                    <Grid container md={12} p={2}>
+                    <Grid container md={12} p={2} mb={4}>
                       <Grid item md={12} key={caseStudy.id}>
                         <CaseStudyCard study={caseStudy} />
                       </Grid>
