@@ -31,7 +31,7 @@ const ServiceCard = ({ title, description, image }) => {
         <Card
           sx={{
             maxWidth: 345,
-            height: 340,
+            height: 500,
             transition: "0.3s",
             borderRadius: "10px",
             alignSelf: "center",

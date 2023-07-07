@@ -178,34 +178,46 @@ function WhyIntegral() {
                 }}
               >
                 <Slider {...settings}>
+                <ServiceCard
+                    title="Fortune 500 Experience"
+                    description="Our team brings first-hand experience of deploying robust, production-grade models within globally recognized Fortune 500 institutions. With us, you get proven methodologies and practices that have been tried and tested in challenging real-world scenarios."
+                    image={ImageTeam}
+                  />
+
+                <ServiceCard
+                    title="Cross-Sector Expertise"
+                    description="Our diverse portfolio spans digital marketing to banking, credit cards, auto loans, anti-money laundering, fraud detection, talent acquisition, health sharing, and fantasy sports. This broad experience equips us with a unique understanding and adaptability, ensuring that we deliver tailored and effective solutions no matter the industry or challenge."
+
+                    image={ImageTeam}
+                  />
                   <ServiceCard
-                    title="Seasoned Expertise"
-                    description="Integral's team comprises seasoned professionals, averaging over a decade of data-centric experience to the table."
+                    title="Long-Standing Industry Veterans"
+                    description="The Integral team brings an unparalleled depth of expertise to your business, averaging 10+ years of data-centric experience per consultant. This deep expertise allows us not only to understand your needs, but also to anticipate them. With our team, you're choosing reliable, efficient, and high-quality solutions, delivered by proven professionals who have spent years honing their skills."
                     image={Coffee}
                   />
 
                   <ServiceCard
-                    title="Cost-effective Solutions"
-                    description="An internal analytics team can be a significant expense. By choosing Integral, you save on overheads while increasing your business agility and staying competitive."
+                    title="Cost-Effective Solutions"
+                    description="By choosing Integral, not only do you reduce the overheads of an internal analytics team, but you also gain immediate access to experienced consultants committed to tackling and resolving your business challenges, providing you with an unparalleled competitive edge."
                     image={ImageDash}
                   />
 
                   <ServiceCard
                     title="Uncompromised Quality"
-                    description="Quality is our guiding principle. Our seasoned expertise guarantees top-tier, accurate solutions that make a real difference."
+                    description="Our emphasis on quality is more than a promise; it's a commitment backed by years of profound data expertise. We don't just deliver solutions; we provide value by producing accurate, superior solutions that generate meaningful outcomes. With us, you have a trusted partner who is dedicated to your business's success."
                     image={ImageNerd}
                   />
 
                   <ServiceCard
                     title="Building Partnerships"
-                    description="We are more than just data experts & programmers. We are your partners, invested in your understanding of your business landscape, facilitating you to make strategic, data-driven decisions."
+                    description="We are not merely data experts and programmers; we consider ourselves partners, fully committed to helping you understand your business landscape and empowering you to make strategic, data-driven decisions."
                     image={ImageTeam}
                   />
 
                   <ServiceCard
                     title="Flexibility"
-                    description="We cater to projects of any magnitude with adaptable pricing options. Your business needs are our top priority."
-                    image={Image2}
+                    description="We cater to projects of any magnitude with adaptable pricing options. Your business needs are our top priority. We can help you solve small data analytics problems or tackle large projects like data migrations or building a reporting suite."
+                    image={Coffee}
                   />
                 </Slider>
               </Box>
