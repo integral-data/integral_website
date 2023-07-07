@@ -1,7 +1,6 @@
 import React from "react";
 import { Box, Typography, Grid } from "@mui/material";
 import Coffee from "../images/code_and_coffee.jpeg";
-import Image2 from "../images/problem.svg";
 import ImageNerd from "../images/circuit_nerd.jpeg";
 import ImageDash from "../images/dashboard.jpeg";
 import ImageTeam from "../images/teamwork.jpeg";
