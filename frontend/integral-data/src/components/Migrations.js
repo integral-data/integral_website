@@ -4,6 +4,7 @@ import migration from "../images/migration_transparent.png";
 import { useTheme } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
 import { CheckCircle } from "@mui/icons-material";
+import { Link as RouterLink } from 'react-router-dom';
 
 function Migrations() {
   const theme = useTheme();
@@ -150,14 +151,15 @@ function Migrations() {
                     </Typography>
                   </Box>
                 </Box>
-
                 <Typography variant="h6" color="#fbf7f5" mt={2}>
-                  See our data migration case study&nbsp;
-                  <Link href="/case_study_v2/12" color="inherit">
-                    here
-                  </Link>
-                  .
-                </Typography>
+  See our data migration case study&nbsp;
+  <Link component={RouterLink} to="/case_study_v2/12" color="inherit">
+    here
+  </Link>
+  .
+</Typography>
+
+
               </Box>
             </Grid>
             {!isSmallScreen && (

@@ -4,6 +4,7 @@ import scrape from "../images/scrape_transparent.png";
 import { useTheme } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
 import { CheckCircle } from "@mui/icons-material";
+import { Link as RouterLink } from 'react-router-dom';
 
 function Scraping() {
   const theme = useTheme();
@@ -150,14 +151,16 @@ function Scraping() {
                     </Typography>
                   </Box>
                 </Box>
-
                 <Typography variant="h6" color="#fbf7f5" mt={2}>
-                  See our web scraping case study&nbsp;
-                  <Link href="/case_study_v2/3" color="inherit">
-                    here
-                  </Link>
-                  .
-                </Typography>
+  See our web scraping migration case study&nbsp;
+  <Link component={RouterLink} to="/case_study_v2/3" color="inherit">
+    here
+  </Link>
+  .
+</Typography>
+
+
+
               </Box>
             </Grid>
           </Grid>
