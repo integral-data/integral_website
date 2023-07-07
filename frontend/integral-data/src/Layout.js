@@ -11,15 +11,14 @@ const Layout = ({ children, fullWidth }) => {
 
   return (
     <>
-      <Navbar />
       <Box
         sx={{
           position: "relative",
           minHeight: "100vh",
           overflowX: "hidden", // Prevent horizontal scroll
-          pt: 10, // Add padding-top
         }}
       >
+        <Navbar />
         <CssBaseline />
 
         <Box
@@ -37,7 +36,9 @@ const Layout = ({ children, fullWidth }) => {
         />
 
         <Container maxWidth={fullWidth ? false : "lg"}>
-          <main style={{ position: "relative" }}>{children}</main>
+          <main style={{ position: "relative", marginTop: "80px" }}>
+            {children}
+          </main>
         </Container>
       </Box>
       <Footer />

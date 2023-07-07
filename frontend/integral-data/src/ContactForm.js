@@ -13,8 +13,8 @@ import { Snackbar, Alert } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import emailjs from "emailjs-com";
 import contact from "./images/contact-us.png";
-import Footer from "./Footer";
-import Navbar from "./NavBar.tsx";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 import { useTheme } from "@mui/material/styles";
 import { tokens } from "./theme";
 
@@ -132,8 +132,6 @@ const ContactUsReact = () => {
                 Message sent successfully - thanks for reaching out!
               </Alert>
             </Snackbar>
-
-            
 
             <Grid container spacing={3} justifyContent="center">
               <Grid item xs={12} md={12}>
@@ -346,8 +344,12 @@ const ContactUsReact = () => {
                       </Typography>
                     </Button>
                   </Box>
-                  <Grid container spacing={3} justifyContent="center" style={{ paddingBottom: '200px' }}>
-            </Grid>
+                  <Grid
+                    container
+                    spacing={3}
+                    justifyContent="center"
+                    style={{ paddingBottom: "200px" }}
+                  ></Grid>
                 </form>
                 {/* <Box
                   sx={{
@@ -402,7 +404,6 @@ const ContactUsReact = () => {
             width: "100%",
           }}
         >
-          
           <Footer />
         </Box>
       </Box>

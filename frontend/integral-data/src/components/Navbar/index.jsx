@@ -44,6 +44,12 @@ const Navbar = ({ toggle }) => {
   };
 
   const ScrollOrRouteLink = ({ to, children, ...props }) => {
+    const handleClick = () => {
+      if (isOpen) {
+        setIsOpen(false);
+      }
+    };
+
     if (location.pathname === "/") {
       return (
         <NavLinks
@@ -53,6 +59,7 @@ const Navbar = ({ toggle }) => {
           smooth={true}
           duration={500}
           offset={-80}
+          onClick={handleClick}
           {...props}
         >
           {children}
@@ -66,6 +73,7 @@ const Navbar = ({ toggle }) => {
         href={"/#" + to}
         color="inherit"
         underline="none"
+        onClick={handleClick}
         {...props}
       >
         {children}

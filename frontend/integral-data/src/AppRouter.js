@@ -29,7 +29,7 @@ function AppRouter() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/contact" element={<ContactForm />} />
-            <Route path="contact_success" element={<ContactSuccess />} />
+
             <Route
               path="/*"
               element={
@@ -54,6 +54,10 @@ function AppRouter() {
                       element={<CaseStudyPage />}
                     />
                     <Route path="/consultants" element={<EmployeesPage />} />
+                    <Route
+                      path="contact_success"
+                      element={<ContactSuccess />}
+                    />
                     <Route path="*" element={<NotFoundPage />} />
                   </Routes>
                 </Layout>
