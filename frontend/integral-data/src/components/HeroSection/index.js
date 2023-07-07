@@ -12,6 +12,11 @@ const HeroSection = () => {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   const colors = tokens(theme.palette.mode);
 
+  const getHeroHeight = () => {
+    if (isSmallScreen) return "740px";
+    return "1000px";
+  };
+
   const onHover = () => {
     setHover(!hover);
   };
@@ -26,7 +31,7 @@ const HeroSection = () => {
         justifyContent: "center",
         alignItems: "center",
         padding: "0 10px",
-        height: "1000px",
+        height: getHeroHeight(),
         position: "relative",
         zIndex: 1,
       }}
