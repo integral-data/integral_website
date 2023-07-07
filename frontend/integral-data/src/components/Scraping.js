@@ -153,7 +153,7 @@ function Scraping() {
 
                 <Typography variant="h6" color="#fbf7f5" mt={2}>
                   See our web scraping case study&nbsp;
-                  <Link href="#" color="inherit">
+                  <Link href="/case_study_v2/3" color="inherit">
                     here
                   </Link>
                   .

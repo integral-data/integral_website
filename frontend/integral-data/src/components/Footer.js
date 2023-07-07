@@ -1,5 +1,13 @@
 import React from "react";
-import { Box, Typography, Link, Container } from "@mui/material";
+import {
+  Box,
+  Grid,
+  Typography,
+  Link as MuiLink,
+  Container,
+} from "@mui/material";
+import { Link as ScrollLink } from "react-scroll";
+import { useLocation } from "react-router-dom";
 import { IntegralRotatingLogo } from "./RotatingLogo";
 
 const Footer = () => {

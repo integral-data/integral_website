@@ -152,8 +152,8 @@ function Migrations() {
                 </Box>
 
                 <Typography variant="h6" color="#fbf7f5" mt={2}>
-                  See our analytics case study&nbsp;
-                  <Link href="#" color="inherit">
+                  See our data migration case study&nbsp;
+                  <Link href="/case_study_v2/12" color="inherit">
                     here
                   </Link>
                   .

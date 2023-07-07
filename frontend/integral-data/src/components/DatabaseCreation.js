@@ -140,7 +140,7 @@ function DatabaseCreation() {
 
                 <Typography variant="h6" color="#fbf7f5" mt={2}>
                   See our custom database case study&nbsp;
-                  <Link href="#" color="inherit">
+                  <Link href="/case_study_v2/17" color="inherit">
                     here
                   </Link>
                   .
