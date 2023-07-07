@@ -3,11 +3,9 @@ import { Box, Typography, Grid } from "@mui/material";
 import GradientText from "./GradientText";
 import { useTheme } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
-import { tokens } from "../theme";
 
 function Divider({ title, subtitle, id }) {
   const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
   const isXs = useMediaQuery(theme.breakpoints.only("xs"));
   const isSm = useMediaQuery(theme.breakpoints.only("sm"));
   const isMd = useMediaQuery(theme.breakpoints.only("md"));

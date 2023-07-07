@@ -9,7 +9,7 @@ import Scraping from "./components/Scraping.js";
 import DatabaseCreation from "./components/DatabaseCreation.js";
 import Skills from "./components/Skills.js";
 import CaseStudies from "./components/CaseStudies.js";
-import Testimonials from "./components/Testimonials.js";
+// import Testimonials from "./components/Testimonials.js";
 import Divider from "./components/Divider.js";
 function HomePage() {
   return (

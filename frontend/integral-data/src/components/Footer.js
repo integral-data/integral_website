@@ -3,38 +3,12 @@ import {
   Box,
   Grid,
   Typography,
-  Link as MuiLink,
   Container,
 } from "@mui/material";
-import { Link as ScrollLink } from "react-scroll";
-import { useLocation } from "react-router-dom";
 import { IntegralRotatingLogo } from "./RotatingLogo";
 
 const Footer = () => {
-  const location = useLocation();
 
-  const ScrollOrRouteLink = ({ to, children, ...props }) => {
-    if (location.pathname === "/") {
-      return (
-        <ScrollLink
-          to={to}
-          spy={true}
-          smooth={true}
-          duration={500}
-          offset={-60}
-          {...props}
-        >
-          {children}
-        </ScrollLink>
-      );
-    }
-
-    return (
-      <MuiLink href={"/#" + to} {...props}>
-        {children}
-      </MuiLink>
-    );
-  };
 
   return (
     <Box
