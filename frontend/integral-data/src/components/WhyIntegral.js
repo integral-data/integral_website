@@ -85,14 +85,14 @@ function WhyIntegral() {
             <Grid
               item
               md={8}
-              xs={8}
+              xs={12}
               sx={{
                 alignSelf: "center",
                 textAlign: { xs: "left", md: "left" }, // change here
               }}
             >
               <GradientText
-                variant="h2"
+                variant="h1"
                 color1="rgba(245,177,97,1)"
                 color2="rgba(236,54,110,1)"
                 fontWeight={600}

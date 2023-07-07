@@ -12,7 +12,7 @@ import {
 import { Snackbar, Alert } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import emailjs from "emailjs-com";
-import contact from "./images/contact-us.png";
+import contact from "./images/
 import Footer from "./Footer";
 import Navbar from "./NavBar.tsx";
 import { useTheme } from "@mui/material/styles";
@@ -139,7 +139,7 @@ const ContactUsReact = () => {
                   <Grid container sx={{ display: "flex" }}>
                     <Typography
                       variant="body1"
-                      align="center"
+                      align="left"
                       color="text.primary"
                     >
                       Connect with the Integral team to explore how we can drive

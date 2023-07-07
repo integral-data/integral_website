@@ -3,61 +3,116 @@ import { Box, Typography, Link, Container } from "@mui/material";
 import { IntegralRotatingLogo } from "./RotatingLogo";
 
 const Footer = () => {
+  const location = useLocation();
+
+  const ScrollOrRouteLink = ({ to, children, ...props }) => {
+    if (location.pathname === "/") {
+      return (
+        <ScrollLink
+          to={to}
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={-60}
+          {...props}
+        >
+          {children}
+        </ScrollLink>
+      );
+    }
+
+    return (
+      <MuiLink href={"/#" + to} {...props}>
+        {children}
+      </MuiLink>
+    );
+  };
+
   return (
     <Box
       component="footer"
-      sx={{ backgroundColor: "black", color: "white", py: 6 }}
+      sx={{ backgroundColor: "black", color: "white", py: 2 }}
     >
       <Container maxWidth="xl">
-        <Box
+        <Grid
+          container
           display="flex"
           justifyContent="space-between"
           alignItems="center"
-          mb={3}
+          mb={1}
+          height="60px"
         >
-          <Box>
-            <Typography variant="h2" fontWeight={700}>
+          <Grid item md={4}>
+            <Typography variant="h5" fontWeight={700}>
               Integral Data
             </Typography>
-          </Box>
-          <IntegralRotatingLogo size="small" />
-        </Box>
-        <Box display="flex" justifyContent="space-between">
+            <Typography variant="body2" color="inherit">
+              &copy; {new Date().getFullYear()} Integral Data. All rights
+              reserved.
+            </Typography>
+          </Grid>
+          <Grid item md={4} xs={12}></Grid>
+          <IntegralRotatingLogo height="40px" width="40px" />
+        </Grid>
+        {/* <Box display="flex" justifyContent="space-between">
           <Box>
-            <Typography variant="h5" fontWeight={600}>
+            <Typography variant="body1" fontWeight={600}>
               Company
             </Typography>
-            <Link href="/about" color="inherit" underline="none">
-              <Typography variant="body1">About Us</Typography>
-            </Link>
 
-            <Link href="/contact" color="inherit" underline="none">
-              <Typography variant="body1">Contact</Typography>
-            </Link>
+            <Typography variant="body2">
+              <ScrollLink
+                to="contact-section"
+                spy={true}
+                smooth={true}
+                duration={500}
+                offset={-60}
+                color="inherit"
+                underline="none"
+                activeClass="active"
+              >
+                Contact
+              </ScrollLink>
+            </Typography>
           </Box>
           <Box>
-            <Typography variant="h5" fontWeight={600}>
+            <Typography variant="body1" fontWeight={600}>
               Resources
             </Typography>
-            <Link href="/skills" color="inherit" underline="none">
-              <Typography variant="body1">Skills</Typography>
-            </Link>
+            <Typography variant="body2">
+              <ScrollOrRouteLink
+                to="expertise"
+                color="inherit"
+                underline="none"
+                activeClass="active"
+              >
+                Skills
+              </ScrollOrRouteLink>
+            </Typography>
 
-            <Link href="/testimonials" color="inherit" underline="none">
-              <Typography variant="body1">Testimonials</Typography>
-            </Link>
+            <Typography variant="body2">
+              <ScrollOrRouteLink
+                to="testimonials"
+                color="inherit"
+                underline="none"
+                activeClass="active"
+              >
+                Testimonials
+              </ScrollOrRouteLink>
+            </Typography>
 
-            <Link href="/support" color="inherit" underline="none">
-              <Typography variant="body1">Case Studies</Typography>
-            </Link>
+            <Typography variant="body2">
+              <ScrollOrRouteLink
+                to="case-studies"
+                color="inherit"
+                underline="none"
+                activeClass="active"
+              >
+                Case Studies
+              </ScrollOrRouteLink>
+            </Typography>
           </Box>
-        </Box>
-        <Box mt={3}>
-          <Typography variant="body2" color="inherit">
-            &copy; {new Date().getFullYear()} Integral Data. All rights
-            reserved.
-          </Typography>
-        </Box>
+        </Box> */}
       </Container>
     </Box>
   );

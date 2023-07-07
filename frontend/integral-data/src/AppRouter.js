@@ -11,11 +11,12 @@ import WhatWeDo from "./WhatWeDo";
 import SkillsV2 from "./SkillsV2";
 import NewPage from "./NewPage";
 import Layout from "./Layout";
-
+import ScrollToTop from "./ScrollToTop";
 import CaseStudiesPage from "./CaseStudiesOverviewPage";
 import CaseStudyPageCarousel from "./CaseStudiesCarousel";
 import CaseStudyPage from "./CaseStudySingle";
 import EmployeesPage from "./Consultants";
+import NotFoundPage from "./NotFoundPage";
 
 function AppRouter() {
   const [theme, colorMode] = useMode();
@@ -24,21 +25,21 @@ function AppRouter() {
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <Router>
+          <ScrollToTop />
           <Routes>
-            <Route exact path="/" element={<HomePage />} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/contact" element={<ContactForm />} />
             <Route path="contact_success" element={<ContactSuccess />} />
             <Route
               path="/*"
               element={
-                <Layout>
+                <Layout fullWidth>
                   <Routes>
                     <Route path="experience" element={<ExperiencePage />} />
                     <Route path="why_integral" element={<WhyIntegral />} />
                     <Route path="what_we_do" element={<WhatWeDo />} />
                     <Route path="skills" element={<SkillsV2 />} />
                     <Route path="test" element={<NewPage />} />
-
                     <Route path="/case_studies" element={<CaseStudiesPage />} />
                     <Route
                       path="/case_carousel"
@@ -53,6 +54,7 @@ function AppRouter() {
                       element={<CaseStudyPage />}
                     />
                     <Route path="/consultants" element={<EmployeesPage />} />
+                    <Route path="*" element={<NotFoundPage />} />
                   </Routes>
                 </Layout>
               }

@@ -1,23 +1,24 @@
 import React from "react";
-import NavBar from "./NavBar.tsx";
-import Footer from "./Footer";
+import { Outlet } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import Container from "@mui/material/Container";
 import { useTheme } from "@mui/material";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, fullWidth }) => {
   const theme = useTheme();
 
   return (
     <>
-      <NavBar />
+      <Navbar />
       <Box
         sx={{
           position: "relative",
           minHeight: "100vh",
           overflowX: "hidden", // Prevent horizontal scroll
-          pt: 8, // Add padding-top
+          pt: 10, // Add padding-top
         }}
       >
         <CssBaseline />
@@ -36,7 +37,7 @@ const Layout = ({ children }) => {
           }}
         />
 
-        <Container maxWidth="lg">
+        <Container maxWidth={fullWidth ? false : "lg"}>
           <main style={{ position: "relative" }}>{children}</main>
         </Container>
       </Box>
