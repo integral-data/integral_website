@@ -1,5 +1,4 @@
 import React from "react";
-// import Navbar from "./NavBar.tsx";
 import Navbar from "./components/Navbar/index.jsx";
 import Footer from "./components/Footer.js";
 import HeroSection from "./components/HeroSection/index.js";

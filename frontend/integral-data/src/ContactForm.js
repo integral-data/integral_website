@@ -12,10 +12,9 @@ import {
 import { Snackbar, Alert } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import emailjs from "emailjs-com";
-import contact from "./images/contact-us.png";
-import Footer from "./components/Footer";
-import { IntegralRotatingLogo } from "./components/RotatingLogo";
-import Navbar from "./components/Navbar";
+import contact from "./images/
+import Footer from "./Footer";
+import Navbar from "./NavBar.tsx";
 import { useTheme } from "@mui/material/styles";
 import { tokens } from "./theme";
 
