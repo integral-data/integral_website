@@ -180,7 +180,7 @@ function CaseStudies() {
               </Box>
               <Box display="flex" justifyContent="center" alignItems="center" style={{ paddingTop: '50px' }}>
   <Button
-    // to="/case_studies"
+    to="/case_studies"
     onMouseEnter={onHover}
     onMouseLeave={onHover}
     primary="true"
