@@ -3,7 +3,7 @@ import { Box, Paper, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useSpring, animated } from "react-spring";
 
-const CaseStudyCard = ({ study, showSubtitle }) => {
+const CaseStudyCard = ({ study, showSubtitle, size }) => {
   const [props, set] = useSpring(() => ({ scale: 1 }));
 
   return (
@@ -16,7 +16,7 @@ const CaseStudyCard = ({ study, showSubtitle }) => {
         <Paper
           sx={{
             maxWidth: 345,
-            height: 300,
+            height: 350,
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
