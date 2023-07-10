@@ -96,35 +96,35 @@ const Navbar = ({ toggle }) => {
                 flexDirection: "column", // The direct children stack on top of each other
                 justifyContent: "center", // Center children vertically
                 alignItems: "center", // Center children horizontally
-                height: "100%", // Make it fill the entire container
-                marginTop: "0px",
-                marginBottom: "800px",
+                height: "20%", // Make it fill the entire container
+                margin: "auto",
+                marginTop: "30%",
               }}
             >
-              <NavItem sx={{ marginTop: "0px", textAlign: "center" }}>
+              <NavItem>
                 <ScrollOrRouteLink to="why-integral">
-                  <Typography variant="h2" fontWeight={400} textAlign="center">
+                  <Typography variant="h2" fontWeight={400} mt={2}>
                     Why Integral?
                   </Typography>
                 </ScrollOrRouteLink>
               </NavItem>
               <NavItem>
                 <ScrollOrRouteLink to="services">
-                  <Typography variant="h2" fontWeight={400}>
+                  <Typography variant="h2" fontWeight={400} mt={2}>
                     Our Services
                   </Typography>
                 </ScrollOrRouteLink>
               </NavItem>
-              <NavItem sx={{ marginTop: "0px", margin: "auto" }}>
+              <NavItem>
                 <ScrollOrRouteLink to="expertise">
-                  <Typography variant="h2" fontWeight={400}>
+                  <Typography variant="h2" fontWeight={400} mt={2}>
                     Expertise
                   </Typography>
                 </ScrollOrRouteLink>
               </NavItem>
               <NavItem>
                 <ScrollOrRouteLink to="case-studies">
-                  <Typography variant="h2" fontWeight={400}>
+                  <Typography variant="h2" fontWeight={400} mt={2}>
                     Case Studies
                   </Typography>
                 </ScrollOrRouteLink>
@@ -139,7 +139,7 @@ const Navbar = ({ toggle }) => {
                   offset={-80}
                   onClick={() => setIsOpen(false)}
                 >
-                  <Typography variant="h2" fontWeight={400}>
+                  <Typography variant="h2" fontWeight={400} mt={2}>
                     Contact Us
                   </Typography>
                 </NavSignUpLink>

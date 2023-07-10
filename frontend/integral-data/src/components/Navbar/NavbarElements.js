@@ -159,8 +159,9 @@ export const NavMenuMobile = styled.ul`
     justify-content: center;
 
     width: 100%;
-    top: 50px;
+    top: 0; // This ensures the menu starts from the top of the viewport
     right: 0px;
     height: 100vh;
-    background: black
+    background: black;
+  }
 `;

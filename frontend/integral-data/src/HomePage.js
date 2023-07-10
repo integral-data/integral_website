@@ -10,8 +10,8 @@ import DatabaseCreation from "./components/DatabaseCreation.js";
 import DataCleansing from "./components/DataCleansing.js";
 import Skills from "./components/Skills.js";
 import CaseStudies from "./components/CaseStudies.js";
+import OurServices from "./components/OurServices.js";
 // import Testimonials from "./components/Testimonials.js";
-import Divider from "./components/Divider.js";
 function HomePage() {
   return (
     <>
@@ -19,11 +19,7 @@ function HomePage() {
       <HeroSection />
       <WhyIntegral />
       <div id="services">
-        <Divider
-          title="Our Services"
-          subtitle="Arming your business with our expertise"
-        />
-
+        <OurServices />
         <Migrations />
         <Analytics />
         <DataCleansing />

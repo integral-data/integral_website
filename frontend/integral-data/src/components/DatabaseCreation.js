@@ -4,7 +4,7 @@ import migration from "../images/database_transparent.png";
 import { useTheme } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
 import { CheckCircle } from "@mui/icons-material";
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink } from "react-router-dom";
 
 function DatabaseCreation() {
   const theme = useTheme();
@@ -37,6 +37,21 @@ function DatabaseCreation() {
               maxWidth: "1600px",
             }}
           >
+            {!isSmallScreen && (
+              <Grid
+                item
+                md={4}
+                sm={12}
+                xs={12}
+                sx={{
+                  height: isSmallScreen ? "200px" : "200px",
+                  backgroundImage: `url(${migration})`,
+                  backgroundSize: "contain",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                }}
+              ></Grid>
+            )}
             <Grid item md={8} sm={12} xs={12}>
               <Box
                 sx={{
@@ -140,29 +155,18 @@ function DatabaseCreation() {
                 </Box>
 
                 <Typography variant="h6" color="#fbf7f5" mt={2}>
-  See our custom database case study&nbsp;
-  <Link component={RouterLink} to="/case_study_v2/4" color="inherit">
-    here
-  </Link>
-  .
-</Typography>
+                  See our custom database case study&nbsp;
+                  <Link
+                    component={RouterLink}
+                    to="/case_study_v2/4"
+                    color="inherit"
+                  >
+                    here
+                  </Link>
+                  .
+                </Typography>
               </Box>
             </Grid>
-            {!isSmallScreen && (
-              <Grid
-                item
-                md={4}
-                sm={12}
-                xs={12}
-                sx={{
-                  height: isSmallScreen ? "200px" : "200px",
-                  backgroundImage: `url(${migration})`,
-                  backgroundSize: "contain",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                }}
-              ></Grid>
-            )}
           </Grid>
         </Box>
       </Grid>

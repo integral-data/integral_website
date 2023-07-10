@@ -4,7 +4,7 @@ import scrape from "../images/scrape_transparent.png";
 import { useTheme } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
 import { CheckCircle } from "@mui/icons-material";
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink } from "react-router-dom";
 
 function Scraping() {
   const theme = useTheme();
@@ -37,21 +37,6 @@ function Scraping() {
               maxWidth: "1600px",
             }}
           >
-            {!isSmallScreen && (
-              <Grid
-                item
-                md={4}
-                sm={12}
-                xs={12}
-                sx={{
-                  height: isSmallScreen ? "200px" : "200px",
-                  backgroundImage: `url(${scrape})`,
-                  backgroundSize: "contain",
-                  backgroundPosition: "left",
-                  backgroundRepeat: "no-repeat",
-                }}
-              ></Grid>
-            )}
             <Grid item md={8} sm={12} xs={12}>
               <Box
                 sx={{
@@ -152,17 +137,33 @@ function Scraping() {
                   </Box>
                 </Box>
                 <Typography variant="h6" color="#fbf7f5" mt={2}>
-  See our web scraping migration case study&nbsp;
-  <Link component={RouterLink} to="/case_study_v2/5" color="inherit">
-    here
-  </Link>
-  .
-</Typography>
-
-
-
+                  See our web scraping migration case study&nbsp;
+                  <Link
+                    component={RouterLink}
+                    to="/case_study_v2/5"
+                    color="inherit"
+                  >
+                    here
+                  </Link>
+                  .
+                </Typography>
               </Box>
             </Grid>
+            {!isSmallScreen && (
+              <Grid
+                item
+                md={4}
+                sm={12}
+                xs={12}
+                sx={{
+                  height: isSmallScreen ? "200px" : "200px",
+                  backgroundImage: `url(${scrape})`,
+                  backgroundSize: "contain",
+                  backgroundPosition: "left",
+                  backgroundRepeat: "no-repeat",
+                }}
+              ></Grid>
+            )}
           </Grid>
         </Box>
       </Grid>

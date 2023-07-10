@@ -10,8 +10,6 @@ import { tokens } from "../theme.js";
 import { Button } from "./ButtonElements";
 import { ArrowForward, ArrowRight } from "./HeroSection/HeroElements";
 
-
-
 function CaseStudies() {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -61,7 +59,7 @@ function CaseStudies() {
         display={"flex"}
         flexDirection={"row"}
         sx={{
-          background: theme.homeGradient2,
+          background: theme.homeGradient1,
           position: "relative",
         }}
       >
@@ -100,8 +98,8 @@ function CaseStudies() {
                 variant="h1"
                 fontWeight={600}
                 text="Case Studies"
-                color1={colors.blueAccent[100]}
-                color2={colors.blueAccent[400]}
+                color1="rgba(245,177,97,1)"
+                color2="rgba(236,54,110,1)"
               ></GradientText>
               <Typography variant="h4" color="white">
                 Explore our success stories, showcasing Integral's exceptional
@@ -116,12 +114,9 @@ function CaseStudies() {
                 eager to embark on new projects that drive innovation and
                 growth.
               </Typography>
-
             </Grid>
           </Grid>
         </Grid>
-
-        
 
         <Grid item md={12} sx={{ margin: "auto" }}>
           <Grid
@@ -178,28 +173,31 @@ function CaseStudies() {
                   ))}
                 </Slider>
               </Box>
-              <Box display="flex" justifyContent="center" alignItems="center" style={{ paddingTop: '50px' }}>
-  <Button
-    to="/case_studies"
-    onMouseEnter={onHover}
-    onMouseLeave={onHover}
-    primary="true"
-    dark="true"
-    smooth={true}
-    duration={500}
-    spy={true}
-    exact="true"
-    offset={-80}
-    sx={{ maxWidth: "200px" ,}}
-  >
-    
-    <Typography variant="h6" sx={{ fontWeight: "600" }}>
-      View All Case Studies
-    </Typography>
-    {hover ? <ArrowForward /> : <ArrowRight />}
-  </Button>
-</Box>
-
+              <Box
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                style={{ paddingTop: "50px" }}
+              >
+                <Button
+                  to="/case_studies"
+                  onMouseEnter={onHover}
+                  onMouseLeave={onHover}
+                  primary="true"
+                  dark="true"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                  sx={{ maxWidth: "200px" }}
+                >
+                  <Typography variant="h6" sx={{ fontWeight: "600" }}>
+                    View All Case Studies
+                  </Typography>
+                  {hover ? <ArrowForward /> : <ArrowRight />}
+                </Button>
+              </Box>
             </Grid>
           </Grid>
         </Grid>
