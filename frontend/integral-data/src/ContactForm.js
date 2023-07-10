@@ -68,7 +68,7 @@ const ContactUsReact = () => {
         navigate("/contact_success");
       } catch (error) {
         console.error(error);
-        // show error message
+        // show error messages
       }
       setSubmitting(false);
     },
