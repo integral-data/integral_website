@@ -55,7 +55,7 @@ function WhyIntegral() {
         display={"flex"}
         flexDirection={"row"}
         sx={{
-          background: "black",
+          background: theme.homeGradient2,
           position: "relative",
         }}
       >
@@ -177,16 +177,15 @@ function WhyIntegral() {
                 }}
               >
                 <Slider {...settings}>
-                <ServiceCard
+                  <ServiceCard
                     title="Fortune 500 Experience"
                     description="Our team brings first-hand experience of deploying robust, production-grade models within globally recognized Fortune 500 institutions. With us, you get proven methodologies and practices that have been tried and tested in challenging real-world scenarios."
                     image={ImageTeam}
                   />
 
-                <ServiceCard
+                  <ServiceCard
                     title="Cross-Sector Expertise"
                     description="Our diverse portfolio spans digital marketing to banking, credit cards, auto loans, anti-money laundering, fraud detection, talent acquisition, health sharing, and fantasy sports. This broad experience equips us with a unique understanding and adaptability, ensuring that we deliver tailored and effective solutions no matter the industry or challenge."
-
                     image={ImageTeam}
                   />
                   <ServiceCard

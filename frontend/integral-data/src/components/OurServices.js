@@ -4,9 +4,11 @@ import GradientText from "./GradientText";
 import services from "../images/services.png";
 import { useTheme } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
+import { tokens } from "../theme";
 
 function OurServices() {
   const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
@@ -17,7 +19,7 @@ function OurServices() {
         sm={12}
         md={12}
         sx={{
-          background: theme.gradient2,
+          background: "black",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -57,8 +59,8 @@ function OurServices() {
                   />
                   <GradientText
                     variant="h4"
-                    color1="rgba(245,177,97,1)"
-                    color2="rgba(236,54,110,1)"
+                    color1={colors.blueAccent[100]}
+                    color2={colors.blueAccent[400]}
                     text="Arming your business with our expertise."
                   />
                 </Box>

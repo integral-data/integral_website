@@ -104,15 +104,7 @@ function CaseStudies() {
               <Typography variant="h4" color="white">
                 Explore our success stories, showcasing Integral's exceptional
                 work with clients from various industries. From healthcare to
-                finance and retail, we've tackled diverse data challenges with
-                expertise.
-              </Typography>
-              <br></br>
-              <Typography variant="h4" color="white">
-                Get inspired by our past accomplishments and discover how we can
-                empower your business with data-driven solutions. We're always
-                eager to embark on new projects that drive innovation and
-                growth.
+                finance and retail, we've tackled diverse data challenges.
               </Typography>
             </Grid>
           </Grid>
