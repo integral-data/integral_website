@@ -4,6 +4,9 @@ import Coffee from "../images/code_and_coffee.jpeg";
 import ImageNerd from "../images/circuit_nerd.jpeg";
 import ImageDash from "../images/dashboard.jpeg";
 import ImageTeam from "../images/teamwork.jpeg";
+import ImageStock from "../images/stock_ticker.png"
+import ImageAdapt from "../images/adaptable.jpg"
+import ImageIndustry from "../images/cross-industry.jpg"
 import GradientText from "../components/GradientText.js";
 import ServiceCard from "../components/ServiceCard.js";
 import { IntegralRotatingLogo } from "./RotatingLogo";
@@ -177,16 +180,17 @@ function WhyIntegral() {
                 }}
               >
                 <Slider {...settings}>
-                  <ServiceCard
+                <ServiceCard
                     title="Fortune 500 Experience"
                     description="Our team brings first-hand experience of deploying robust, production-grade models within globally recognized Fortune 500 institutions. With us, you get proven methodologies and practices that have been tried and tested in challenging real-world scenarios."
-                    image={ImageTeam}
+                    image={ImageStock}
                   />
 
-                  <ServiceCard
+                <ServiceCard
                     title="Cross-Sector Expertise"
-                    description="Our diverse portfolio spans digital marketing to banking, credit cards, auto loans, anti-money laundering, fraud detection, talent acquisition, health sharing, and fantasy sports. This broad experience equips us with a unique understanding and adaptability, ensuring that we deliver tailored and effective solutions no matter the industry or challenge."
-                    image={ImageTeam}
+                    description="Our diverse experience spans digital marketing to banking, credit cards, wealth management, auto loans, anti-money laundering, fraud detection, talent acquisition, health sharing, and fantasy sports. This broad experience equips us with a unique understanding and adaptability, ensuring that we deliver tailored and effective solutions no matter the industry or challenge."
+
+                    image={ImageIndustry}
                   />
                   <ServiceCard
                     title="Long-Standing Industry Veterans"
@@ -215,7 +219,7 @@ function WhyIntegral() {
                   <ServiceCard
                     title="Flexibility"
                     description="We cater to projects of any magnitude with adaptable pricing options. Your business needs are our top priority. We can help you solve small data analytics problems or tackle large projects like data migrations or building a reporting suite."
-                    image={Coffee}
+                    image={ImageAdapt}
                   />
                 </Slider>
               </Box>
