@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Grid, Box, Container, Typography, useMediaQuery } from "@mui/material";
 import { Button } from "./components/ButtonElements";
 import {
@@ -13,21 +13,20 @@ import { useTheme } from "@mui/material";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { tokens } from "./theme";
 
-function getRandom(arr, n) {
-  const result = new Array(n);
-  let len = arr.length;
-  const taken = new Array(len);
-  if (n > len)
-    throw new RangeError("getRandom: more elements taken than available");
-  while (n--) {
-    const x = Math.floor(Math.random() * len);
-    result[n] = arr[x in taken ? taken[x] : x];
-    taken[x] = --len in taken ? taken[len] : len;
-  }
-  return result;
-}
+// function getRandom(arr, n) {
+//   const result = new Array(n);
+//   let len = arr.length;
+//   const taken = new Array(len);
+//   if (n > len)
+//     throw new RangeError("getRandom: more elements taken than available");
+//   while (n--) {
+//     const x = Math.floor(Math.random() * len);
+//     result[n] = arr[x in taken ? taken[x] : x];
+//     taken[x] = --len in taken ? taken[len] : len;
+//   }
+//   return result;
+// }
 
 const CaseStudyPage = () => {
   const { id } = useParams();
@@ -37,16 +36,17 @@ const CaseStudyPage = () => {
   );
 
   const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
+  // const colors = tokens(theme.palette.mode);
   const filteredCaseStudiesData = caseStudiesData.filter(
     (study) => study.id !== currentId
   );
 
+  // eslint-disable-next-line
   const [hover, setHover] = useState(false);
 
-  const onHover = () => {
-    setHover(!hover);
-  };
+  // const onHover = () => {
+  //   setHover(!hover);
+  // };
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("lg"));
 
   const settings = {
