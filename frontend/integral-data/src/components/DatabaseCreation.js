@@ -18,7 +18,7 @@ function DatabaseCreation() {
         sm={12}
         md={12}
         sx={{
-          background: theme.homeGradient1,
+          background: theme.homeGradient2,
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -141,7 +141,7 @@ function DatabaseCreation() {
 
                 <Typography variant="h6" color="#fbf7f5" mt={2}>
   See our custom database case study&nbsp;
-  <Link component={RouterLink} to="/case_study_v2/17" color="inherit">
+  <Link component={RouterLink} to="/case_study_v2/4" color="inherit">
     here
   </Link>
   .

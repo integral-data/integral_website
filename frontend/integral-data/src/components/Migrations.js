@@ -96,7 +96,7 @@ function Migrations() {
                       variant="h5"
                       sx={{ alignSelf: "center", marginTop: "5px" }}
                     >
-                      Comprehensive data exploration and analysis
+                      Comprehensive data exploration of your data in existing platform
                     </Typography>
                   </Box>
                   <Box
@@ -112,7 +112,7 @@ function Migrations() {
                       variant="h5"
                       sx={{ alignSelf: "center", marginTop: "5px" }}
                     >
-                      Customized metric and KPI design
+                      Analysis of the new platform's architecture 
                     </Typography>
                   </Box>
                   <Box
@@ -128,7 +128,7 @@ function Migrations() {
                       variant="h5"
                       sx={{ alignSelf: "center", marginTop: "5px" }}
                     >
-                      Thorough data cleaning, transformation, and formatting
+                      Thorough data cleaning, transformation, formatting, and loading 
                     </Typography>
                   </Box>
                   <Box
@@ -146,14 +146,13 @@ function Migrations() {
                       variant="h5"
                       sx={{ alignSelf: "center", marginTop: "5px" }}
                     >
-                      Verification and validation to ensure data accuracy and
-                      integrity
+                      Verification and validation to ensure data accuracy and integrity 
                     </Typography>
                   </Box>
                 </Box>
                 <Typography variant="h6" color="#fbf7f5" mt={2}>
   See our data migration case study&nbsp;
-  <Link component={RouterLink} to="/case_study_v2/12" color="inherit">
+  <Link component={RouterLink} to="/case_study_v2/1" color="inherit">
     here
   </Link>
   .

@@ -1,12 +1,12 @@
 import React from "react";
 import { Box, Typography, Grid, Link } from "@mui/material";
-import scrape from "../images/scrape_transparent.png";
+import migration from "../images/migration_transparent.png";
 import { useTheme } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
 import { CheckCircle } from "@mui/icons-material";
 import { Link as RouterLink } from 'react-router-dom';
 
-function Scraping() {
+function DataCleansing() {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -19,6 +19,7 @@ function Scraping() {
         md={12}
         sx={{
           background: `linear-gradient(145deg, rgba(9,29,85,1) 0.2%, rgba(0,0,0,1) 100.2%)`,
+
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -28,8 +29,8 @@ function Scraping() {
           <Grid
             container
             alignSelf={"center"}
-            maxWidth={"1600px"}
             md={12}
+            m={0}
             sx={{
               display: "flex",
               justifyContent: "center",
@@ -37,21 +38,6 @@ function Scraping() {
               maxWidth: "1600px",
             }}
           >
-            {!isSmallScreen && (
-              <Grid
-                item
-                md={4}
-                sm={12}
-                xs={12}
-                sx={{
-                  height: isSmallScreen ? "200px" : "200px",
-                  backgroundImage: `url(${scrape})`,
-                  backgroundSize: "contain",
-                  backgroundPosition: "left",
-                  backgroundRepeat: "no-repeat",
-                }}
-              ></Grid>
-            )}
             <Grid item md={8} sm={12} xs={12}>
               <Box
                 sx={{
@@ -64,12 +50,12 @@ function Scraping() {
               >
                 <Box sx={{ display: "flex", alignItems: "center" }}>
                   <Typography variant="h2" fontWeight={600} color="white">
-                    Web Scraping
+                    Data Cleansing
                   </Typography>
                   {isSmallScreen && (
                     <img
-                      src={scrape}
-                      alt="Dashboard"
+                      src={migration}
+                      alt="Migration"
                       height="40px"
                       style={{ marginLeft: "15px" }}
                     />
@@ -83,12 +69,11 @@ function Scraping() {
                   }}
                 />
                 <Typography variant="h4" color="#fbf7f5">
-                  Unlock valuable data and automate processes through web
-                  scraping.
+                  We are experts at cleaning data.
                 </Typography>
 
                 <Typography variant="h4" color="#fbf7f5" mt={2}>
-                  Benefits of Web Scraping:
+                  Benefits of data cleaning:
                 </Typography>
                 <Box
                   sx={{
@@ -106,8 +91,11 @@ function Scraping() {
                     }}
                   >
                     <CheckCircle sx={{ fontSize: 22, mr: 1 }} />
-                    <Typography variant="h5">
-                      Eliminate manual data entry and repetitive tasks
+                    <Typography
+                      variant="h5"
+                      sx={{ alignSelf: "center", marginTop: "5px" }}
+                    >
+                      Clean data is essential to drive smart decisions (garbage in - garbage out)
                     </Typography>
                   </Box>
                   <Box
@@ -119,9 +107,11 @@ function Scraping() {
                     }}
                   >
                     <CheckCircle sx={{ fontSize: 22, mr: 1 }} />
-                    <Typography variant="h5">
-                      Access and extract data from various websites and online
-                      sources
+                    <Typography
+                      variant="h5"
+                      sx={{ alignSelf: "center", marginTop: "5px" }}
+                    >
+                      We can analyze millions of rows & thousands of columns 
                     </Typography>
                   </Box>
                   <Box
@@ -133,8 +123,11 @@ function Scraping() {
                     }}
                   >
                     <CheckCircle sx={{ fontSize: 22, mr: 1 }} />
-                    <Typography variant="h5">
-                      Gather competitive intelligence and market insights
+                    <Typography
+                      variant="h5"
+                      sx={{ alignSelf: "center", marginTop: "5px" }}
+                    >
+                      Restructuring data can often lead to key insights. We can handle that.
                     </Typography>
                   </Box>
                   <Box
@@ -145,24 +138,43 @@ function Scraping() {
                       mt: 1,
                     }}
                   >
-                    <CheckCircle sx={{ fontSize: 22, mr: 1 }} />
-                    <Typography variant="h5">
-                      Streamline data-driven decision-making processes
+                    <CheckCircle
+                      sx={{ fontSize: 22, mr: 1, alignSelf: "center" }}
+                    />
+                    <Typography
+                      variant="h5"
+                      sx={{ alignSelf: "center", marginTop: "5px" }}
+                    >
+                      We can help you get the most out of your messy data.
                     </Typography>
                   </Box>
                 </Box>
                 <Typography variant="h6" color="#fbf7f5" mt={2}>
-  See our web scraping migration case study&nbsp;
-  <Link component={RouterLink} to="/case_study_v2/5" color="inherit">
+  See our data cleansing case study&nbsp;
+  <Link component={RouterLink} to="/case_study_v2/3" color="inherit">
     here
   </Link>
   .
 </Typography>
 
 
-
               </Box>
             </Grid>
+            {!isSmallScreen && (
+              <Grid
+                item
+                md={4}
+                sm={12}
+                xs={12}
+                sx={{
+                  height: isSmallScreen ? "200px" : "200px",
+                  backgroundImage: `url(${migration})`,
+                  backgroundSize: "contain",
+                  backgroundPosition: "center",
+                  backgroundRepeat: "no-repeat",
+                }}
+              ></Grid>
+            )}
           </Grid>
         </Box>
       </Grid>
@@ -170,4 +182,4 @@ function Scraping() {
   );
 }
 
-export default Scraping;
+export default DataCleansing;
