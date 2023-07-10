@@ -99,7 +99,7 @@ function CaseStudies() {
               <GradientText
                 variant="h1"
                 fontWeight={600}
-                text="Success Stories"
+                text="Case Studies"
                 color1={colors.blueAccent[100]}
                 color2={colors.blueAccent[400]}
               ></GradientText>

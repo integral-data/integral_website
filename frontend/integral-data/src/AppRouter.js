@@ -5,11 +5,6 @@ import { ColorModeContext, useMode } from "./theme";
 import HomePage from "./HomePage";
 import ContactForm from "./ContactForm";
 import ContactSuccess from "./ContactSuccess";
-import ExperiencePage from "./ExperiencePage";
-import WhyIntegral from "./WhyIntegral";
-import WhatWeDo from "./WhatWeDo";
-import SkillsV2 from "./SkillsV2";
-import NewPage from "./NewPage";
 import Layout from "./Layout";
 import ScrollToTop from "./ScrollToTop";
 import CaseStudiesPage from "./CaseStudiesOverviewPage";
@@ -35,11 +30,6 @@ function AppRouter() {
               element={
                 <Layout fullWidth>
                   <Routes>
-                    <Route path="experience" element={<ExperiencePage />} />
-                    <Route path="why_integral" element={<WhyIntegral />} />
-                    <Route path="what_we_do" element={<WhatWeDo />} />
-                    <Route path="skills" element={<SkillsV2 />} />
-                    <Route path="test" element={<NewPage />} />
                     <Route path="/case_studies" element={<CaseStudiesPage />} />
                     <Route
                       path="/case_carousel"
