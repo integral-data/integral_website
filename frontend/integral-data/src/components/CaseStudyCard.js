@@ -72,9 +72,19 @@ const CaseStudyCard = ({ study, showSubtitle, size }) => {
                 ))}
             </Box>
           </Box>
-          <Box sx={{ display: "flex", alignItems: "flex-end", height: "10%" }}>
+          <Box 
+            sx={{ 
+              display: "flex", 
+              alignItems: "flex-end", 
+              height: "10%", 
+              justifyContent: "space-between" 
+            }}
+          >
             <Typography variant="caption" color="white">
               {study.datePosted}
+            </Typography>
+            <Typography variant="caption" color="white">
+              {study.categories && study.categories.join(", ")}
             </Typography>
           </Box>
         </Paper>

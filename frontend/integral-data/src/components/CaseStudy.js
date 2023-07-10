@@ -20,6 +20,7 @@ const CaseStudy = ({
   content,
   badges,
   chips,
+  categories,
 }) => {
   // const [isTechVisible, setTechVisibility] = useState(true);
 
@@ -40,6 +41,14 @@ const CaseStudy = ({
           {author} - {datePosted}
         </Typography>
       </Box>
+
+      <Box display="flex" alignItems="center" marginBottom={2}>
+      <Typography variant="body1" display="block" gutterBottom>
+          Category: {categories && categories.join(", ")}
+        </Typography>
+      </Box>
+
+
       <Box
         display="flex"
         flexDirection="row"

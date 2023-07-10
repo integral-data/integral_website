@@ -69,11 +69,11 @@ function DataCleansing() {
                   }}
                 />
                 <Typography variant="h4" color="#fbf7f5">
-                  We are experts at cleaning data.
+                  We are experts at cleaning data no matter how complex or messy your data may be.
                 </Typography>
 
                 <Typography variant="h4" color="#fbf7f5" mt={2}>
-                  Benefits of data cleaning:
+                  Benefits of data cleansing:
                 </Typography>
                 <Box
                   sx={{
@@ -95,7 +95,7 @@ function DataCleansing() {
                       variant="h5"
                       sx={{ alignSelf: "center", marginTop: "5px" }}
                     >
-                      Clean data is essential to drive smart decisions (garbage in - garbage out)
+                      Clean data is essential to drive smart decisions.
                     </Typography>
                   </Box>
                   <Box
@@ -111,7 +111,7 @@ function DataCleansing() {
                       variant="h5"
                       sx={{ alignSelf: "center", marginTop: "5px" }}
                     >
-                      We can analyze millions of rows & thousands of columns 
+                      Millions of rows of data? Thousands of columns? We can help.
                     </Typography>
                   </Box>
                   <Box
@@ -127,7 +127,7 @@ function DataCleansing() {
                       variant="h5"
                       sx={{ alignSelf: "center", marginTop: "5px" }}
                     >
-                      Restructuring data can often lead to key insights. We can handle that.
+                      Restructuring data can often lead to key insights. We are experts in data structure.
                     </Typography>
                   </Box>
                   <Box
@@ -145,7 +145,7 @@ function DataCleansing() {
                       variant="h5"
                       sx={{ alignSelf: "center", marginTop: "5px" }}
                     >
-                      We can help you get the most out of your messy data.
+                      Bring data scattered across tables & platforms together.
                     </Typography>
                   </Box>
                 </Box>

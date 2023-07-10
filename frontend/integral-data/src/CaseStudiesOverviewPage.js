@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, Container } from '@mui/material';
 import { CaseStudyOverview } from './components/CaseStudy';
+import CaseStudyCard from './components/CaseStudyCard';
 import { caseStudiesData } from './data/caseStudiesData';
 import TitleSubtitle from './components/TitleSubtitle';
 
@@ -16,7 +17,7 @@ export default function CaseStudiesPage() {
       <Grid container spacing={6}>
         {caseStudiesData.map(caseStudy => (
           <Grid item xs={12} sm={6} md={4} key={caseStudy.id}>
-            <CaseStudyOverview study={caseStudy} />
+            <CaseStudyCard study={caseStudy} />
           </Grid>
         ))}
       </Grid>
