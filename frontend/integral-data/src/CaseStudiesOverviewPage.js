@@ -1,6 +1,5 @@
 import React from 'react';
 import { Grid, Container } from '@mui/material';
-import { CaseStudyOverview } from './components/CaseStudy';
 import CaseStudyCard from './components/CaseStudyCard';
 import { caseStudiesData } from './data/caseStudiesData';
 import TitleSubtitle from './components/TitleSubtitle';
