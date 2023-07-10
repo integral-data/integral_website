@@ -61,7 +61,7 @@ function Skills() {
   };
 
   return (
-    <Grid container sx={{ backgroundImage: theme.gradient }}>
+    <Grid container sx={{ backgroundImage: theme.homeGradient2 }}>
       <Box maxWidth="1600px" width="100%" margin="auto" display={"flex"}>
         <Grid container spacing={5} p={5} rowGap={1} mb={5}>
           <Grid item md={12} sm={12} xs={12}>

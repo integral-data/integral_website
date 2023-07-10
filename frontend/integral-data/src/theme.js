@@ -301,6 +301,7 @@ export const themeSettings = (mode) => {
     )`,
     homeGradient1: `linear-gradient(145deg, rgba(9,29,85,1) 0.2%, rgba(0,0,0,1) 100.2%)`,
     homeGradient2: `linear-gradient(145deg, #780206, #061161)`,
+    homeGradient3: `linear-gradient(145deg, #5FE88D, #061161)`,
     borderGradient: "linear-gradient(45deg, #00C9FF 30%, #92FE9D 90%)",
     gradient:
       "radial-gradient(circle, #02084b, #000946, #000940, #00083b, #000735, #010631, #01062d, #010529, #010526, #010423, #010421, #01031e)",

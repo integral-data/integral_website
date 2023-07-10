@@ -1,10 +1,10 @@
 import React from "react";
 import { Box, Typography, Grid, Link } from "@mui/material";
-import migration from "../images/migration_transparent.png";
+import cleaning from "../images/data_cleaning.png";
 import { useTheme } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
 import { CheckCircle } from "@mui/icons-material";
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink } from "react-router-dom";
 
 function DataCleansing() {
   const theme = useTheme();
@@ -54,7 +54,7 @@ function DataCleansing() {
                   </Typography>
                   {isSmallScreen && (
                     <img
-                      src={migration}
+                      src={cleaning}
                       alt="Migration"
                       height="40px"
                       style={{ marginLeft: "15px" }}
@@ -69,7 +69,8 @@ function DataCleansing() {
                   }}
                 />
                 <Typography variant="h4" color="#fbf7f5">
-                  We are experts at cleaning data no matter how complex or messy your data may be.
+                  We are experts at cleaning data no matter how complex or messy
+                  your data may be.
                 </Typography>
 
                 <Typography variant="h4" color="#fbf7f5" mt={2}>
@@ -111,7 +112,8 @@ function DataCleansing() {
                       variant="h5"
                       sx={{ alignSelf: "center", marginTop: "5px" }}
                     >
-                      Millions of rows of data? Thousands of columns? We can help.
+                      Millions of rows of data? Thousands of columns? We can
+                      help.
                     </Typography>
                   </Box>
                   <Box
@@ -127,7 +129,8 @@ function DataCleansing() {
                       variant="h5"
                       sx={{ alignSelf: "center", marginTop: "5px" }}
                     >
-                      Restructuring data can often lead to key insights. We are experts in data structure.
+                      Restructuring data can often lead to key insights. We are
+                      experts in data structure.
                     </Typography>
                   </Box>
                   <Box
@@ -150,14 +153,16 @@ function DataCleansing() {
                   </Box>
                 </Box>
                 <Typography variant="h6" color="#fbf7f5" mt={2}>
-  See our data cleansing case study&nbsp;
-  <Link component={RouterLink} to="/case_study_v2/3" color="inherit">
-    here
-  </Link>
-  .
-</Typography>
-
-
+                  See our data cleansing case study&nbsp;
+                  <Link
+                    component={RouterLink}
+                    to="/case_study_v2/3"
+                    color="inherit"
+                  >
+                    here
+                  </Link>
+                  .
+                </Typography>
               </Box>
             </Grid>
             {!isSmallScreen && (
@@ -168,7 +173,7 @@ function DataCleansing() {
                 xs={12}
                 sx={{
                   height: isSmallScreen ? "200px" : "200px",
-                  backgroundImage: `url(${migration})`,
+                  backgroundImage: `url(${cleaning})`,
                   backgroundSize: "contain",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
