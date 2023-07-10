@@ -198,4 +198,27 @@ export const caseStudiesData = [
     categories: ['Database Creation'],
     content: `## The Challenge\n\nOur client was in need of a manageable way to enter and view important data but was not ready for a full-fledged database. They required a system that could store data in an organized manner and generate reports as needed.\n\n## Our Approach\n\nWe created a "database" in Excel that allowed their employees to enter important data using a form built directly into Excel. This abstracted away the complexities of the spreadsheet and allowed users to view and create data directly in the form. The tool also featured a macro to generate reports in PDF format.\n\n## The Outcome\n\nThe Account Summary Generator not only simplified data entry and viewing but also automated report generation. This resulted in significant time savings and improved the efficiency of their operations. The solution once again reinforced our client's trust in our capabilities to create practical and effective data management solutions.`,
   },
+
+  {
+    id: 10,
+    title: "COVID-19 Impact Analysis for a Health Sector Client",
+    subheader: "Combining Public Data and Proprietary Insights to Inform Business Strategy",
+    author: "Jeff Barton",
+    datePosted: "2020",
+    badges: [
+      <BadgePython />,
+      <BadgePandas />,
+      <BadgePowerBI />,
+      <BadgeGithub />,
+    ],
+    chips: [
+      <ChipPython />,
+      <ChipPandas />,
+      <ChipPowerBI />,
+      <ChipGithub />,
+    ],
+    categories: ['Analytics'],
+    content: `## The Challenge\n\nWith the onset of the COVID-19 pandemic in early 2020, our client in the health sector was keen to understand the potential impact of the virus on their customers. They needed a way to incorporate and analyze the available public data along with their existing customer data to inform their business strategy.\n\n## Our Solution\n\nWe leveraged Python to pull the COVID-19 data that Johns Hopkins was posting on GitHub. Given the data structure changed over time, we wrote resilient code that could identify and clean each data structure variation. Once the raw data was sanitized, we restructured it to align with our client's data schema. This transformed data was then fed into our client's existing Power BI reports to provide a holistic view of their customers' exposure to the pandemic.\n\n## The Outcome\n\nOur client gained access to a custom COVID-19 dashboard, which layered their customer data with the pandemic impact data. This solution allowed our client to gain critical insights into the potential business implications of the pandemic. It not only helped them manage the crisis more effectively but also underscored our expertise in data cleaning, transformation, and visualization.`,
+  }
+  
 ]
