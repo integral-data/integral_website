@@ -1,7 +1,7 @@
 import React, { useEffect, useState, Fragment } from "react";
 import { FaBars } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
-import { Typography, Link as MuiLink } from "@mui/material";
+import { Typography, Box, Link as MuiLink } from "@mui/material";
 
 import {
   Nav,
@@ -44,7 +44,7 @@ const Navbar = ({ toggle }) => {
   };
 
   const ScrollOrRouteLink = ({ to, children, ...props }) => {
-    const handleClick = () => {
+    const handleClick = (event) => {
       if (isOpen) {
         setIsOpen(false);
       }
@@ -58,7 +58,7 @@ const Navbar = ({ toggle }) => {
           spy={true}
           smooth={true}
           duration={500}
-          offset={-80}
+          offset={-80} // Adjust this value
           onClick={handleClick}
           {...props}
         >
@@ -90,49 +90,61 @@ const Navbar = ({ toggle }) => {
               transform: isOpen ? "translateY(0)" : "translateY(-100%)",
             }}
           >
-            <NavItem sx={{ marginTop: "200px" }}>
-              <ScrollOrRouteLink to="why-integral">
-                <Typography variant="h2" fontWeight={400}>
-                  Why Integral?
-                </Typography>
-              </ScrollOrRouteLink>
-            </NavItem>
-            <NavItem>
-              <ScrollOrRouteLink to="services">
-                <Typography variant="h2" fontWeight={400}>
-                  Our Services
-                </Typography>
-              </ScrollOrRouteLink>
-            </NavItem>
-            <NavItem>
-              <ScrollOrRouteLink to="expertise">
-                <Typography variant="h2" fontWeight={400}>
-                  Expertise
-                </Typography>
-              </ScrollOrRouteLink>
-            </NavItem>
-            <NavItem>
-              <ScrollOrRouteLink to="case-studies">
-                <Typography variant="h2" fontWeight={400}>
-                  Case Studies
-                </Typography>
-              </ScrollOrRouteLink>
-            </NavItem>
-            <NavItem>
-              <NavSignUpLink
-                to="/contact"
-                smooth={true}
-                duration={500}
-                spy={true}
-                exact="true"
-                offset={-80}
-                onClick={() => setIsOpen(false)}
-              >
-                <Typography variant="h2" fontWeight={400}>
-                  Contact Us
-                </Typography>
-              </NavSignUpLink>
-            </NavItem>
+            <Box
+              sx={{
+                display: "flex", // The box should be a flex container
+                flexDirection: "column", // The direct children stack on top of each other
+                justifyContent: "center", // Center children vertically
+                alignItems: "center", // Center children horizontally
+                height: "100%", // Make it fill the entire container
+                marginTop: "0px",
+                marginBottom: "800px",
+              }}
+            >
+              <NavItem sx={{ marginTop: "0px", textAlign: "center" }}>
+                <ScrollOrRouteLink to="why-integral">
+                  <Typography variant="h2" fontWeight={400} textAlign="center">
+                    Why Integral?
+                  </Typography>
+                </ScrollOrRouteLink>
+              </NavItem>
+              <NavItem>
+                <ScrollOrRouteLink to="services">
+                  <Typography variant="h2" fontWeight={400}>
+                    Our Services
+                  </Typography>
+                </ScrollOrRouteLink>
+              </NavItem>
+              <NavItem sx={{ marginTop: "0px", margin: "auto" }}>
+                <ScrollOrRouteLink to="expertise">
+                  <Typography variant="h2" fontWeight={400}>
+                    Expertise
+                  </Typography>
+                </ScrollOrRouteLink>
+              </NavItem>
+              <NavItem>
+                <ScrollOrRouteLink to="case-studies">
+                  <Typography variant="h2" fontWeight={400}>
+                    Case Studies
+                  </Typography>
+                </ScrollOrRouteLink>
+              </NavItem>
+              <NavItem>
+                <NavSignUpLink
+                  to="/contact"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Typography variant="h2" fontWeight={400}>
+                    Contact Us
+                  </Typography>
+                </NavSignUpLink>
+              </NavItem>
+            </Box>
             {/* Add NavItems here */}
           </NavMenuMobile>
           <NavbarContainer>
