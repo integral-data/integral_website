@@ -31,6 +31,22 @@ const CaseStudyCard = ({ study, showSubtitle, size }) => {
             color: "#ffffff",
           }}
         >
+          <Box 
+            sx={{ 
+              display: "flex", 
+              justifyContent: "space-between", 
+              alignItems: "center",
+              mb: 3 // Add some margin to the bottom
+            }}
+          >
+            <Typography variant="caption" color="white">
+              {study.categories && study.categories.join(", ")}
+            </Typography>
+            <Typography variant="caption" style={{ color: "#AAF0C1" }}>
+              {study.datePosted}
+            </Typography>
+          </Box>
+          
           <Box sx={{ height: "30%" }}>
             <Typography
               variant="h4"
@@ -47,6 +63,7 @@ const CaseStudyCard = ({ study, showSubtitle, size }) => {
               {study.title}
             </Typography>
           </Box>
+          
           {showSubtitle !== 0 && (
             <Box sx={{ height: "20%" }}>
               <Typography variant="body1" color="white">
@@ -54,8 +71,9 @@ const CaseStudyCard = ({ study, showSubtitle, size }) => {
               </Typography>
             </Box>
           )}
+          
           <Box sx={{ height: "40%" }}>
-            <Typography variant="body1" color="secondary" mb={2}>
+            <Typography variant="body1" color="secondary" mb={2} textAlign={'center'}>
               Tech Stack
             </Typography>
             <Box
@@ -71,21 +89,6 @@ const CaseStudyCard = ({ study, showSubtitle, size }) => {
                   </Box>
                 ))}
             </Box>
-          </Box>
-          <Box 
-            sx={{ 
-              display: "flex", 
-              alignItems: "flex-end", 
-              height: "10%", 
-              justifyContent: "space-between" 
-            }}
-          >
-            <Typography variant="caption" color="white">
-              {study.datePosted}
-            </Typography>
-            <Typography variant="caption" color="white">
-              {study.categories && study.categories.join(", ")}
-            </Typography>
           </Box>
         </Paper>
       </animated.div>
