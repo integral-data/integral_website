@@ -62,16 +62,11 @@ With us, you gain flexible access to experts who understand your data as deeply 
 
 ## The Reality of In-House Teams
 
-Having worked within Fortune 500 companies analytics shops, we know first-hand that maintaining an in-house team doesn't always equate to full-time work. Initial setup may be intensive, but once the system is automated, the focus shifts to maintenance and incremental improvements. This may not warrant a full-time team unless your report suite is of significant scale.
+Having worked within Fortune 500 analytics shops, we know first-hand that maintaining an in-house team doesn't always equate to full-time work. Initial setup may be intensive, but once the system is automated, the focus shifts to maintenance, feature requests, and incremental improvements. This may not warrant a full-time team unless your report suite is of significant scale.
 
 ## Addressing the Issue of Report Bloat
 
-A common problem with dedicated reporting and analytics teams is the phenomenon of "report bloat." During quiet periods, analysts often create new reports to fill their time. However, the creation of a new report does not inherently add value and can often lead to an overwhelming amount of reports that are costly to maintain, without providing substantial insight or benefits.
-
-## Bridging the Gap Between Data and Business
-
-But our value doesn't stop at technical expertise. We pride ourselves on being bilingual in the language of data and business. We bridge the gap between complex technical concepts and the needs of non-technical stakeholders, ensuring that the insights we provide are not only accurate but also understandable and actionable. In essence, we are not just your data analysts, but your translators and strategists, translating your data into a language that your entire business can understand and act on.
-
+A common problem with dedicated reporting and analytics teams is the phenomenon of "report bloat." During quiet periods, analysts often create new reports to fill their time. However, the creation of a new report does not inherently add value and can often lead to an overwhelming amount of reports that are actually costly to maintain, without providing substantial insight or benefits.
 
 ## Our Different Approach to Reporting
 
@@ -79,7 +74,11 @@ Our approach is fundamentally different. We view reporting as a means to an end 
 
 ## Flexible Data Presentation
 
-Another key differentiation is our flexible approach to data presentation. Not every piece of analysis needs to become a permanent, regularly maintained report. We're experts at selecting the right medium for each piece of information. Perhaps a simple email can convey the insights you need, or a notebook can be created for ad-hoc execution as required. And when it is necessary, we can design and implement automated reports that are refreshed regularly. In every case, our goal is to provide you with the information you need in the most suitable, efficient, and easily understood format.
+Another key differentiation is our flexible approach to data presentation. Not every piece of analysis needs to become a permanent, regularly maintained report. We're experts at selecting the right medium for each piece of information. Perhaps a simple email with summary statistics can convey the insights you need. Or maybe a snippet of code can be created & stored on GitHub for ad-hoc execution as required. And when it is necessary, we can design and implement automated reports that are refreshed regularly. In every case, our goal is to provide you with the information you need in the most suitable, efficient, and easily understood format.
+
+## Bridging the Gap Between Data and Business
+
+But our value doesn't stop at technical expertise. We pride ourselves on being bilingual in the language of data and business. We bridge the gap between complex technical concepts and the needs of non-technical stakeholders, ensuring that the insights we provide are not only accurate but also understandable and actionable. In essence, we are not just your data analysts, but your translators and strategists, translating your data into a language that your entire business can understand and act on.
 
 ## Full Life-Cycle Data Consultants\nIn the realm of data consulting, technical skills such as SQL querying or creating basic BI dashboards might be commonplace. However, we firmly believe that true data mastery involves a much deeper level of involvement and understanding.
 
