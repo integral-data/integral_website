@@ -25,6 +25,7 @@ import HTMLLogo from "../images/logo_html.png";
 import CSSLogo from "../images/logo_css.png";
 import SQLLogo from "../images/logo_sql.png";
 import FlaskLogo from "../images/logo_flask.jpeg";
+import RubyLogo from "../images/logo_ruby_rails.png";
 
 // Add your descriptions here
 const descriptions = {
@@ -53,6 +54,7 @@ const descriptions = {
   SQL: "SQL (Structured Query Language) is a standard language for managing and manipulating relational databases.",
   Flask:
     "Flask is a micro web framework written in Python. It is classified as a microframework because it does not require particular tools or libraries.",
+  "Ruby On Rails" : "Ruby on Rails, often simply Rails, is a server-side web application framework written in Ruby under the MIT License. It follows the Model-View-Controller (MVC) architectural pattern and emphasizes the use of convention over configuration, meaning developers can write less code and accomplish more compared to many other frameworks. Rails provides a full-stack framework that includes seamless database table creations, migrations, and scaffolding of views to speed up application development. It also supports many web standards and protocols, such as JSON or XML, for data transfer, and HTML, CSS, and JavaScript for user interfacing."
 };
 
 const LogoImage = styled("img")({
@@ -298,6 +300,12 @@ const BadgeFlask = () => (
   <TechnologyBadge logo={FlaskLogo} technologyName="Flask" />
 );
 
+const BadgeRuby = () => (
+  <TechnologyBadge logo={RubyLogo} technologyName="Ruby On Rails" />
+);
+
+
+
 const ChipPython = () => (
   <TechnologyChip logo={PythonLogo} technologyName="Python" />
 );
@@ -334,6 +342,8 @@ const ChipFlask = () => (
   <TechnologyChip logo={FlaskLogo} technologyName="Flask" />
 );
 
+const ChipRuby = () => <TechnologyChip logo={RubyLogo} technologyName="Ruby On Rails" />;
+
 export {
   TechnologyBadge,
   BadgePython,
@@ -351,6 +361,7 @@ export {
   BadgeCSS,
   BadgeSQL,
   BadgeFlask,
+  BadgeRuby,
   ChipPython,
   ChipGithub,
   ChipExcel,
@@ -366,4 +377,5 @@ export {
   ChipCSS,
   ChipSQL,
   ChipFlask,
+  ChipRuby,
 };

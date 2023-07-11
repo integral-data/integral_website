@@ -3,12 +3,12 @@ import Navbar from "./components/Navbar/index.jsx";
 import Footer from "./components/Footer.js";
 import HeroSection from "./components/HeroSection/index.js";
 import WhyIntegral from "./components/WhyIntegral.js";
-import Analytics from "./components/Analytics.js";
+import DataViz from "./components/DataViz.js";
 import Migrations from "./components/Migrations.js";
-import Scraping from "./components/Scraping.js";
+import Scraping from "./components/DataAnalytics.js";
 import DatabaseCreation from "./components/DatabaseCreation.js";
 import DataCleansing from "./components/DataCleansing.js";
-import Skills from "./components/Skills.js";
+import Skills from "./components/Expertise.js";
 import CaseStudies from "./components/CaseStudies.js";
 import OurServices from "./components/OurServices.js";
 // import Testimonials from "./components/Testimonials.js";
@@ -21,7 +21,7 @@ function HomePage() {
       <div id="services">
         <OurServices />
         <Migrations />
-        <Analytics />
+        <DataViz />
         <DataCleansing />
         <DatabaseCreation />
         <Scraping />

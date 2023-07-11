@@ -1,12 +1,12 @@
 import React from "react";
 import { Box, Typography, Grid, Link } from "@mui/material";
-import scrape from "../images/scrape_transparent.png";
+import dashboard from "../images/dashboard_transparent.png";
 import { useTheme } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
 import { CheckCircle } from "@mui/icons-material";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink } from 'react-router-dom';
 
-function Scraping() {
+function DataViz() {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -18,7 +18,7 @@ function Scraping() {
         sm={12}
         md={12}
         sx={{
-          background: `linear-gradient(145deg, rgba(9,29,85,1) 0.2%, rgba(0,0,0,1) 100.2%)`,
+          background: theme.homeGradient2,
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -28,8 +28,8 @@ function Scraping() {
           <Grid
             container
             alignSelf={"center"}
-            maxWidth={"1600px"}
             md={12}
+            m={0}
             sx={{
               display: "flex",
               justifyContent: "center",
@@ -37,6 +37,22 @@ function Scraping() {
               maxWidth: "1600px",
             }}
           >
+            {!isSmallScreen && (
+              <Grid
+                item
+                md={4}
+                sm={12}
+                xs={12}
+                sx={{
+                  height: isSmallScreen ? "200px" : "200px",
+                  backgroundImage: `url(${dashboard})`,
+                  backgroundSize: "contain",
+                  backgroundPosition: "left",
+                  backgroundRepeat: "no-repeat",
+                }}
+              ></Grid>
+            )}
+
             <Grid item md={8} sm={12} xs={12}>
               <Box
                 sx={{
@@ -49,11 +65,11 @@ function Scraping() {
               >
                 <Box sx={{ display: "flex", alignItems: "center" }}>
                   <Typography variant="h2" fontWeight={600} color="white">
-                    Web Scraping
+                    Data Visualization
                   </Typography>
                   {isSmallScreen && (
                     <img
-                      src={scrape}
+                      src={dashboard}
                       alt="Dashboard"
                       height="40px"
                       style={{ marginLeft: "15px" }}
@@ -68,12 +84,13 @@ function Scraping() {
                   }}
                 />
                 <Typography variant="h4" color="#fbf7f5">
-                  Unlock valuable data and automate processes through web
-                  scraping.
+                  Make sense of your data, visualize insights, and design
+                  impactful metrics and KPIs. Build interactive dashboards that
+                  empower data-driven decision-making.
                 </Typography>
 
                 <Typography variant="h4" color="#fbf7f5" mt={2}>
-                  Benefits of Web Scraping:
+                  Our Visualization Offering:
                 </Typography>
                 <Box
                   sx={{
@@ -91,8 +108,11 @@ function Scraping() {
                     }}
                   >
                     <CheckCircle sx={{ fontSize: 22, mr: 1 }} />
-                    <Typography variant="h5">
-                      Eliminate manual data entry and repetitive tasks
+                    <Typography
+                      variant="h5"
+                      sx={{ alignSelf: "center", marginTop: "5px" }}
+                    >
+                      Advanced data analysis and modeling
                     </Typography>
                   </Box>
                   <Box
@@ -104,9 +124,11 @@ function Scraping() {
                     }}
                   >
                     <CheckCircle sx={{ fontSize: 22, mr: 1 }} />
-                    <Typography variant="h5">
-                      Access and extract data from various websites and online
-                      sources
+                    <Typography
+                      variant="h5"
+                      sx={{ alignSelf: "center", marginTop: "5px" }}
+                    >
+                      Customized metric and KPI design
                     </Typography>
                   </Box>
                   <Box
@@ -118,8 +140,11 @@ function Scraping() {
                     }}
                   >
                     <CheckCircle sx={{ fontSize: 22, mr: 1 }} />
-                    <Typography variant="h5">
-                      Gather competitive intelligence and market insights
+                    <Typography
+                      variant="h5"
+                      sx={{ alignSelf: "center", marginTop: "5px" }}
+                    >
+                      Interactive dashboard development
                     </Typography>
                   </Box>
                   <Box
@@ -130,40 +155,29 @@ function Scraping() {
                       mt: 1,
                     }}
                   >
-                    <CheckCircle sx={{ fontSize: 22, mr: 1 }} />
-                    <Typography variant="h5">
-                      Streamline data-driven decision-making processes
+                    <CheckCircle
+                      sx={{ fontSize: 22, mr: 1, alignSelf: "center" }}
+                    />
+                    <Typography
+                      variant="h5"
+                      sx={{ alignSelf: "center", marginTop: "5px" }}
+                    >
+                      Data visualization and storytelling
                     </Typography>
                   </Box>
                 </Box>
                 <Typography variant="h6" color="#fbf7f5" mt={2}>
-                  See our web scraping migration case study&nbsp;
-                  <Link
-                    component={RouterLink}
-                    to="/case_study_v2/5"
-                    color="inherit"
-                  >
-                    here
-                  </Link>
-                  .
-                </Typography>
+  See our visualization case study&nbsp;
+  <Link component={RouterLink} to="/case_study_v2/2" color="inherit">
+    here
+  </Link>
+  .
+</Typography>
+
+
+
               </Box>
             </Grid>
-            {!isSmallScreen && (
-              <Grid
-                item
-                md={4}
-                sm={12}
-                xs={12}
-                sx={{
-                  height: isSmallScreen ? "200px" : "200px",
-                  backgroundImage: `url(${scrape})`,
-                  backgroundSize: "contain",
-                  backgroundPosition: "left",
-                  backgroundRepeat: "no-repeat",
-                }}
-              ></Grid>
-            )}
           </Grid>
         </Box>
       </Grid>
@@ -171,4 +185,4 @@ function Scraping() {
   );
 }
 
-export default Scraping;
+export default DataViz;

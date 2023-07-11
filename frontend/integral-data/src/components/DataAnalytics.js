@@ -1,12 +1,12 @@
 import React from "react";
 import { Box, Typography, Grid, Link } from "@mui/material";
-import dashboard from "../images/dashboard_transparent.png";
+import scrape from "../images/scrape_transparent.png";
 import { useTheme } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
 import { CheckCircle } from "@mui/icons-material";
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink } from "react-router-dom";
 
-function Analytics() {
+function Scraping() {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -18,7 +18,7 @@ function Analytics() {
         sm={12}
         md={12}
         sx={{
-          background: theme.homeGradient2,
+          background: `linear-gradient(145deg, rgba(9,29,85,1) 0.2%, rgba(0,0,0,1) 100.2%)`,
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -28,8 +28,8 @@ function Analytics() {
           <Grid
             container
             alignSelf={"center"}
+            maxWidth={"1600px"}
             md={12}
-            m={0}
             sx={{
               display: "flex",
               justifyContent: "center",
@@ -37,22 +37,6 @@ function Analytics() {
               maxWidth: "1600px",
             }}
           >
-            {!isSmallScreen && (
-              <Grid
-                item
-                md={4}
-                sm={12}
-                xs={12}
-                sx={{
-                  height: isSmallScreen ? "200px" : "200px",
-                  backgroundImage: `url(${dashboard})`,
-                  backgroundSize: "contain",
-                  backgroundPosition: "left",
-                  backgroundRepeat: "no-repeat",
-                }}
-              ></Grid>
-            )}
-
             <Grid item md={8} sm={12} xs={12}>
               <Box
                 sx={{
@@ -65,11 +49,11 @@ function Analytics() {
               >
                 <Box sx={{ display: "flex", alignItems: "center" }}>
                   <Typography variant="h2" fontWeight={600} color="white">
-                    Analytics
+                    Data Analytics
                   </Typography>
                   {isSmallScreen && (
                     <img
-                      src={dashboard}
+                      src={scrape}
                       alt="Dashboard"
                       height="40px"
                       style={{ marginLeft: "15px" }}
@@ -84,13 +68,11 @@ function Analytics() {
                   }}
                 />
                 <Typography variant="h4" color="#fbf7f5">
-                  Make sense of your data, visualize insights, and design
-                  impactful metrics and KPIs. Build interactive dashboards that
-                  empower data-driven decision-making.
+                Unlock the power of your data through our wide-ranging analytics services.
                 </Typography>
 
                 <Typography variant="h4" color="#fbf7f5" mt={2}>
-                  Our Analytics Offering:
+                  Benefits of Data Analytics:
                 </Typography>
                 <Box
                   sx={{
@@ -108,11 +90,8 @@ function Analytics() {
                     }}
                   >
                     <CheckCircle sx={{ fontSize: 22, mr: 1 }} />
-                    <Typography
-                      variant="h5"
-                      sx={{ alignSelf: "center", marginTop: "5px" }}
-                    >
-                      Advanced data analysis and modeling
+                    <Typography variant="h5">
+                    Uncover hidden patterns and insights in your data to fuel strategic business decisions.
                     </Typography>
                   </Box>
                   <Box
@@ -124,11 +103,8 @@ function Analytics() {
                     }}
                   >
                     <CheckCircle sx={{ fontSize: 22, mr: 1 }} />
-                    <Typography
-                      variant="h5"
-                      sx={{ alignSelf: "center", marginTop: "5px" }}
-                    >
-                      Customized metric and KPI design
+                    <Typography variant="h5">
+                    Use analytics to optimize your operations, streamline processes, and improve productivity.
                     </Typography>
                   </Box>
                   <Box
@@ -140,44 +116,39 @@ function Analytics() {
                     }}
                   >
                     <CheckCircle sx={{ fontSize: 22, mr: 1 }} />
-                    <Typography
-                      variant="h5"
-                      sx={{ alignSelf: "center", marginTop: "5px" }}
-                    >
-                      Interactive dashboard development
-                    </Typography>
-                  </Box>
-                  <Box
-                    sx={{
-                      display: "flex",
-                      alignItems: "center",
-                      color: "#fbf7f5",
-                      mt: 1,
-                    }}
-                  >
-                    <CheckCircle
-                      sx={{ fontSize: 22, mr: 1, alignSelf: "center" }}
-                    />
-                    <Typography
-                      variant="h5"
-                      sx={{ alignSelf: "center", marginTop: "5px" }}
-                    >
-                      Data visualization and storytelling
+                    <Typography variant="h5">
+                      Streamline data-driven decision-making processes
                     </Typography>
                   </Box>
                 </Box>
                 <Typography variant="h6" color="#fbf7f5" mt={2}>
-  See our analytics case study&nbsp;
-  <Link component={RouterLink} to="/case_study_v2/2" color="inherit">
-    here
-  </Link>
-  .
-</Typography>
-
-
-
+                  See our data analytics case study&nbsp;
+                  <Link
+                    component={RouterLink}
+                    to="/case_study_v2/10"
+                    color="inherit"
+                  >
+                    here
+                  </Link>
+                  .
+                </Typography>
               </Box>
             </Grid>
+            {!isSmallScreen && (
+              <Grid
+                item
+                md={4}
+                sm={12}
+                xs={12}
+                sx={{
+                  height: isSmallScreen ? "200px" : "200px",
+                  backgroundImage: `url(${scrape})`,
+                  backgroundSize: "contain",
+                  backgroundPosition: "left",
+                  backgroundRepeat: "no-repeat",
+                }}
+              ></Grid>
+            )}
           </Grid>
         </Box>
       </Grid>
@@ -185,4 +156,4 @@ function Analytics() {
   );
 }
 
-export default Analytics;
+export default Scraping;

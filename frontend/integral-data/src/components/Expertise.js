@@ -31,20 +31,20 @@ function Skills() {
       ],
     },
     {
-      title: "CRMs",
-      description: "We have experience working with several CRMs",
-      skills: ["Salesforce", "ZoHo", "e123"],
-    },
-    {
-      title: "Popular Data Platforms",
+      title: "Other Tech Infrastructure",
       description:
-        "We have experience working in all of the following systems.",
-      skills: ["Snowflake", "AWS", "Azure", "Postgres", "GitHub"],
+        "We have experience working in all of the following tech.",
+      skills: ["Snowflake", "AWS", "Azure", "Postgres", "GitHub", "CLI"],
     },
     {
       title: "Additional Expertise",
       description: "We are also proficient in the following areas.",
-      skills: ["APIs", "XML", "JSON", "Pandas"],
+      skills: ["Web Scraping","APIs", "XML", "Pandas", "Jira", "Confluence","JSON"],
+    },
+    {
+      title: "CRMs",
+      description: "We have experience working with several CRMs",
+      skills: ["Salesforce", "ZoHo", "e123"],
     },
   ];
 

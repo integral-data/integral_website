@@ -74,7 +74,7 @@ function DataCleansing() {
                 </Typography>
 
                 <Typography variant="h4" color="#fbf7f5" mt={2}>
-                  Benefits of data cleansing:
+                  Benefits of Data Cleansing:
                 </Typography>
                 <Box
                   sx={{
