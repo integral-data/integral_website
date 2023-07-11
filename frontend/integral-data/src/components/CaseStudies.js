@@ -6,13 +6,13 @@ import { caseStudiesData } from "../data/caseStudiesData";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { tokens } from "../theme.js";
+// import { tokens } from "../theme.js";
 import { Button } from "./ButtonElements";
 import { ArrowForward, ArrowRight } from "./HeroSection/HeroElements";
 
 function CaseStudies() {
   const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
+  // const colors = tokens(theme.palette.mode);
   const isXs = useMediaQuery(theme.breakpoints.only("xs"));
   const isSm = useMediaQuery(theme.breakpoints.only("sm"));
   const isMd = useMediaQuery(theme.breakpoints.only("md"));

@@ -18,9 +18,9 @@ import "slick-carousel/slick/slick-theme.css";
 const IntegralPhiliosophy = () => {
   const { id } = useParams();
   const currentId = parseInt(id);
-  const currentCaseStudy = caseStudiesData.find(
-    (study) => study.id === currentId
-  );
+//   const currentCaseStudy = caseStudiesData.find(
+//     (study) => study.id === currentId
+//   );
 
   const theme = useTheme();
   // const colors = tokens(theme.palette.mode);
