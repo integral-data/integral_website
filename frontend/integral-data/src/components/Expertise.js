@@ -17,7 +17,7 @@ function Skills() {
       title: "Coding Languages",
       description:
         "We work with a wide variety of programming languages and frameworks.",
-      skills: ["Python", "JavaScript", "React", "SQL", "VBA"],
+      skills: ["Python", "JavaScript", "React", "SQL", "VBA", "Django","Flask"],
     },
     {
       title: "Visualization Software",
@@ -39,7 +39,7 @@ function Skills() {
     {
       title: "Additional Expertise",
       description: "We are also proficient in the following areas.",
-      skills: ["Web Scraping","APIs", "XML", "Pandas", "Jira", "Confluence","JSON"],
+      skills: ["Website Creation", "Web Scraping","APIs", "XML", "Pandas", "Jira", "Confluence","JSON"],
     },
     {
       title: "CRMs",
