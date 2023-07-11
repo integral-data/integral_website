@@ -22,12 +22,6 @@ const CaseStudy = ({
   chips,
   categories,
 }) => {
-  // const [isTechVisible, setTechVisibility] = useState(true);
-
-  // const handleTechVisibility = () => {
-  //   setTechVisibility(!isTechVisible);
-  // };
-
   return (
     <Box>
       <Typography variant="h2" component="h1" gutterBottom>
@@ -36,34 +30,39 @@ const CaseStudy = ({
       <Typography variant="h5" component="h2" gutterBottom>
         {subheader}
       </Typography>
-      <Box display="flex" alignItems="center" marginBottom={2}>
-        <Typography variant="body1" display="block" gutterBottom>
-          {author} - {datePosted}
-        </Typography>
-      </Box>
+      {author && datePosted && (
+        <Box display="flex" alignItems="center" marginBottom={2}>
+          <Typography variant="body1" display="block" gutterBottom>
+            {author} - {datePosted}
+          </Typography>
+        </Box>
+      )}
+      {categories && categories.length > 0 && (
+        <Box display="flex" alignItems="center" marginBottom={2}>
+          <Typography variant="body1" display="block" gutterBottom>
+            Category: {categories.join(", ")}
+          </Typography>
+        </Box>
+      )}
 
-      <Box display="flex" alignItems="center" marginBottom={2}>
-      <Typography variant="body1" display="block" gutterBottom>
-          Category: {categories && categories.join(", ")}
-        </Typography>
-      </Box>
-
-
-      <Box
-        display="flex"
-        flexDirection="row"
-        columnGap={2}
-        flexWrap="wrap"
-        marginBottom={4}
-      >
-        {chips && chips.map((Chip, index) => Chip)}
-      </Box>
+      {chips && chips.length > 0 && (
+        <Box
+          display="flex"
+          flexDirection="row"
+          columnGap={2}
+          flexWrap="wrap"
+          marginBottom={4}
+        >
+          {chips.map((Chip, index) => Chip)}
+        </Box>
+      )}
       <Box>
         <ReactMarkdown>{content}</ReactMarkdown>
       </Box>
     </Box>
   );
 };
+
 
 const CaseStudyOverview = ({ study }) => {
   const [props, set] = useSpring(() => ({ scale: 1 }));

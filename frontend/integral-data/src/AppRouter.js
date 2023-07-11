@@ -12,6 +12,7 @@ import CaseStudyPageCarousel from "./CaseStudiesCarousel";
 import CaseStudyPage from "./CaseStudySingle";
 import EmployeesPage from "./Consultants";
 import NotFoundPage from "./NotFoundPage";
+import IntegralPhiliosophy from "./OurPhiliospophy";
 
 function AppRouter() {
   const [theme, colorMode] = useMode();
@@ -24,12 +25,14 @@ function AppRouter() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/contact" element={<ContactForm />} />
+            
 
             <Route
               path="/*"
               element={
                 <Layout fullWidth>
                   <Routes>
+                  <Route path="/philosophy" element={<IntegralPhiliosophy />} />
                     <Route path="/case_studies" element={<CaseStudiesPage />} />
                     <Route
                       path="/case_carousel"

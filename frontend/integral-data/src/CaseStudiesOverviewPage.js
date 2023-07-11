@@ -1,17 +1,28 @@
 import React from "react";
-import { Grid, Container } from "@mui/material";
+import { Grid, Container, Typography, Box } from "@mui/material";
 import CaseStudyCard from "./components/CaseStudyCard";
 import { caseStudiesData } from "./data/caseStudiesData";
-import TitleSubtitle from "./components/TitleSubtitle";
+import GradientText from "./components/GradientText";
 
 export default function CaseStudiesPage() {
   return (
     <Container>
-      <TitleSubtitle
-        title="Case Studies"
-        subtitle="From Problem to Solution: Highlighting Our Client Projects"
-        color="white"
-      />
+
+
+<Box display="flex" flexDirection="column" alignItems="center" mb={4}>
+  <GradientText
+    variant="h1"
+    color1="rgba(245,177,97,1)"
+    color2="rgba(236,54,110,1)"
+    fontWeight={600}
+    text="Case Studies"
+  >
+  </GradientText>
+  <Typography variant="h4" color="white" align="center">
+    From Problem to Solution: Highlighting Our Client Projects
+  </Typography>
+</Box>
+
 
       <Grid container spacing={6} mb={3}>
         {caseStudiesData.map((caseStudy) => (

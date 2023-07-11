@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Typography, Grid } from "@mui/material";
 import Coffee from "../images/code_and_coffee.jpeg";
 import ImageNerd from "../images/circuit_nerd.jpeg";
@@ -11,10 +11,13 @@ import GradientText from "../components/GradientText.js";
 import ServiceCard from "../components/ServiceCard.js";
 import { IntegralRotatingLogo } from "./RotatingLogo";
 import { useTheme } from "@mui/material";
+import { tokens } from "../theme";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useMediaQuery } from "@mui/material";
+import { ArrowForward, ArrowRight } from "@mui/icons-material";
+import { Button } from "./ButtonElements";
 
 function WhyIntegral() {
   const theme = useTheme();
@@ -23,6 +26,14 @@ function WhyIntegral() {
   const isMd = useMediaQuery(theme.breakpoints.only("md"));
   const isLg = useMediaQuery(theme.breakpoints.only("lg"));
   const isXl = useMediaQuery(theme.breakpoints.only("xl"));
+
+
+  const [hover, setHover] = useState(false);
+
+  const onHover = () => {
+    setHover(!hover);
+  };
+  const colors = tokens(theme.palette.mode);
 
   const getContainerWidth = () => {
     // You can adjust these pixel values to better suit your needs
@@ -102,7 +113,7 @@ function WhyIntegral() {
               ></GradientText>
               <Typography variant="h4" color="white">
                 Integral transforms complexity into clarity, providing the data
-                expertise needed for smarter business decisions
+                expertise needed for smarter business decisions.
               </Typography>
             </Grid>
             <Grid
@@ -223,6 +234,49 @@ function WhyIntegral() {
                   />
                 </Slider>
               </Box>
+
+              <Box textAlign="center" mt={"60px"}>
+                  <GradientText
+                    variant="h4"
+                    color1={colors.blueAccent[100]}
+                    color2={colors.blueAccent[100]}
+                    text="Discover why our data and analytics team could be a better alternative to an in-house team while cutting costs and producing great results."
+                  />
+                <Box
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                style={{ paddingTop: "30px" }}
+              >
+                <Button
+                  to="/philosophy"
+                  onMouseEnter={onHover}
+                  onMouseLeave={onHover}
+                  primary="true"
+                  dark="true"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                  sx={{ maxWidth: "200px" }}
+                >
+                  <Typography variant="h6" sx={{ fontWeight: "600" }}>
+                    Discover the Integral Philosophy
+                  </Typography>
+                  {hover ? <ArrowForward /> : <ArrowRight />}
+                </Button>
+                
+              </Box>
+              <Box style={{ paddingTop: "10px" }}>
+              <GradientText
+                    variant="h6"
+                    color1={colors.blueAccent[100]}
+                    color2={colors.blueAccent[100]}
+                    text="(5 minute read)"
+                  />
+              </Box>
+                </Box>
             </Grid>
           </Grid>
         </Grid>
