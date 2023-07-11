@@ -14,7 +14,7 @@ import "slick-carousel/slick/slick-theme.css";
 const CaseStudy = ({
   id,
   title,
-  subheader,
+  subheader,  
   author,
   datePosted,
   content,
@@ -39,9 +39,14 @@ const CaseStudy = ({
       )}
       {categories && categories.length > 0 && (
         <Box display="flex" alignItems="center" marginBottom={2}>
-          <Typography variant="body1" display="block" gutterBottom>
-            Category: {categories.join(", ")}
-          </Typography>
+          <Typography 
+    variant="body1" 
+    display="block" 
+    gutterBottom 
+    sx={{ color: '#98FF98' }}
+>
+    Category: {categories.join(", ")}
+</Typography>
         </Box>
       )}
 

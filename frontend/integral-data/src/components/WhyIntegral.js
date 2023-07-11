@@ -116,32 +116,37 @@ function WhyIntegral() {
                 expertise needed for smarter business decisions.
               </Typography>
             </Grid>
+           
+           
             <Grid
-              item
-              md={4}
-              xs={4}
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "right",
-                maxHeight: "100%",
-              }}
-            >
-              <Box
-                sx={{
-                  width: "100%",
-                  maxWidth: "100%",
-                  height: "100%",
-                  maxHeight: "100%",
-                  display: "flex",
-                  justifyContent: { xs: "center", md: "right" },
+  item
+  md={4}
+  xs={4}
+  sx={{
+    display: isXs ? "none" : "flex", // hides the logo on extra small screens
+    justifyContent: "center",
+    alignItems: "right",
+    maxHeight: "100%",
+  }}
+>
+  <Box
+    sx={{
+      width: "100%",
+      maxWidth: "100%",
+      height: "100%",
+      maxHeight: "100%",
+      display: "flex",
+      justifyContent: { xs: "center", md: "right" },
+      alignItems: "center",
+    }}
+  >
+    <IntegralRotatingLogo />
+  </Box>
+</Grid>
 
-                  alignItems: "center",
-                }}
-              >
-                <IntegralRotatingLogo />
-              </Box>
-            </Grid>
+
+
+
           </Grid>
         </Grid>
 
@@ -149,7 +154,7 @@ function WhyIntegral() {
           <Grid
             container
             md={12}
-            p={5}
+            p={0}
             width={getContainerWidth()}
             rowSpacing={0}
             sx={{
@@ -268,7 +273,7 @@ function WhyIntegral() {
                 </Button>
                 
               </Box>
-              <Box style={{ paddingTop: "10px" }}>
+              <Box style={{ paddingTop: "10px", paddingBottom:"20px" }}>
               <GradientText
                     variant="h6"
                     color1={colors.blueAccent[100]}

@@ -135,7 +135,7 @@ const CaseStudyPage = () => {
           ))}
         </Slider>
       </Box>
-      <Box sx={{ maxWidth: "200px", marginTop: "40px" }}>
+      <Box sx={{ display: "flex", justifyContent: "center", marginTop: "40px" }}>
         <Button
           to="/case_studies"
           primary="true"

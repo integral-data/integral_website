@@ -96,29 +96,12 @@ By truly understanding the essence of your data and its impact on your business,
       <Typography variant="h4" fontWeight={600} mt={12} mb={2}>
         Explore Our Case Studies
       </Typography>
-      {/* <Grid container spacing={2} direction="row" justifyContent="center">
-        {filteredCaseStudiesData.map((caseStudy) => (
-          <Grid
-            item
-            md={4}
-            sm={12}
-            xs={12}
-            key={caseStudy.id}
-            justifySelf={"center"}
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
-            <CaseStudyCard study={caseStudy} showSubtitle={0} />
-          </Grid>
-        ))}
-      </Grid> */}
 
       <Box
         sx={{
           maxWidth: "100%",
           margin: "auto",
+          alignItems:'center'
         }}
       >
         <Slider {...settings}>
@@ -130,8 +113,8 @@ By truly understanding the essence of your data and its impact on your business,
             </Grid>
           ))}
         </Slider>
-      </Box>
-      <Box sx={{ maxWidth: "200px", marginTop: "40px" }}>
+
+        <Box sx={{ display: "flex", justifyContent: "center", marginTop: "40px" }}>
         <Button
           to="/case_studies"
           primary="true"
@@ -148,6 +131,8 @@ By truly understanding the essence of your data and its impact on your business,
           {hover ? <ArrowForward /> : <ArrowRight />}
         </Button>
       </Box>
+      </Box>
+
     </Container>
   );
 };
