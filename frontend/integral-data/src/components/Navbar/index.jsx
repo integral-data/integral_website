@@ -12,7 +12,6 @@ import {
   NavItem,
   NavLinks,
   NavMenuMobile,
-  NavSignUpLink,
 } from "./NavbarElements";
 import integral_banner from "../../images/integral_wide_transparent.png";
 import { animateScroll as scroll, Link as ReactScrollLink } from "react-scroll";

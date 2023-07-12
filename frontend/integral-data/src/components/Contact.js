@@ -12,14 +12,14 @@ import {
 import Paper from '@mui/material/Paper';
 import { Snackbar, Alert } from "@mui/material";
 import emailjs from "emailjs-com";
-import { tokens } from "../theme";
+// import { tokens } from "../theme";
 import { useTheme } from "@mui/material/styles";
 import GradientText from "./GradientText";
 
 const ContactComponent = () => {
   const [open, setOpen] = React.useState(false);
   const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
+//   const colors = tokens(theme.palette.mode);
   const handleClose = (event, reason) => {
     if (reason === "clickaway") {
       return;
