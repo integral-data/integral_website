@@ -7,7 +7,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 // import { tokens } from "../theme.js";
-import { Button } from "./ButtonElements";
+import { ButtonIntegral } from "./ButtonElements.js";
 import { ArrowForward, ArrowRight } from "./HeroSection/HeroElements";
 
 function CaseStudies() {
@@ -171,24 +171,10 @@ function CaseStudies() {
                 alignItems="center"
                 style={{ paddingTop: "50px" }}
               >
-                <Button
+                <ButtonIntegral
                   to="/case_studies"
-                  onMouseEnter={onHover}
-                  onMouseLeave={onHover}
-                  primary="true"
-                  dark="true"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                  sx={{ maxWidth: "200px" }}
-                >
-                  <Typography variant="h6" sx={{ fontWeight: "600" }}>
-                    View All Case Studies
-                  </Typography>
-                  {hover ? <ArrowForward /> : <ArrowRight />}
-                </Button>
+                  text="View All Case Studies">
+                </ButtonIntegral>
               </Box>
             </Grid>
           </Grid>

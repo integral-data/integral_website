@@ -1,14 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Typography, Grid, Link } from "@mui/material";
 import scrape from "../images/scrape_transparent.png";
 import { useTheme } from "@mui/material";
 import { useMediaQuery } from "@mui/material";
 import { CheckCircle } from "@mui/icons-material";
 import { Link as RouterLink } from "react-router-dom";
+import GradientText from "./GradientText";
+import { Button } from "./ButtonElements";
+import { tokens } from "../theme";
+import { ArrowForward, ArrowRight } from "@mui/icons-material";
+import ScrollOrRouteLink from "./ScrollOrRouteLink";
+import { ButtonIntegral } from "./ButtonElements";
 
 function Scraping() {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
+
+  const [hover, setHover] = useState(false);
+
+  const onHover = () => {
+    setHover(!hover);
+  };
+  const colors = tokens(theme.palette.mode);
 
   return (
     <>
@@ -133,6 +146,12 @@ function Scraping() {
                   .
                 </Typography>
               </Box>
+
+              
+
+
+
+
             </Grid>
             {!isSmallScreen && (
               <Grid
@@ -150,6 +169,40 @@ function Scraping() {
               ></Grid>
             )}
           </Grid>
+          <Box textAlign="center" mt={"60px"} mb={"60px"}>
+                  <GradientText
+                    variant="h4"
+                    color1={colors.blueAccent[100]}
+                    color2={colors.blueAccent[100]}
+                    text="Don't see exactly what you are looking for? No problem - please reach out to us and we'll see if we can assist you."
+                  />
+                <Box
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                style={{ paddingTop: "30px" }}
+              >
+
+               <ScrollOrRouteLink to="contact-us"> 
+                <ButtonIntegral
+                  // to="/#contact-us"
+                  onMouseEnter={onHover}
+                  onMouseLeave={onHover}
+                  primary="true"
+                  dark="true"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact="true"
+                  offset={-80}
+                  sx={{ maxWidth: "200px" }}
+                  text="Contact Us"
+                >
+                </ButtonIntegral>
+                </ScrollOrRouteLink>
+                
+              </Box>
+              </Box>
         </Box>
       </Grid>
     </>

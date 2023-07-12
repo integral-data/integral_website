@@ -5,6 +5,7 @@ import { Button } from "../ButtonElements";
 import { Grid, useTheme, Typography, useMediaQuery } from "@mui/material";
 import { ArrowForward, ArrowRight } from "./HeroElements";
 import { tokens } from "../../theme";
+import ScrollOrRouteLink from "../ScrollOrRouteLink";
 
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
@@ -145,8 +146,8 @@ const HeroSection = () => {
           }}
         >
           <Grid item md={3} sx={{ display: "flex", justifyContent: "left" }}>
+          <ScrollOrRouteLink to="contact-us"> 
             <Button
-              to="/contact"
               onMouseEnter={onHover}
               onMouseLeave={onHover}
               primary="true"
@@ -163,6 +164,7 @@ const HeroSection = () => {
               </Typography>
               {hover ? <ArrowForward /> : <ArrowRight />}
             </Button>
+            </ScrollOrRouteLink>
           </Grid>
         </Grid>
       </Grid>

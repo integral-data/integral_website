@@ -17,7 +17,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useMediaQuery } from "@mui/material";
 import { ArrowForward, ArrowRight } from "@mui/icons-material";
-import { Button } from "./ButtonElements";
+import { ButtonIntegral } from "./ButtonElements";
 
 function WhyIntegral() {
   const theme = useTheme();
@@ -253,25 +253,13 @@ function WhyIntegral() {
                 alignItems="center"
                 style={{ paddingTop: "30px" }}
               >
-                <Button
-                  to="/philosophy"
-                  onMouseEnter={onHover}
-                  onMouseLeave={onHover}
-                  primary="true"
-                  dark="true"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                  sx={{ maxWidth: "200px" }}
-                >
-                  <Typography variant="h6" sx={{ fontWeight: "600" }}>
-                    Discover the Integral Philosophy
-                  </Typography>
-                  {hover ? <ArrowForward /> : <ArrowRight />}
-                </Button>
                 
+                <ButtonIntegral
+                  to="/philosophy"
+                  text="Discover the Integral Philosophy">
+                </ButtonIntegral>
+
+
               </Box>
               <Box style={{ paddingTop: "10px", paddingBottom:"20px" }}>
               <GradientText
