@@ -51,7 +51,7 @@ const IntegralPhiliosophy = () => {
   const data_philio =   {
     id: 9,
     title: "Integral Data Can Help You Rethink Analytics",
-    subheader: "We believe we can be the data & analytics partner you need and help you save money.",
+    subheader: "We're committed to being more than a data and analytics service provider – we want to be a partner in your success.",
     content: `## Our Value Proposition
 
 Our team of consultants brings more than a decade of experience to every project. This isn’t just about expertise—it’s about delivering actionable insights and results. When you're considering building an in-house analytics team, you’re not just looking for staff—you’re looking for knowledge, for insights, for data-driven strategies. That’s where we come in.

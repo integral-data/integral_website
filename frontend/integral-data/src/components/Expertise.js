@@ -39,7 +39,7 @@ function Skills() {
     {
       title: "Additional Expertise",
       description: "We are also proficient in the following areas.",
-      skills: ["Website Creation", "Web Scraping","APIs", "XML", "Pandas", "Jira", "Confluence","JSON"],
+      skills: ["Website Creation", "Web Scraping","APIs", "XML", "Pandas", "Jira", "Confluence"],
     },
     {
       title: "CRMs",
