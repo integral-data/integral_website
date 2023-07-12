@@ -93,15 +93,23 @@ const ContactComponent = () => {
             mb:'20px'
           }}
         >
-          <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+            {/* <Box mt={100}>  */}
+          <Snackbar open={open} 
+                    autoHideDuration={6000} 
+                    onClose={handleClose} 
+                    anchorOrigin={{ vertical: 'top', horizontal: 'center' }} // Added this line
+                >
+                
             <Alert
-              onClose={handleClose}
+              onClose={handleClose} 
               severity="success"
               sx={{ width: "100%" }}
+
             >
               Message sent successfully - thanks for reaching out!
             </Alert>
           </Snackbar>
+          {/* </Box> */}
 
           <GradientText
             variant="h1"
