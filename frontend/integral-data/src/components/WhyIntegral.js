@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Box, Typography, Grid } from "@mui/material";
 import Coffee from "../images/code_and_coffee.jpeg";
 import ImageNerd from "../images/circuit_nerd.jpeg";
@@ -16,7 +16,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useMediaQuery } from "@mui/material";
-import { ArrowForward, ArrowRight } from "@mui/icons-material";
 import { ButtonIntegral } from "./ButtonElements";
 
 function WhyIntegral() {
@@ -27,12 +26,6 @@ function WhyIntegral() {
   const isLg = useMediaQuery(theme.breakpoints.only("lg"));
   const isXl = useMediaQuery(theme.breakpoints.only("xl"));
 
-
-  const [hover, setHover] = useState(false);
-
-  const onHover = () => {
-    setHover(!hover);
-  };
   const colors = tokens(theme.palette.mode);
 
   const getContainerWidth = () => {

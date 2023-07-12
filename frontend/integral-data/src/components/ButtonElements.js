@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { Button as MuiButton, Typography } from "@mui/material";
+import {  Typography } from "@mui/material";
 import { ArrowForward, ArrowRight } from '@mui/icons-material';
 
 const Button = styled(Link)`

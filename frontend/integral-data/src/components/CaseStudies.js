@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Grid, useTheme, Typography, useMediaQuery, Box } from "@mui/material";
 import GradientText from "./GradientText.js";
 import CaseStudyCard from "./CaseStudyCard.js";
@@ -8,7 +8,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 // import { tokens } from "../theme.js";
 import { ButtonIntegral } from "./ButtonElements.js";
-import { ArrowForward, ArrowRight } from "./HeroSection/HeroElements";
 
 function CaseStudies() {
   const theme = useTheme();
@@ -19,11 +18,6 @@ function CaseStudies() {
   const isLg = useMediaQuery(theme.breakpoints.only("lg"));
   const isXl = useMediaQuery(theme.breakpoints.only("xl"));
 
-  const [hover, setHover] = useState(false);
-
-  const onHover = () => {
-    setHover(!hover);
-  };
 
   const getContainerWidth = () => {
     // You can adjust these pixel values to better suit your needs

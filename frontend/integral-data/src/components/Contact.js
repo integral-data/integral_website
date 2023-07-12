@@ -15,7 +15,6 @@ import emailjs from "emailjs-com";
 // import { tokens } from "../theme";
 import { useTheme } from "@mui/material/styles";
 import GradientText from "./GradientText";
-import { ButtonIntegral } from "./ButtonElements";
 
 const ContactComponent = () => {
   const [open, setOpen] = React.useState(false);

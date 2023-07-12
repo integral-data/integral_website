@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { Link as MuiLink } from "@mui/material";
 import { NavLinks } from "./Navbar/NavbarElements";
-import { animateScroll as scroll, Link as ReactScrollLink } from "react-scroll";
+import { Link as ReactScrollLink } from "react-scroll";
 import { useLocation } from "react-router-dom";
 
 

@@ -6,9 +6,7 @@ import { useMediaQuery } from "@mui/material";
 import { CheckCircle } from "@mui/icons-material";
 import { Link as RouterLink } from "react-router-dom";
 import GradientText from "./GradientText";
-import { Button } from "./ButtonElements";
 import { tokens } from "../theme";
-import { ArrowForward, ArrowRight } from "@mui/icons-material";
 import ScrollOrRouteLink from "./ScrollOrRouteLink";
 import { ButtonIntegral } from "./ButtonElements";
 
