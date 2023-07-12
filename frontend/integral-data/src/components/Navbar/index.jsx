@@ -130,6 +130,15 @@ const Navbar = ({ toggle }) => {
                 </ScrollOrRouteLink>
               </NavItem>
               <NavItem>
+                <ScrollOrRouteLink to="contact-us">
+                  <Typography variant="h2" fontWeight={400} mt={2}>
+                    Contact Us
+                  </Typography>
+                </ScrollOrRouteLink>
+              </NavItem>
+
+
+              {/* <NavItem>
                 <NavSignUpLink
                   to="/contact"
                   smooth={true}
@@ -143,7 +152,7 @@ const Navbar = ({ toggle }) => {
                     Contact Us
                   </Typography>
                 </NavSignUpLink>
-              </NavItem>
+              </NavItem> */}
             </Box>
             {/* Add NavItems here */}
           </NavMenuMobile>
@@ -188,20 +197,15 @@ const Navbar = ({ toggle }) => {
                   </Typography>
                 </ScrollOrRouteLink>
               </NavItem>
+
               <NavItem>
-                <NavSignUpLink
-                  to="/contact"
-                  smooth={true}
-                  duration={500}
-                  spy={true}
-                  exact="true"
-                  offset={-80}
-                >
+                <ScrollOrRouteLink to="contact-us">
                   <Typography variant="h6" fontWeight={700}>
                     Contact Us
                   </Typography>
-                </NavSignUpLink>
+                </ScrollOrRouteLink>
               </NavItem>
+
             </NavMenu>
           </NavbarContainer>
         </Nav>
