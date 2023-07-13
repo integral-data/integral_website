@@ -238,7 +238,7 @@ function WhyIntegral() {
                     variant="h4"
                     color1={colors.blueAccent[100]}
                     color2={colors.blueAccent[100]}
-                    text="Discover why our data and analytics team could be a better alternative to an in-house team while cutting costs and producing great results."
+                    text="Explore how Integral can offer superior solutions than an in-house team while reducing expenses & overhead."
                   />
                 <Box
                 display="flex"
@@ -249,7 +249,7 @@ function WhyIntegral() {
                 
                 <ButtonIntegral
                   to="/philosophy"
-                  text="Discover the Integral Philosophy">
+                  text="Discover the Integral Advantage">
                 </ButtonIntegral>
 
 
